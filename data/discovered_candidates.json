@@ -1,8 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": null,
-  "discovery_status": "NOT_RUN",
-  "queries_checked": 0,
+  "generated_at": "2026-10-21T04:19:17+09:00",
+  "discovery_status": "OK",
+  "queries_checked": 25,
   "query_errors": [],
+  "new_candidate_count": 0,
+  "current_seen_count": 0,
+  "retained_candidate_count": 0,
   "candidates": []
 }
