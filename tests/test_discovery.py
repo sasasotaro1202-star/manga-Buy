@@ -45,6 +45,12 @@ class DiscoveryTests(unittest.TestCase):
         with self.assertRaises(Exception):
             parse_bing_rss(b"<rss>")
 
+    def test_relative_bing_result_uses_bing_as_base(self):
+        # Search pages often return an absolute-path redirect rather than a full URL.
+        relative = "/ck/a?u=a1aHR0cHM6Ly9qcC5tZXJjYXJpLmNvbS9pdGVtL20xMjM="
+        base = "https://www.bing.com/search?q=manga"
+        self.assertEqual(unwrap_search_url(relative, base), "https://jp.mercari.com/item/m123")
+
     def test_bing_redirect_url_is_unwrapped(self):
         # Bing encodes the destination URL as base64url after the "a1" prefix.
         url = "https://www.bing.com/ck/a?u=a1aHR0cHM6Ly9qcC5tZXJjYXJpLmNvbS9pdGVtL20xMjM="
