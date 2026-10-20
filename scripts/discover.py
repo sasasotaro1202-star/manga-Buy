@@ -138,6 +138,7 @@ def search_engine_urls(discovery_config):
         raw = [
             discovery_config.get("engine_url") or "https://html.duckduckgo.com/html/?q={query}",
             "https://www.bing.com/search?q={query}",
+            "https://www.bing.com/search?format=rss&q={query}",
         ]
     result = []
     for item in raw:
