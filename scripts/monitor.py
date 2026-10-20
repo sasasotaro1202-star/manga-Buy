@@ -54,7 +54,11 @@ def check_robots(url, user_agent, timeout, allowed_domains, robots_cache):
                     robots_cache[robots_url] = (True, parser)
         except HTTPError as exc:
             # A true 404 means the origin publishes no robots policy. Other failures fail closed.
-            robots_cache[robots_url] = (exc.code == 404, "ROBOTS_HTTP_STATUS_" + str(exc.code))
+            if exc.code == 404:
+                parser.parse([])
+                robots_cache[robots_url] = (True, parser)
+            else:
+                robots_cache[robots_url] = (False, "ROBOTS_HTTP_STATUS_" + str(exc.code))
         except Exception as exc:
             robots_cache[robots_url] = (False, "ROBOTS_UNVERIFIED:" + type(exc).__name__)
     allowed, value = robots_cache[robots_url]
@@ -72,9 +76,9 @@ def fetch_product(url, config, allowed_domains, robots_cache):
     user_agent = str(config.get("user_agent") or "manga-Buy/0.1")
     if not valid_https_url(url) or not allowed_host(url, allowed_domains):
         return {"retrieval_status": "URL_NOT_ALLOWLISTED", "error": "Only allowlisted HTTPS product pages can be checked."}
-    if not check_robots(url, user_agent, timeout, allowed_domains, robots_cache)[0]:
-        allowed, reason = check_robots(url, user_agent, timeout, allowed_domains, robots_cache)
-        return {"retrieval_status": "ROBOTS_BLOCKED_OR_UNKNOWN", "error": reason}
+    robots_allowed, robots_reason = check_robots(url, user_agent, timeout, allowed_domains, robots_cache)
+    if not robots_allowed:
+        return {"retrieval_status": "ROBOTS_BLOCKED_OR_UNKNOWN", "error": robots_reason}
     try:
         opener = build_opener(AllowlistedRedirectHandler(allowed_domains))
         request = Request(url, headers={
