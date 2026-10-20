@@ -1,5 +1,8 @@
 import unittest
+import sys
+from pathlib import Path
 from datetime import timedelta
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 from manga_core import (
     now_jst, listing_decision, ranges_cover_all, normalized_ranges,
