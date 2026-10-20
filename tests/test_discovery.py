@@ -45,11 +45,16 @@ class DiscoveryTests(unittest.TestCase):
         with self.assertRaises(Exception):
             parse_bing_rss(b"<rss>")
 
-    def test_default_search_fallback_includes_bing_rss(self):
+    def test_bing_redirect_url_is_unwrapped(self):
+        # Bing encodes the destination URL as base64url after the "a1" prefix.
+        url = "https://www.bing.com/ck/a?u=a1aHR0cHM6Ly9qcC5tZXJjYXJpLmNvbS9pdGVtL20xMjM="
+        self.assertEqual(unwrap_search_url(url), "https://jp.mercari.com/item/m123")
+
+    def test_default_search_fallback_includes_bing_html(self):
         urls = search_engine_urls({"engine_url": "https://html.duckduckgo.com/html/?q={query}"})
         self.assertEqual(len(urls), 2)
         self.assertIn("duckduckgo.com", urls[0])
-        self.assertIn("format=rss", urls[1])
+        self.assertIn("bing.com/search?q=", urls[1])
         self.assertTrue(all(url.startswith("https://") and "{query}" in url for url in urls))
 
     def test_http_url_is_rejected(self):
