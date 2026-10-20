@@ -89,19 +89,36 @@ def generate_report():
             provisional = []
             registered = listings_by_manga.get(manga.get("id"), [])
             all_decisions = []
+            basket_candidates = []
             for listing in registered:
                 observation = observed_by_id.get(str(listing.get("id") or ""), {})
-                decision = listing_decision(
-                    listing, observation, manga, policy,
-                    now=now_jst(),
-                    max_price_age_hours=int(marketplace_config.get("monitor", {}).get("max_price_age_hours", 24)),
-                    max_cost_age_days=int(marketplace_config.get("monitor", {}).get("max_cost_check_age_days", 7)),
-                )
+                decision_args = {
+                    "now": now_jst(),
+                    "max_price_age_hours": int(marketplace_config.get("monitor", {}).get("max_price_age_hours", 24)),
+                    "max_cost_age_days": int(marketplace_config.get("monitor", {}).get("max_cost_check_age_days", 7)),
+                }
+                decision = listing_decision(listing, observation, manga, policy, **decision_args)
                 all_decisions.append(decision)
                 if decision["status"] == "CONFIRMED":
                     confirmed.append(decision)
                 elif decision["status"] == "PROVISIONAL":
                     provisional.append(decision)
+
+                # Independently admit verified partial lots for a no-gap, no-double-buy
+                # basket plan. They never qualify as standalone full-set listings.
+                basket_decision = listing_decision(
+                    listing, observation, manga, policy, require_complete=False, **decision_args
+                )
+                if basket_decision["status"] == "CONFIRMED":
+                    basket_candidates.append({
+                        "status": "CONFIRMED",
+                        "total_jpy": basket_decision["total_jpy"],
+                        "included_ranges": basket_decision["included_ranges"],
+                        "listing_url": basket_decision["listing_url"],
+                        "seller": basket_decision.get("seller"),
+                        "condition": basket_decision.get("condition"),
+                        "listing_id": basket_decision.get("listing_id"),
+                    })
                 if observation.get("retrieval_status") != "OK":
                     error_count += 1
             confirmed.sort(key=lambda row: (row.get("total_jpy") or 10**12, row.get("condition") == "RENTAL_USED"))
@@ -133,6 +150,22 @@ def generate_report():
                 lines.append("  - **購入可能な全巻最安とは確定していません。** 巻数メタデータまたは登録情報を再確認してください。")
             else:
                 lines.append("- 確認済みの購入可能な全巻セット：まだなし。")
+
+            # Only attempt combination when the series' current required volume count
+            # is source/curation-confirmed. A provisional count is never a completeness proof.
+            basket_plan = minimum_cost_cover(basket_candidates, count) if count_confirmed and count else None
+            if basket_plan:
+                duplicate_count = basket_plan.get("duplicate_volume_count", 0)
+                duplicate_text = f"（重複巻 {duplicate_count}冊分あり）" if duplicate_count else "（重複巻なし）"
+                lines.append(f"- **確認済み出品を組み合わせた最小総額プラン：{yen(basket_plan['total_jpy'])}** {duplicate_text}")
+                for item in basket_plan.get("listings", []):
+                    item_ranges = item.get("included_ranges") or []
+                    volume_text = ", ".join(f"{start}〜{end}巻" for start, end in item_ranges)
+                    lines.append(f"  - [{safe_markdown(item.get('seller') or item.get('listing_id') or '商品ページ')}]({item.get('listing_url')}) — {volume_text}: {yen(item.get('total_jpy'))}")
+            elif count_confirmed and count and registered:
+                lines.append("- 組み合わせ購入プラン：現在の登録出品では、巻抜けなしの確認済みプランを作れません。")
+            else:
+                lines.append("- 組み合わせ購入プラン：巻数の確定または条件を満たす登録出品が不足。")
 
             if all_decisions:
                 lines.append("- 登録商品ページの確認結果：")
