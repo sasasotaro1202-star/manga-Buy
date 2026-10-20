@@ -465,9 +465,13 @@
       "expected_volume_count": 30,
       "provisional_volume_count": 30,
       "volume_count_status": "OFFICIAL_CONFIRMED",
-      "volume_count_source_url": "https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-890094-2",
+      "volume_count_source_url": "https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-891050-5",
       "series_status": "completed",
-      "edition_policy": "通常版の東京喰種1-14巻と東京喰種:re 1-16巻を合わせた30巻構成。別々の版/文庫版を混ぜず、両方の収録範囲を確認する。"
+      "edition_policy": "通常版の東京喰種1-14巻と東京喰種:re 1-16巻を合わせた30巻構成。別々の版/文庫版を混ぜず、両方の収録範囲を確認する。",
+      "volume_count_source_urls": [
+        "https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-890031-5",
+        "https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-891050-5"
+      ]
     },
     {
       "id": "parasyte",

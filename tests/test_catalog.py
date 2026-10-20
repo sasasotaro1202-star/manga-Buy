@@ -34,9 +34,9 @@ class CatalogueTests(unittest.TestCase):
         self.assertTrue(item["volume_count_source_url"].startswith("https://"))
 
     def test_ongoing_unverified_count_does_not_become_confirmed(self):
-        item = manga_map(self.catalog)["frieren"]
+        item = manga_map(self.catalog)["heavenly-delusion"]
         count, confirmed = expected_count(item, allow_provisional=True)
-        self.assertEqual(count, 15)
+        self.assertEqual(count, 14)
         self.assertFalse(confirmed)
 
 
