@@ -278,7 +278,11 @@ def extract_product_data(html, url):
     for offer in offers:
         currency = str(offer.get("priceCurrency") or "").upper()
         types = _type_names(offer.get("@type"))
-        raw_price = offer.get("lowPrice") if "aggregateoffer" in types and offer.get("lowPrice") is not None else offer.get("price")
+        # AggregateOffer.lowPrice is a price-range floor, not proof of the selected item's
+        # checkout price. Never rank it as a direct offer; only explicit Offer.price qualifies.
+        if "aggregateoffer" in types:
+            continue
+        raw_price = offer.get("price")
         price = as_positive_int(raw_price)
         if price is None:
             continue
