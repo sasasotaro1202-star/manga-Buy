@@ -142,9 +142,23 @@ def generate_report():
                         lines.append("    - 取得状態：" + safe_markdown(observation.get("retrieval_status")) + " / " + safe_markdown(observation.get("error")))
             discovered = discovered_by_manga.get(manga.get("id"), [])
             if discovered:
-                lines.append("- 検索で見つかった未検証リンク（価格・全巻・状態・在庫は未確認）：")
+                lines.append("- 自動発見リンク（参考価格の観測はできても、全巻・版・状態・送料は未検証）：")
+                observations_for_url = {
+                    str(value.get("listing_url") or ""): value
+                    for value in observed_by_id.values() if isinstance(value, dict)
+                }
                 for item in discovered[:8]:
-                    lines.append("  - [" + safe_markdown(item.get("search_result_title") or item.get("source_domain") or "候補リンク") + "](" + str(item.get("listing_url") or "") + ")")
+                    item_url = str(item.get("listing_url") or "")
+                    observed = observations_for_url.get(item_url, {})
+                    label = safe_markdown(item.get("search_result_title") or item.get("source_domain") or "候補リンク")
+                    lines.append("  - [" + label + "](" + item_url + ")")
+                    if observed:
+                        if observed.get("retrieval_status") == "OK" and isinstance(observed.get("price_jpy"), int):
+                            lines.append("    - 構造化データ観測：" + yen(observed.get("price_jpy")) + " / 在庫：" + safe_markdown(observed.get("availability") or "UNKNOWN") + " / 時刻：" + safe_markdown(observed.get("retrieved_at")) + "（全巻・送料込み総額ではありません）")
+                        else:
+                            lines.append("    - 取得結果：" + safe_markdown(observed.get("retrieval_status") or "未取得") + " / " + safe_markdown(observed.get("error") or "価格・在庫の構造化データを確認できませんでした"))
+                    else:
+                        lines.append("    - 未取得。検索発見URLであり、購入条件は未確認です。")
             query = str(manga.get("search_title") or manga.get("title") or "") + " " + ("全巻セット 中古" if manga.get("series_status") == "completed" else "既刊全巻セット 中古")
             lines.append("- 各サイトで現在の出品を探す：")
             enabled = [site for site in marketplace_config.get("marketplaces", []) if site.get("enabled")]
