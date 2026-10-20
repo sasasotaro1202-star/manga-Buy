@@ -53,13 +53,15 @@ class SearchResultsParser(HTMLParser):
             self._current = None
 
 
-def unwrap_search_url(url):
-    """Unwrap common public search redirects; marketplace allowlisting still happens later."""
+def unwrap_search_url(url, base_url=None):
+    """Unwrap public-search redirects; resolve relative links against the engine that returned them."""
     url = str(url or "").strip()
     if url.startswith("//"):
         url = "https:" + url
     elif url.startswith("/"):
-        url = urljoin("https://html.duckduckgo.com/html/", url)
+        # Bing HTML result links are commonly relative /ck/a redirects. Resolving
+        # them against DuckDuckGo causes every result to be misclassified as a DDG URL.
+        url = urljoin(base_url or "https://html.duckduckgo.com/html/", url)
     parsed = urlparse(url)
     host = (parsed.hostname or "").lower()
 
@@ -208,15 +210,19 @@ def run_discovery(limit=None):
                     search_results = parser.items
                 new_from_engine = 0
                 rejected_hosts = {}
+                rejected_host_samples = {}
                 rejected_paths = []
                 for result in search_results:
-                    url = unwrap_search_url(result.get("url", ""))
+                    url = unwrap_search_url(result.get("url", ""), base_url=search_url)
                     if not valid_https_url(url):
                         rejected_hosts["invalid_or_non_https"] = rejected_hosts.get("invalid_or_non_https", 0) + 1
                         continue
                     if not allowed_host(url, allowed_domains):
                         host = urlparse(url).hostname or "unknown"
                         rejected_hosts[host] = rejected_hosts.get(host, 0) + 1
+                        rejected_host_samples.setdefault(host, [])
+                        if len(rejected_host_samples[host]) < 2:
+                            rejected_host_samples[host].append(url[:500])
                         continue
                     if not is_product_candidate(url, allowed_domains):
                         if len(rejected_paths) < 3:
@@ -258,6 +264,7 @@ def run_discovery(limit=None):
                     "candidate_count": new_from_engine,
                     "fallback_used": engine_index > 0,
                     "rejected_host_counts": rejected_hosts,
+                    "rejected_host_samples": rejected_host_samples,
                     "rejected_path_samples": rejected_paths,
                     "has_result_marker": bool(new_from_engine) or any(token in lower_html for token in (
                         "result__a", "b_algo", "web-result", "result__body", "<item>"
