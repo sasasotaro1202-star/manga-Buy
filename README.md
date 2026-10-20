@@ -77,7 +77,7 @@ GitHubのActionsタブで「Manga Price Intelligence」を開き、Run workflow�
     python scripts/monitor.py
     python scripts/report.py
 
-ネット検索・商品ページ取得はサイトの制限、構造変更、レート制限などで失敗する場合があります。失敗は在庫切れと同義ではありません。
+ネット検索・商品ページ取得はサイトの制限、構造変更、レート制限などで失敗する場合があります。失敗は在庫切れと同義ではありません。検索結果が0件の場合は `EMPTY` と表示し、検索が機能したと誤認させません。
 
 ### 2. 商品ページを監視対象に追加
 

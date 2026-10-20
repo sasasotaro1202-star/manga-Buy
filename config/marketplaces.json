@@ -18,30 +18,70 @@
     "mandarake.co.jp"
   ],
   "marketplaces": [
-    {"id":"amazon-jp","name":"Amazon.co.jp","search_template":"https://www.amazon.co.jp/s?k={query}","enabled":true},
-    {"id":"mercari","name":"メルカリ","search_template":"https://jp.mercari.com/search?keyword={query}","enabled":true},
-    {"id":"rakuten","name":"楽天市場","search_template":"https://search.rakuten.co.jp/search/mall/{query}/","enabled":true},
-    {"id":"yahoo-shopping","name":"Yahoo!ショッピング","search_template":"https://shopping.yahoo.co.jp/search?p={query}","enabled":true},
-    {"id":"yahoo-auctions","name":"Yahoo!オークション","search_template":"https://auctions.yahoo.co.jp/search/search?p={query}","enabled":true},
-    {"id":"bookoff","name":"BOOKOFFオンライン","search_template":"https://shopping.bookoff.co.jp/search/keyword/{query}","enabled":true},
-    {"id":"suruga-ya","name":"駿河屋（サイト内検索）","search_template":"https://www.google.com/search?q=site%3Asuruga-ya.jp+{query}","enabled":true},
-    {"id":"netoff","name":"ネットオフ（サイト内検索）","search_template":"https://www.google.com/search?q=site%3Anettof.co.jp+{query}","enabled":true}
+    {
+      "id": "amazon-jp",
+      "name": "Amazon.co.jp",
+      "search_template": "https://www.amazon.co.jp/s?k={query}",
+      "enabled": true
+    },
+    {
+      "id": "mercari",
+      "name": "メルカリ",
+      "search_template": "https://jp.mercari.com/search?keyword={query}",
+      "enabled": true
+    },
+    {
+      "id": "rakuten",
+      "name": "楽天市場",
+      "search_template": "https://search.rakuten.co.jp/search/mall/{query}/",
+      "enabled": true
+    },
+    {
+      "id": "yahoo-shopping",
+      "name": "Yahoo!ショッピング",
+      "search_template": "https://shopping.yahoo.co.jp/search?p={query}",
+      "enabled": true
+    },
+    {
+      "id": "yahoo-auctions",
+      "name": "Yahoo!オークション",
+      "search_template": "https://auctions.yahoo.co.jp/search/search?p={query}",
+      "enabled": true
+    },
+    {
+      "id": "bookoff",
+      "name": "BOOKOFFオンライン",
+      "search_template": "https://shopping.bookoff.co.jp/search/keyword/{query}",
+      "enabled": true
+    },
+    {
+      "id": "suruga-ya",
+      "name": "駿河屋（サイト内検索）",
+      "search_template": "https://www.google.com/search?q=site%3Asuruga-ya.jp+{query}",
+      "enabled": true
+    },
+    {
+      "id": "netoff",
+      "name": "ネットオフ（サイト内検索）",
+      "search_template": "https://www.google.com/search?q=site%3Anettof.co.jp+{query}",
+      "enabled": true
+    }
   ],
   "discovery": {
     "engine_url": "https://html.duckduckgo.com/html/?q={query}",
     "max_queries_per_run": 25,
     "max_candidates_per_manga": 12,
-    "delay_seconds": 2.0,
-    "timeout_seconds": 20,
+    "delay_seconds": 2,
+    "timeout_seconds": 10,
     "max_response_bytes": 2000000
   },
   "monitor": {
-    "timeout_seconds": 20,
+    "timeout_seconds": 12,
     "max_response_bytes": 3000000,
     "max_price_age_hours": 24,
     "max_cost_check_age_days": 7,
-    "max_auto_watch_candidates": 75,
-    "max_auto_candidates_per_manga": 3,
+    "max_auto_watch_candidates": 25,
+    "max_auto_candidates_per_manga": 1,
     "request_delay_seconds": 0.8,
     "user_agent": "manga-Buy/0.1 (+https://github.com/sasasotaro1202-star/manga-Buy)"
   }

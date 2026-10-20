@@ -30,9 +30,15 @@ class SearchResultsParser(HTMLParser):
         if tag.lower() != "a":
             return
         data = {key.lower(): value for key, value in attrs if key}
-        classes = set(str(data.get("class") or "").split())
-        if "result__a" in classes and data.get("href"):
-            self._current = {"url": data["href"], "title": ""}
+        # Search engines change markup frequently. Collect every anchor and use
+        # strict destination host/path allowlists later instead of relying on
+        # one CSS class name that can silently break discovery.
+        if data.get("href"):
+            self._current = {
+                "url": data["href"],
+                "title": "",
+                "classes": str(data.get("class") or ""),
+            }
 
     def handle_data(self, data):
         if self._current is not None:
@@ -103,6 +109,7 @@ def run_discovery(limit=None):
     }
     current_by_url = {}
     errors = []
+    diagnostics = []
     queries_checked = 0
     now = now_jst().isoformat()
     query_base = str(discovery_config.get("engine_url") or "https://html.duckduckgo.com/html/?q={query}")
@@ -124,6 +131,16 @@ def run_discovery(limit=None):
                 html = raw.decode(charset, errors="replace")
             parser = SearchResultsParser()
             parser.feed(html)
+            diagnostics.append({
+                "manga_id": manga.get("id"),
+                "search_url": search_url,
+                "response_bytes": len(raw),
+                "anchor_count": len(parser.items),
+                "has_result_marker": "result__a" in html or "result__body" in html,
+                "page_appears_blocked": any(token in html.lower() for token in (
+                    "captcha", "bot detection", "unusual traffic", "verify you are human"
+                )),
+            })
             accepted = 0
             seen_for_manga = set()
             for result in parser.items:
@@ -168,13 +185,22 @@ def run_discovery(limit=None):
     merged.update(current_by_url)
     candidates = list(merged.values())
     candidates.sort(key=lambda item: (item.get("manga_id") or "", item.get("listing_url") or ""))
-    status = "OK" if queries_checked and not errors else ("PARTIAL" if current_by_url else "FAILED")
+    status = (
+        "OK" if current_by_url and not errors
+        else "PARTIAL" if current_by_url
+        else "FAILED" if errors
+        else "EMPTY"
+    )
     result = {
         "schema_version": 1,
         "generated_at": now,
         "discovery_status": status,
         "queries_checked": queries_checked,
         "query_errors": errors,
+        "query_diagnostics": diagnostics,
+        "queries_with_anchors": sum(1 for item in diagnostics if item.get("anchor_count")),
+        "queries_with_result_marker": sum(1 for item in diagnostics if item.get("has_result_marker")),
+        "queries_appearing_blocked": sum(1 for item in diagnostics if item.get("page_appears_blocked")),
         "new_candidate_count": len(set(current_by_url) - set(previous_by_url)),
         "current_seen_count": len(current_by_url),
         "retained_candidate_count": len(candidates),
@@ -182,7 +208,8 @@ def run_discovery(limit=None):
     }
     save_json(OUTPUT_PATH, result)
     print(json.dumps({key: result[key] for key in (
-        "generated_at", "discovery_status", "queries_checked", "new_candidate_count",
+        "generated_at", "discovery_status", "queries_checked", "queries_with_anchors",
+        "queries_with_result_marker", "queries_appearing_blocked", "new_candidate_count",
         "current_seen_count", "retained_candidate_count"
     )}, ensure_ascii=False))
     return result
