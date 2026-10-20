@@ -134,6 +134,19 @@ class MangaCoreTests(unittest.TestCase):
         self.assertEqual(result["price_jpy"], 3980)
         self.assertEqual(result["availability"], "IN_STOCK")
 
+    def test_meta_product_price_is_parsed_when_currency_is_explicit(self):
+        html = """
+        <html><head>
+        <meta itemprop="price" content="1200">
+        <meta itemprop="priceCurrency" content="JPY">
+        <meta itemprop="availability" content="https://schema.org/InStock">
+        </head><body>商品ページ</body></html>
+        """
+        result = extract_product_data(html, "https://jp.mercari.com/item/m123")
+        self.assertEqual(result["parse_status"], "OK")
+        self.assertEqual(result["price_jpy"], 1200)
+        self.assertEqual(result["currency"], "JPY")
+
     def test_page_text_price_is_not_guessed(self):
         html = "<html><head><title>価格 1200円</title></head><body>中古 1200円</body></html>"
         result = extract_product_data(html, "https://jp.mercari.com/item/m123")
