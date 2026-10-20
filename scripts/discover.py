@@ -146,7 +146,6 @@ def run_discovery(limit=None):
                 accepted += 1
                 if accepted >= max_per_manga:
                     break
-            time.sleep(delay)
         except Exception as exc:
             errors.append({
                 "manga_id": manga.get("id"),
@@ -155,6 +154,8 @@ def run_discovery(limit=None):
                 "error": type(exc).__name__ + ": " + str(exc)[:240],
                 "checked_at": now,
             })
+        finally:
+            time.sleep(delay)
 
     # Keep earlier discoveries so transient search outages don't erase useful leads.
     merged = dict(previous_by_url)
