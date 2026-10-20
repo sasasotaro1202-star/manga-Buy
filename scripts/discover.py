@@ -67,6 +67,23 @@ def unwrap_search_url(url):
     return url if url.startswith("https://") else ""
 
 
+
+def parse_bing_rss(raw):
+    """Parse a public RSS response into link/title leads without using snippets as prices."""
+    root = ET.fromstring(raw)
+    results = []
+    for item in root.iter():
+        if str(item.tag).rsplit("}", 1)[-1].lower() != "item":
+            continue
+        fields = {}
+        for child in list(item):
+            key = str(child.tag).rsplit("}", 1)[-1].lower()
+            if key in {"link", "title"}:
+                fields[key] = "".join(child.itertext()).strip()
+        if fields.get("link"):
+            results.append({"url": fields["link"], "title": fields.get("title", ""), "classes": "bing-rss"})
+    return results
+
 def is_product_candidate(url, allowed_domains):
     if not valid_https_url(url) or not allowed_host(url, allowed_domains):
         return False
