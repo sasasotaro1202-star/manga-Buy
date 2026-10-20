@@ -6,6 +6,7 @@ prove listing identity, coverage, condition, shipping, stock or purchase eligibi
 from __future__ import annotations
 
 import argparse
+import base64
 import json
 import time
 from datetime import timedelta
@@ -53,17 +54,39 @@ class SearchResultsParser(HTMLParser):
 
 
 def unwrap_search_url(url):
+    """Unwrap common public search redirects; marketplace allowlisting still happens later."""
     url = str(url or "").strip()
     if url.startswith("//"):
         url = "https:" + url
     elif url.startswith("/"):
         url = urljoin("https://html.duckduckgo.com/html/", url)
     parsed = urlparse(url)
-    if "duckduckgo.com" in (parsed.hostname or ""):
+    host = (parsed.hostname or "").lower()
+
+    if "duckduckgo.com" in host:
         target = parse_qs(parsed.query).get("uddg")
-        if target:
-            # parse_qs already decoded this value once; do not decode it again.
+        if target and target[0].startswith("https://"):
             return target[0]
+
+    if host == "bing.com" or host.endswith(".bing.com"):
+        params = parse_qs(parsed.query)
+        for key in ("u", "url"):
+            for value in params.get(key, []):
+                candidate = value
+                if key == "u" and candidate.startswith("a1"):
+                    token = candidate[2:]
+                    try:
+                        token += "=" * ((4 - len(token) % 4) % 4)
+                        decoded = base64.urlsafe_b64decode(token.encode("ascii")).decode("utf-8", errors="strict")
+                        if decoded.startswith("https://"):
+                            return decoded
+                    except (ValueError, UnicodeError):
+                        pass
+                if candidate.startswith("https%3A%2F%2F"):
+                    candidate = candidate.replace("%3A", ":").replace("%2F", "/")
+                if candidate.startswith("https://"):
+                    return candidate
+
     return url if url.startswith("https://") else ""
 
 
@@ -114,7 +137,7 @@ def search_engine_urls(discovery_config):
     if not isinstance(raw, list) or not raw:
         raw = [
             discovery_config.get("engine_url") or "https://html.duckduckgo.com/html/?q={query}",
-            "https://www.bing.com/search?format=rss&q={query}",
+            "https://www.bing.com/search?q={query}",
         ]
     result = []
     for item in raw:
