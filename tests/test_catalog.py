@@ -35,7 +35,7 @@ class CatalogueTests(unittest.TestCase):
 
     def test_ongoing_unverified_count_does_not_become_confirmed(self):
         item = manga_map(self.catalog)["frieren"]
-        count, confirmed = expected_count(item)
+        count, confirmed = expected_count(item, allow_provisional=True)
         self.assertEqual(count, 15)
         self.assertFalse(confirmed)
 
