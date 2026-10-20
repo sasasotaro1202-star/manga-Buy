@@ -172,10 +172,15 @@ def run_discovery(limit=None):
     engine_urls = search_engine_urls(discovery_config)
 
     for manga in catalog.get("manga", [])[:max_queries]:
-        query = str(manga.get("search_title") or manga.get("title") or "") + " 中古 全巻セット"
+        query = (
+            str(manga.get("search_title") or manga.get("title") or "")
+            + ' 中古 全巻セット (site:jp.mercari.com OR site:shopping.bookoff.co.jp OR '
+            + 'site:item.rakuten.co.jp OR site:shopping.yahoo.co.jp OR site:auctions.yahoo.co.jp '
+            + 'OR site:suruga-ya.jp OR site:netoff.co.jp OR site:mandarake.co.jp)'
+        )
         seen_for_manga = set()
         accepted = 0
-        for engine_url in engine_urls:
+        for engine_index, engine_url in enumerate(engine_urls):
             if accepted >= max_per_manga:
                 break
             search_url = engine_url.format(query=quote(query, safe=""))
@@ -201,9 +206,22 @@ def run_discovery(limit=None):
                     parser.feed(html)
                     search_results = parser.items
                 new_from_engine = 0
+                rejected_hosts = {}
+                rejected_paths = []
                 for result in search_results:
                     url = unwrap_search_url(result.get("url", ""))
-                    if not is_product_candidate(url, allowed_domains) or url in seen_for_manga:
+                    if not valid_https_url(url):
+                        rejected_hosts["invalid_or_non_https"] = rejected_hosts.get("invalid_or_non_https", 0) + 1
+                        continue
+                    if not allowed_host(url, allowed_domains):
+                        host = urlparse(url).hostname or "unknown"
+                        rejected_hosts[host] = rejected_hosts.get(host, 0) + 1
+                        continue
+                    if not is_product_candidate(url, allowed_domains):
+                        if len(rejected_paths) < 3:
+                            rejected_paths.append(url)
+                        continue
+                    if url in seen_for_manga:
                         continue
                     seen_for_manga.add(url)
                     old = previous_by_url.get(url, {})
@@ -237,6 +255,9 @@ def run_discovery(limit=None):
                     "response_bytes": len(raw),
                     "anchor_count": len(search_results),
                     "candidate_count": new_from_engine,
+                    "fallback_used": engine_index > 0,
+                    "rejected_host_counts": rejected_hosts,
+                    "rejected_path_samples": rejected_paths,
                     "has_result_marker": bool(new_from_engine) or any(token in lower_html for token in (
                         "result__a", "b_algo", "web-result", "result__body", "<item>"
                     )),
