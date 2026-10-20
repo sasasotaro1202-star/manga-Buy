@@ -10,7 +10,7 @@ import json
 import time
 from datetime import timedelta
 from html.parser import HTMLParser
-from urllib.parse import parse_qs, quote, unquote, urlparse
+from urllib.parse import parse_qs, quote, urljoin, urlparse
 from urllib.request import Request, urlopen
 
 from manga_core import ROOT, now_jst, load_json, save_json, allowed_host, valid_https_url
@@ -46,11 +46,17 @@ class SearchResultsParser(HTMLParser):
 
 
 def unwrap_search_url(url):
+    url = str(url or "").strip()
+    if url.startswith("//"):
+        url = "https:" + url
+    elif url.startswith("/"):
+        url = urljoin("https://html.duckduckgo.com/html/", url)
     parsed = urlparse(url)
     if "duckduckgo.com" in (parsed.hostname or ""):
         target = parse_qs(parsed.query).get("uddg")
         if target:
-            return unquote(target[0])
+            # parse_qs already decoded this value once; do not decode it again.
+            return target[0]
     return url if url.startswith("https://") else ""
 
 
