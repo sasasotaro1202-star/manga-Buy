@@ -23,34 +23,62 @@ OUTPUT_PATH = ROOT / "data" / "discovered_candidates.json"
 
 
 class SearchResultsParser(HTMLParser):
+    """Extract result anchors only; exclude search-page navigation and related links."""
+    VOID_TAGS = {"area", "base", "br", "col", "embed", "hr", "img", "input",
+                 "link", "meta", "param", "source", "track", "wbr"}
+
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.items = []
         self._current = None
+        self._stack = []
 
     def handle_starttag(self, tag, attrs):
-        if tag.lower() != "a":
-            return
+        tag = tag.lower()
         data = {key.lower(): value for key, value in attrs if key}
-        # Search engines change markup frequently. Collect every anchor and use
-        # strict destination host/path allowlists later instead of relying on
-        # one CSS class name that can silently break discovery.
-        if data.get("href"):
+        classes = set(str(data.get("class") or "").split())
+        in_b_algo = any(
+            stack_tag in {"li", "div"} and "b_algo" in stack_classes
+            for stack_tag, stack_classes in self._stack
+        )
+        in_result_heading = in_b_algo and any(stack_tag == "h2" for stack_tag, _ in self._stack)
+        # DuckDuckGo's result class is stable in its HTML endpoint; Bing uses
+        # the h2 anchor within a b_algo list item. Generic page links are ignored.
+        is_result = (
+            tag == "a" and (
+                bool(classes.intersection({"result__a", "result-link", "web-result-link"}))
+                or in_result_heading
+            )
+        )
+        if is_result and data.get("href"):
             self._current = {
                 "url": data["href"],
                 "title": "",
                 "classes": str(data.get("class") or ""),
             }
+        if tag not in self.VOID_TAGS:
+            self._stack.append((tag, classes))
 
     def handle_data(self, data):
         if self._current is not None:
             self._current["title"] += data
 
     def handle_endtag(self, tag):
-        if tag.lower() == "a" and self._current is not None:
+        tag = tag.lower()
+        if tag == "a" and self._current is not None:
             self._current["title"] = self._current["title"].strip()
             self.items.append(self._current)
             self._current = None
+        # Recover gracefully from imperfect search HTML by dropping the matching
+        # closing element and any malformed descendants above it.
+        for index in range(len(self._stack) - 1, -1, -1):
+            if self._stack[index][0] == tag:
+                del self._stack[index:]
+                break
+
+    def handle_startendtag(self, tag, attrs):
+        self.handle_starttag(tag, attrs)
+        self.handle_endtag(tag)
 
 
 def unwrap_search_url(url, base_url=None):
