@@ -71,12 +71,12 @@
     "engine_url": "https://html.duckduckgo.com/html/?q={query}",
     "max_queries_per_run": 25,
     "max_candidates_per_manga": 12,
-    "delay_seconds": 2,
-    "timeout_seconds": 10,
+    "delay_seconds": 1,
+    "timeout_seconds": 8,
     "max_response_bytes": 2000000
   },
   "monitor": {
-    "timeout_seconds": 12,
+    "timeout_seconds": 10,
     "max_response_bytes": 3000000,
     "max_price_age_hours": 24,
     "max_cost_check_age_days": 7,
