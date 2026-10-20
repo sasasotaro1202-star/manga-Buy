@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-21T04:37:07+09:00",
+  "generated_at": "2026-10-21T04:40:51+09:00",
   "discovery_status": "EMPTY",
   "queries_checked": 75,
   "query_errors": [],
@@ -16,6 +16,11 @@
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
       },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
+      },
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -24,14 +29,28 @@
       "manga_id": "kusuriya-neko-kurage",
       "search_url": "https://www.bing.com/search?q=%E8%96%AC%E5%B1%8B%E3%81%AE%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%94%E3%81%A8%20%E3%81%AD%E3%81%93%E3%82%AF%E3%83%A9%E3%82%B2%E7%89%88%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 101806,
-      "anchor_count": 24,
+      "response_bytes": 104818,
+      "anchor_count": 29,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
-        "invalid_or_non_https": 6,
-        "html.duckduckgo.com": 9,
-        "www.bing.com": 9
+        "invalid_or_non_https": 7,
+        "www.bing.com": 19,
+        "go.microsoft.com": 2,
+        "support.microsoft.com": 1
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=%e8%96%ac%e5%b1%8b%e3%81%ae%e3%81%b2%e3%81%a8%e3%82%8a%e3%81%94%e3%81%a8+%e3%81%ad%e3%81%93%e3%82%af%e3%83%a9%e3%82%b2%e7%89%88+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=1A6279391C8F6DA32F836EC11D126C0E"
+        ],
+        "go.microsoft.com": [
+          "https://go.microsoft.com/fwlink/?linkid=868922",
+          "https://go.microsoft.com/fwlink/?linkid=2259814"
+        ],
+        "support.microsoft.com": [
+          "https://support.microsoft.com/topic/82d20721-2d6f-4012-a13d-d1910ccf203f"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -46,6 +65,7 @@
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {},
+      "rejected_host_samples": {},
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -54,12 +74,17 @@
       "manga_id": "frieren",
       "search_url": "https://html.duckduckgo.com/html/?q=%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "html.duckduckgo.com",
-      "response_bytes": 14718,
+      "response_bytes": 14736,
       "anchor_count": 1,
       "candidate_count": 0,
       "fallback_used": false,
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
+      },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -69,14 +94,19 @@
       "manga_id": "frieren",
       "search_url": "https://www.bing.com/search?q=%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 97804,
-      "anchor_count": 23,
+      "response_bytes": 98442,
+      "anchor_count": 24,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
         "invalid_or_non_https": 6,
-        "html.duckduckgo.com": 9,
-        "www.bing.com": 8
+        "www.bing.com": 18
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=%e8%91%ac%e9%80%81%e3%81%ae%e3%83%95%e3%83%aa%e3%83%bc%e3%83%ac%e3%83%b3+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=0DEAC92A9D72624E3154DED29CDD632D"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -91,6 +121,7 @@
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {},
+      "rejected_host_samples": {},
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -106,6 +137,11 @@
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
       },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
+      },
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -114,21 +150,59 @@
       "manga_id": "hunter-x-hunter",
       "search_url": "https://www.bing.com/search?q=HUNTER%C3%97HUNTER%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 131872,
-      "anchor_count": 51,
+      "response_bytes": 135131,
+      "anchor_count": 56,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
-        "invalid_or_non_https": 7,
-        "html.duckduckgo.com": 13,
-        "www.bing.com": 9,
-        "hunterboots.com": 5,
+        "invalid_or_non_https": 8,
+        "www.bing.com": 24,
+        "hunterboots.com": 4,
         "hunter.io": 4,
         "www.hunter.com": 4,
         "www.imdb.com": 2,
         "www.hunterfan.com": 4,
         "www.hunterirrigation.com": 2,
-        "support.microsoft.com": 1
+        "go.microsoft.com": 2,
+        "support.microsoft.com": 2
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=HUNTER%c3%97HUNTER+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=30901DFDD1F26FD83B2D0A05D0E56E0C"
+        ],
+        "hunterboots.com": [
+          "https://hunterboots.com/",
+          "https://hunterboots.com/"
+        ],
+        "hunter.io": [
+          "https://hunter.io/",
+          "https://hunter.io/"
+        ],
+        "www.hunter.com": [
+          "https://www.hunter.com/",
+          "https://www.hunter.com/"
+        ],
+        "www.imdb.com": [
+          "https://www.imdb.com/title/tt0086734/",
+          "https://www.imdb.com/title/tt0086734/"
+        ],
+        "www.hunterfan.com": [
+          "https://www.hunterfan.com/",
+          "https://www.hunterfan.com/"
+        ],
+        "www.hunterirrigation.com": [
+          "https://www.hunterirrigation.com/",
+          "https://www.hunterirrigation.com/"
+        ],
+        "go.microsoft.com": [
+          "https://go.microsoft.com/fwlink/?linkid=868922",
+          "https://go.microsoft.com/fwlink/?linkid=2259814"
+        ],
+        "support.microsoft.com": [
+          "https://support.microsoft.com/topic/82d20721-2d6f-4012-a13d-d1910ccf203f",
+          "https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3?"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": true,
@@ -150,6 +224,30 @@
         "www.hunterfan.com": 2,
         "www.hunterirrigation.com": 1
       },
+      "rejected_host_samples": {
+        "hunterboots.com": [
+          "https://hunterboots.com/",
+          "https://hunterboots.com/collections/all?filter.v.availability=1"
+        ],
+        "hunter.io": [
+          "https://hunter.io/",
+          "https://hunter.io/domain-search"
+        ],
+        "www.hunter.com": [
+          "https://www.hunter.com/",
+          "https://www.hunter.com/logon"
+        ],
+        "www.imdb.com": [
+          "https://www.imdb.com/title/tt0086734/"
+        ],
+        "www.hunterfan.com": [
+          "https://www.hunterfan.com/",
+          "https://www.hunterfan.com/collections/ceiling-fans"
+        ],
+        "www.hunterirrigation.com": [
+          "https://www.hunterirrigation.com/"
+        ]
+      },
       "rejected_path_samples": [],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -158,12 +256,17 @@
       "manga_id": "jujutsu-modulo",
       "search_url": "https://html.duckduckgo.com/html/?q=%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1%20%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "html.duckduckgo.com",
-      "response_bytes": 14744,
+      "response_bytes": 14726,
       "anchor_count": 1,
       "candidate_count": 0,
       "fallback_used": false,
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
+      },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -173,14 +276,19 @@
       "manga_id": "jujutsu-modulo",
       "search_url": "https://www.bing.com/search?q=%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1%20%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 95024,
+      "response_bytes": 98299,
       "anchor_count": 23,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
         "invalid_or_non_https": 6,
-        "html.duckduckgo.com": 9,
-        "www.bing.com": 8
+        "www.bing.com": 17
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=%e5%91%aa%e8%a1%93%e5%bb%bb%e6%88%a6%e2%89%a1+%e3%83%a2%e3%82%b8%e3%83%a5%e3%83%ad+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=104067DDB0A062013F3D7025B128638D"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -195,6 +303,7 @@
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {},
+      "rejected_host_samples": {},
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -210,6 +319,11 @@
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
       },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
+      },
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -218,14 +332,19 @@
       "manga_id": "ajin",
       "search_url": "https://www.bing.com/search?q=%E4%BA%9C%E4%BA%BA%20%E6%A1%9C%E4%BA%95%E7%94%BB%E9%96%80%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 96472,
-      "anchor_count": 24,
+      "response_bytes": 94326,
+      "anchor_count": 23,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
         "invalid_or_non_https": 6,
-        "html.duckduckgo.com": 9,
-        "www.bing.com": 9
+        "www.bing.com": 17
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=%e4%ba%9c%e4%ba%ba+%e6%a1%9c%e4%ba%95%e7%94%bb%e9%96%80+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=0316BE8DAE5C6C3B2CABA975AF426D0B"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -240,6 +359,7 @@
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {},
+      "rejected_host_samples": {},
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -255,6 +375,11 @@
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
       },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
+      },
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -263,14 +388,19 @@
       "manga_id": "golden-kamuy",
       "search_url": "https://www.bing.com/search?q=%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 102650,
+      "response_bytes": 98460,
       "anchor_count": 24,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
         "invalid_or_non_https": 6,
-        "html.duckduckgo.com": 9,
-        "www.bing.com": 9
+        "www.bing.com": 18
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=%e3%82%b4%e3%83%bc%e3%83%ab%e3%83%87%e3%83%b3%e3%82%ab%e3%83%a0%e3%82%a4+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=0F521A12FD7A63C120C80DEAFCFE6247"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -285,6 +415,7 @@
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {},
+      "rejected_host_samples": {},
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -293,12 +424,17 @@
       "manga_id": "chainsaw-man",
       "search_url": "https://html.duckduckgo.com/html/?q=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "html.duckduckgo.com",
-      "response_bytes": 14744,
+      "response_bytes": 14750,
       "anchor_count": 1,
       "candidate_count": 0,
       "fallback_used": false,
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
+      },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -308,14 +444,28 @@
       "manga_id": "chainsaw-man",
       "search_url": "https://www.bing.com/search?q=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 99516,
-      "anchor_count": 24,
+      "response_bytes": 100132,
+      "anchor_count": 28,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
-        "invalid_or_non_https": 6,
-        "html.duckduckgo.com": 9,
-        "www.bing.com": 9
+        "invalid_or_non_https": 7,
+        "www.bing.com": 18,
+        "go.microsoft.com": 2,
+        "support.microsoft.com": 1
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=%e3%83%81%e3%82%a7%e3%83%b3%e3%82%bd%e3%83%bc%e3%83%9e%e3%83%b3+%e8%97%a4%e6%9c%ac%e3%82%bf%e3%83%84%e3%82%ad+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=2EE2037991076E3F1614148190926F9A"
+        ],
+        "go.microsoft.com": [
+          "https://go.microsoft.com/fwlink/?linkid=868922",
+          "https://go.microsoft.com/fwlink/?linkid=2259814"
+        ],
+        "support.microsoft.com": [
+          "https://support.microsoft.com/topic/82d20721-2d6f-4012-a13d-d1910ccf203f"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -330,6 +480,7 @@
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {},
+      "rejected_host_samples": {},
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -338,12 +489,17 @@
       "manga_id": "kagurabachi",
       "search_url": "https://html.duckduckgo.com/html/?q=%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81%20%E5%A4%96%E8%96%97%E5%81%A5%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "html.duckduckgo.com",
-      "response_bytes": 14726,
+      "response_bytes": 14714,
       "anchor_count": 1,
       "candidate_count": 0,
       "fallback_used": false,
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
+      },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -353,14 +509,28 @@
       "manga_id": "kagurabachi",
       "search_url": "https://www.bing.com/search?q=%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81%20%E5%A4%96%E8%96%97%E5%81%A5%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 95958,
-      "anchor_count": 23,
+      "response_bytes": 98624,
+      "anchor_count": 29,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
-        "invalid_or_non_https": 6,
-        "html.duckduckgo.com": 9,
-        "www.bing.com": 8
+        "invalid_or_non_https": 7,
+        "www.bing.com": 19,
+        "go.microsoft.com": 2,
+        "support.microsoft.com": 1
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=%e3%82%ab%e3%82%b0%e3%83%a9%e3%83%90%e3%83%81+%e5%a4%96%e8%96%97%e5%81%a5+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=1E3344570E04652D338653AF0FC9647D"
+        ],
+        "go.microsoft.com": [
+          "https://go.microsoft.com/fwlink/?linkid=868922",
+          "https://go.microsoft.com/fwlink/?linkid=2259814"
+        ],
+        "support.microsoft.com": [
+          "https://support.microsoft.com/topic/82d20721-2d6f-4012-a13d-d1910ccf203f"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -375,6 +545,7 @@
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {},
+      "rejected_host_samples": {},
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -383,12 +554,17 @@
       "manga_id": "gachiakuta",
       "search_url": "https://html.duckduckgo.com/html/?q=%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF%20%E8%A3%8F%E9%82%A3%E5%9C%AD%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "html.duckduckgo.com",
-      "response_bytes": 14731,
+      "response_bytes": 14714,
       "anchor_count": 1,
       "candidate_count": 0,
       "fallback_used": false,
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
+      },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -398,14 +574,19 @@
       "manga_id": "gachiakuta",
       "search_url": "https://www.bing.com/search?q=%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF%20%E8%A3%8F%E9%82%A3%E5%9C%AD%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 96147,
-      "anchor_count": 23,
+      "response_bytes": 100098,
+      "anchor_count": 24,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
         "invalid_or_non_https": 6,
-        "html.duckduckgo.com": 9,
-        "www.bing.com": 8
+        "www.bing.com": 18
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=%e3%82%ac%e3%83%81%e3%82%a2%e3%82%af%e3%82%bf+%e8%a3%8f%e9%82%a3%e5%9c%ad+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=3694394EDCAB6DE617C22EB6DD0E6CBE"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -420,6 +601,7 @@
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {},
+      "rejected_host_samples": {},
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -435,6 +617,11 @@
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
       },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
+      },
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -443,16 +630,19 @@
       "manga_id": "world-trigger",
       "search_url": "https://www.bing.com/search?q=%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC%20%E8%91%A6%E5%8E%9F%E5%A4%A7%E4%BB%8B%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 101848,
-      "anchor_count": 28,
+      "response_bytes": 98971,
+      "anchor_count": 23,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
-        "invalid_or_non_https": 7,
-        "html.duckduckgo.com": 9,
-        "www.bing.com": 9,
-        "go.microsoft.com": 2,
-        "support.microsoft.com": 1
+        "invalid_or_non_https": 6,
+        "www.bing.com": 17
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=%e3%83%af%e3%83%bc%e3%83%ab%e3%83%89%e3%83%88%e3%83%aa%e3%82%ac%e3%83%bc+%e8%91%a6%e5%8e%9f%e5%a4%a7%e4%bb%8b+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=3E051A74C54C6E7A3C3D0D8CC4746F37"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -467,6 +657,7 @@
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {},
+      "rejected_host_samples": {},
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -475,12 +666,17 @@
       "manga_id": "tongari-atelier",
       "search_url": "https://html.duckduckgo.com/html/?q=%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8%20%E7%99%BD%E6%B5%9C%E9%B4%8E%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "html.duckduckgo.com",
-      "response_bytes": 14768,
+      "response_bytes": 14756,
       "anchor_count": 1,
       "candidate_count": 0,
       "fallback_used": false,
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
+      },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -490,17 +686,67 @@
       "manga_id": "tongari-atelier",
       "search_url": "https://www.bing.com/search?q=%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8%20%E7%99%BD%E6%B5%9C%E9%B4%8E%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 99419,
-      "anchor_count": 23,
+      "response_bytes": 136428,
+      "anchor_count": 56,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
-        "invalid_or_non_https": 6,
-        "html.duckduckgo.com": 9,
-        "www.bing.com": 8
+        "invalid_or_non_https": 8,
+        "www.bing.com": 24,
+        "dictionary.cambridge.org": 4,
+        "www.merriam-webster.com": 2,
+        "ejje.weblio.jp": 4,
+        "www.howtogeek.com": 2,
+        "www.eigo-duke.com": 2,
+        "reibun-eigo.com": 2,
+        "www.collinsdictionary.com": 4,
+        "go.microsoft.com": 2,
+        "support.microsoft.com": 2
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=%e3%81%a8%e3%82%93%e3%81%8c%e3%82%8a%e5%b8%bd%e5%ad%90%e3%81%ae%e3%82%a2%e3%83%88%e3%83%aa%e3%82%a8+%e7%99%bd%e6%b5%9c%e9%b4%8e+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=3EE59C5C083469A6265D8BA409CC6899"
+        ],
+        "dictionary.cambridge.org": [
+          "https://dictionary.cambridge.org/ja/dictionary/english/swipe",
+          "https://dictionary.cambridge.org/ja/dictionary/english/swipe"
+        ],
+        "www.merriam-webster.com": [
+          "https://www.merriam-webster.com/dictionary/swipe",
+          "https://www.merriam-webster.com/dictionary/swipe"
+        ],
+        "ejje.weblio.jp": [
+          "https://ejje.weblio.jp/content/swipe",
+          "https://ejje.weblio.jp/content/swipe"
+        ],
+        "www.howtogeek.com": [
+          "https://www.howtogeek.com/702931/what-do-swipe-left-and-swipe-right-mean/",
+          "https://www.howtogeek.com/702931/what-do-swipe-left-and-swipe-right-mean/"
+        ],
+        "www.eigo-duke.com": [
+          "https://www.eigo-duke.com/word/word/swipe.html",
+          "https://www.eigo-duke.com/word/word/swipe.html"
+        ],
+        "reibun-eigo.com": [
+          "https://reibun-eigo.com/entry-swipe/",
+          "https://reibun-eigo.com/entry-swipe/"
+        ],
+        "www.collinsdictionary.com": [
+          "https://www.collinsdictionary.com/jp/dictionary/english/swipe",
+          "https://www.collinsdictionary.com/jp/dictionary/english/swipe"
+        ],
+        "go.microsoft.com": [
+          "https://go.microsoft.com/fwlink/?linkid=868922",
+          "https://go.microsoft.com/fwlink/?linkid=2259814"
+        ],
+        "support.microsoft.com": [
+          "https://support.microsoft.com/topic/82d20721-2d6f-4012-a13d-d1910ccf203f",
+          "https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3?"
+        ]
       },
       "rejected_path_samples": [],
-      "has_result_marker": false,
+      "has_result_marker": true,
       "page_appears_blocked": false
     },
     {
@@ -512,6 +758,7 @@
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {},
+      "rejected_host_samples": {},
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -520,12 +767,17 @@
       "manga_id": "tenmaku-jadugal",
       "search_url": "https://html.duckduckgo.com/html/?q=%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB%20%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "html.duckduckgo.com",
-      "response_bytes": 14786,
+      "response_bytes": 14773,
       "anchor_count": 1,
       "candidate_count": 0,
       "fallback_used": false,
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
+      },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -535,16 +787,19 @@
       "manga_id": "tenmaku-jadugal",
       "search_url": "https://www.bing.com/search?q=%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB%20%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 104673,
-      "anchor_count": 28,
+      "response_bytes": 99546,
+      "anchor_count": 24,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
-        "invalid_or_non_https": 7,
-        "html.duckduckgo.com": 9,
-        "www.bing.com": 9,
-        "go.microsoft.com": 2,
-        "support.microsoft.com": 1
+        "invalid_or_non_https": 6,
+        "www.bing.com": 18
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=%e5%a4%a9%e5%b9%95%e3%81%ae%e3%82%b8%e3%83%a3%e3%83%bc%e3%83%89%e3%82%a5%e3%83%bc%e3%82%ac%e3%83%ab+%e3%83%88%e3%83%9e%e3%83%88%e3%82%b9%e3%83%bc%e3%83%97+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=2782E5A88FFF61C"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -559,6 +814,7 @@
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {},
+      "rejected_host_samples": {},
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -567,12 +823,17 @@
       "manga_id": "magi",
       "search_url": "https://html.duckduckgo.com/html/?q=%E3%83%9E%E3%82%AE%20%E5%A4%A7%E9%AB%98%E5%BF%8D%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "html.duckduckgo.com",
-      "response_bytes": 14714,
+      "response_bytes": 14696,
       "anchor_count": 1,
       "candidate_count": 0,
       "fallback_used": false,
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
+      },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -582,14 +843,28 @@
       "manga_id": "magi",
       "search_url": "https://www.bing.com/search?q=%E3%83%9E%E3%82%AE%20%E5%A4%A7%E9%AB%98%E5%BF%8D%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 96510,
-      "anchor_count": 24,
+      "response_bytes": 97676,
+      "anchor_count": 27,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
-        "invalid_or_non_https": 6,
-        "html.duckduckgo.com": 9,
-        "www.bing.com": 9
+        "invalid_or_non_https": 7,
+        "www.bing.com": 17,
+        "go.microsoft.com": 2,
+        "support.microsoft.com": 1
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=%e3%83%9e%e3%82%ae+%e5%a4%a7%e9%ab%98%e5%bf%8d+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=16191181C9256FEF2F780679C8B46EA6"
+        ],
+        "go.microsoft.com": [
+          "https://go.microsoft.com/fwlink/?linkid=868922",
+          "https://go.microsoft.com/fwlink/?linkid=2259814"
+        ],
+        "support.microsoft.com": [
+          "https://support.microsoft.com/topic/82d20721-2d6f-4012-a13d-d1910ccf203f"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -604,6 +879,7 @@
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {},
+      "rejected_host_samples": {},
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -612,12 +888,17 @@
       "manga_id": "chi",
       "search_url": "https://html.duckduckgo.com/html/?q=%E3%83%81%E3%80%82%20%E5%9C%B0%E7%90%83%E3%81%AE%E9%81%8B%E5%8B%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E9%AD%9A%E8%B1%8A%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "html.duckduckgo.com",
-      "response_bytes": 14752,
+      "response_bytes": 14758,
       "anchor_count": 1,
       "candidate_count": 0,
       "fallback_used": false,
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
+      },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -627,16 +908,28 @@
       "manga_id": "chi",
       "search_url": "https://www.bing.com/search?q=%E3%83%81%E3%80%82%20%E5%9C%B0%E7%90%83%E3%81%AE%E9%81%8B%E5%8B%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E9%AD%9A%E8%B1%8A%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 100707,
-      "anchor_count": 28,
+      "response_bytes": 104690,
+      "anchor_count": 29,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
         "invalid_or_non_https": 7,
-        "html.duckduckgo.com": 9,
-        "www.bing.com": 9,
+        "www.bing.com": 19,
         "go.microsoft.com": 2,
         "support.microsoft.com": 1
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=%e3%83%81%e3%80%82+%e5%9c%b0%e7%90%83%e3%81%ae%e9%81%8b%e5%8b%95%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6+%e9%ad%9a%e8%b1%8a+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=306282991FDC659E3C5595611E18645D"
+        ],
+        "go.microsoft.com": [
+          "https://go.microsoft.com/fwlink/?linkid=868922",
+          "https://go.microsoft.com/fwlink/?linkid=2259814"
+        ],
+        "support.microsoft.com": [
+          "https://support.microsoft.com/topic/82d20721-2d6f-4012-a13d-d1910ccf203f"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -651,6 +944,7 @@
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {},
+      "rejected_host_samples": {},
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -666,6 +960,11 @@
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
       },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
+      },
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -674,14 +973,19 @@
       "manga_id": "houseki-no-kuni",
       "search_url": "https://www.bing.com/search?q=%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD%20%E5%B8%82%E5%B7%9D%E6%98%A5%E5%AD%90%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 96373,
-      "anchor_count": 23,
+      "response_bytes": 98978,
+      "anchor_count": 24,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
         "invalid_or_non_https": 6,
-        "html.duckduckgo.com": 9,
-        "www.bing.com": 8
+        "www.bing.com": 18
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=%e5%ae%9d%e7%9f%b3%e3%81%ae%e5%9b%bd+%e5%b8%82%e5%b7%9d%e6%98%a5%e5%ad%90+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=180B5576062665991588428E07216459"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -696,6 +1000,7 @@
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {},
+      "rejected_host_samples": {},
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -704,12 +1009,17 @@
       "manga_id": "dandadan",
       "search_url": "https://html.duckduckgo.com/html/?q=%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3%20%E9%BE%8D%E5%B9%B8%E4%BC%B8%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "html.duckduckgo.com",
-      "response_bytes": 14719,
+      "response_bytes": 14720,
       "anchor_count": 1,
       "candidate_count": 0,
       "fallback_used": false,
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
+      },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -719,14 +1029,28 @@
       "manga_id": "dandadan",
       "search_url": "https://www.bing.com/search?q=%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3%20%E9%BE%8D%E5%B9%B8%E4%BC%B8%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 99374,
-      "anchor_count": 23,
+      "response_bytes": 98910,
+      "anchor_count": 29,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
-        "invalid_or_non_https": 6,
-        "html.duckduckgo.com": 9,
-        "www.bing.com": 8
+        "invalid_or_non_https": 7,
+        "www.bing.com": 19,
+        "go.microsoft.com": 2,
+        "support.microsoft.com": 1
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=%e3%83%80%e3%83%b3%e3%83%80%e3%83%80%e3%83%b3+%e9%be%8d%e5%b9%b8%e4%bc%b8+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=01BF16097C9A66DF34AC01F17D0167F1"
+        ],
+        "go.microsoft.com": [
+          "https://go.microsoft.com/fwlink/?linkid=868922",
+          "https://go.microsoft.com/fwlink/?linkid=2259814"
+        ],
+        "support.microsoft.com": [
+          "https://support.microsoft.com/topic/82d20721-2d6f-4012-a13d-d1910ccf203f"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -741,6 +1065,7 @@
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {},
+      "rejected_host_samples": {},
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -749,12 +1074,17 @@
       "manga_id": "pluto",
       "search_url": "https://html.duckduckgo.com/html/?q=PLUTO%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E6%89%8B%E5%A1%9A%E6%B2%BB%E8%99%AB%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "html.duckduckgo.com",
-      "response_bytes": 14750,
+      "response_bytes": 14744,
       "anchor_count": 1,
       "candidate_count": 0,
       "fallback_used": false,
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
+      },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -764,18 +1094,44 @@
       "manga_id": "pluto",
       "search_url": "https://www.bing.com/search?q=PLUTO%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E6%89%8B%E5%A1%9A%E6%B2%BB%E8%99%AB%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 127727,
-      "anchor_count": 49,
+      "response_bytes": 136942,
+      "anchor_count": 56,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
-        "invalid_or_non_https": 7,
-        "html.duckduckgo.com": 13,
-        "www.bing.com": 10,
+        "invalid_or_non_https": 8,
+        "www.bing.com": 26,
         "pluto.tv": 12,
         "app-windows.pluto.tv": 4,
         "en.wikipedia.org": 2,
-        "support.microsoft.com": 1
+        "go.microsoft.com": 2,
+        "support.microsoft.com": 2
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=PLUTO+%e6%b5%a6%e6%b2%a2%e7%9b%b4%e6%a8%b9+%e6%89%8b%e5%a1%9a%e6%b2%bb%e8%99%ab+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=04C05005014B6D1D2DFD47FD00E26C12"
+        ],
+        "pluto.tv": [
+          "https://pluto.tv/?msockid=2bcea214c7ad6ebe01dcb5ecc6046ffb",
+          "https://pluto.tv/?msockid=2bcea214c7ad6ebe01dcb5ecc6046ffb"
+        ],
+        "app-windows.pluto.tv": [
+          "https://app-windows.pluto.tv/us/on-demand",
+          "https://app-windows.pluto.tv/us/on-demand"
+        ],
+        "en.wikipedia.org": [
+          "https://en.wikipedia.org/wiki/Pluto",
+          "https://en.wikipedia.org/wiki/Pluto"
+        ],
+        "go.microsoft.com": [
+          "https://go.microsoft.com/fwlink/?linkid=868922",
+          "https://go.microsoft.com/fwlink/?linkid=2259814"
+        ],
+        "support.microsoft.com": [
+          "https://support.microsoft.com/topic/82d20721-2d6f-4012-a13d-d1910ccf203f",
+          "https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3?"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": true,
@@ -795,6 +1151,19 @@
         "app-windows.pluto.tv": 2,
         "en.wikipedia.org": 1
       },
+      "rejected_host_samples": {
+        "pluto.tv": [
+          "https://pluto.tv/",
+          "https://pluto.tv/us/home/"
+        ],
+        "app-windows.pluto.tv": [
+          "https://app-windows.pluto.tv/us/on-demand",
+          "https://app-windows.pluto.tv/us/on-demand/611436eea449220007a0039b"
+        ],
+        "en.wikipedia.org": [
+          "https://en.wikipedia.org/wiki/Pluto"
+        ]
+      },
       "rejected_path_samples": [],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -803,12 +1172,17 @@
       "manga_id": "tokyo-ghoul-franchise",
       "search_url": "https://html.duckduckgo.com/html/?q=%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%20%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are%20%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "html.duckduckgo.com",
-      "response_bytes": 14758,
+      "response_bytes": 14764,
       "anchor_count": 1,
       "candidate_count": 0,
       "fallback_used": false,
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
+      },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -818,15 +1192,14 @@
       "manga_id": "tokyo-ghoul-franchise",
       "search_url": "https://www.bing.com/search?q=%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%20%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are%20%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 135440,
-      "anchor_count": 51,
+      "response_bytes": 138759,
+      "anchor_count": 56,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
-        "invalid_or_non_https": 7,
-        "html.duckduckgo.com": 13,
-        "www.bing.com": 9,
-        "www.gotokyo.org": 5,
+        "invalid_or_non_https": 8,
+        "www.bing.com": 24,
+        "www.gotokyo.org": 4,
         "ja.wikipedia.org": 4,
         "en.wikipedia.org": 2,
         "mimigo.tw": 2,
@@ -834,7 +1207,54 @@
         "travel.rakuten.co.jp": 2,
         "rurubu.jp": 2,
         "www.tripadvisor.com": 2,
-        "support.microsoft.com": 1
+        "go.microsoft.com": 2,
+        "support.microsoft.com": 2
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=%e6%9d%b1%e4%ba%ac%e5%96%b0%e7%a8%ae+%e6%9d%b1%e4%ba%ac%e5%96%b0%e7%a8%ae%3are+%e3%82%bb%e3%83%83%e3%83%88+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=3EE3485AF60D67F818EE5FA2F7096695"
+        ],
+        "www.gotokyo.org": [
+          "https://www.gotokyo.org/jp/index.html",
+          "https://www.gotokyo.org/jp/index.html"
+        ],
+        "ja.wikipedia.org": [
+          "https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E9%83%BD",
+          "https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E9%83%BD"
+        ],
+        "en.wikipedia.org": [
+          "https://en.wikipedia.org/wiki/Tokyo",
+          "https://en.wikipedia.org/wiki/Tokyo"
+        ],
+        "mimigo.tw": [
+          "https://mimigo.tw/tokyo-trips/",
+          "https://mimigo.tw/tokyo-trips/"
+        ],
+        "www.gltjp.com": [
+          "https://www.gltjp.com/zh-hant/article/item/20183/",
+          "https://www.gltjp.com/zh-hant/article/item/20183/"
+        ],
+        "travel.rakuten.co.jp": [
+          "https://travel.rakuten.co.jp/mytrip/ranking/spot-tokyo",
+          "https://travel.rakuten.co.jp/mytrip/ranking/spot-tokyo"
+        ],
+        "rurubu.jp": [
+          "https://rurubu.jp/andmore/article/22035",
+          "https://rurubu.jp/andmore/article/22035"
+        ],
+        "www.tripadvisor.com": [
+          "https://www.tripadvisor.com/Attractions-g298184-Activities-Tokyo_Tokyo_Prefecture_Kanto.html",
+          "https://www.tripadvisor.com/Attractions-g298184-Activities-Tokyo_Tokyo_Prefecture_Kanto.html"
+        ],
+        "go.microsoft.com": [
+          "https://go.microsoft.com/fwlink/?linkid=868922",
+          "https://go.microsoft.com/fwlink/?linkid=2259814"
+        ],
+        "support.microsoft.com": [
+          "https://support.microsoft.com/topic/82d20721-2d6f-4012-a13d-d1910ccf203f",
+          "https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3?"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": true,
@@ -858,6 +1278,34 @@
         "rurubu.jp": 1,
         "www.tripadvisor.com": 1
       },
+      "rejected_host_samples": {
+        "www.gotokyo.org": [
+          "https://www.gotokyo.org/jp/index.html",
+          "https://www.gotokyo.org/en/index.html"
+        ],
+        "ja.wikipedia.org": [
+          "https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E9%83%BD",
+          "https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC"
+        ],
+        "en.wikipedia.org": [
+          "https://en.wikipedia.org/wiki/Tokyo"
+        ],
+        "mimigo.tw": [
+          "https://mimigo.tw/tokyo-trips/"
+        ],
+        "www.gltjp.com": [
+          "https://www.gltjp.com/zh-hant/article/item/20183/"
+        ],
+        "travel.rakuten.co.jp": [
+          "https://travel.rakuten.co.jp/mytrip/ranking/spot-tokyo"
+        ],
+        "rurubu.jp": [
+          "https://rurubu.jp/andmore/article/22035"
+        ],
+        "www.tripadvisor.com": [
+          "https://www.tripadvisor.com/Attractions-g298184-Activities-Tokyo_Tokyo_Prefecture_Kanto.html"
+        ]
+      },
       "rejected_path_samples": [],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -866,12 +1314,17 @@
       "manga_id": "parasyte",
       "search_url": "https://html.duckduckgo.com/html/?q=%E5%AF%84%E7%94%9F%E7%8D%A3%20%E5%B2%A9%E6%98%8E%E5%9D%87%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "html.duckduckgo.com",
-      "response_bytes": 14702,
+      "response_bytes": 14708,
       "anchor_count": 1,
       "candidate_count": 0,
       "fallback_used": false,
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
+      },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -881,16 +1334,19 @@
       "manga_id": "parasyte",
       "search_url": "https://www.bing.com/search?q=%E5%AF%84%E7%94%9F%E7%8D%A3%20%E5%B2%A9%E6%98%8E%E5%9D%87%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 98026,
-      "anchor_count": 29,
+      "response_bytes": 98865,
+      "anchor_count": 23,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
-        "invalid_or_non_https": 7,
-        "html.duckduckgo.com": 9,
-        "www.bing.com": 10,
-        "go.microsoft.com": 2,
-        "support.microsoft.com": 1
+        "invalid_or_non_https": 6,
+        "www.bing.com": 17
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=%e5%af%84%e7%94%9f%e7%8d%a3+%e5%b2%a9%e6%98%8e%e5%9d%87+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=335A86104C676D2F387391E84D686CE9"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -905,6 +1361,7 @@
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {},
+      "rejected_host_samples": {},
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -913,12 +1370,17 @@
       "manga_id": "monster",
       "search_url": "https://html.duckduckgo.com/html/?q=MONSTER%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "html.duckduckgo.com",
-      "response_bytes": 14716,
+      "response_bytes": 14715,
       "anchor_count": 1,
       "candidate_count": 0,
       "fallback_used": false,
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
+      },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -928,14 +1390,13 @@
       "manga_id": "monster",
       "search_url": "https://www.bing.com/search?q=MONSTER%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 131965,
+      "response_bytes": 128572,
       "anchor_count": 49,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
         "invalid_or_non_https": 7,
-        "html.duckduckgo.com": 13,
-        "www.bing.com": 8,
+        "www.bing.com": 21,
         "www.monster.com": 8,
         "www.monsterenergy.com": 2,
         "en.wikipedia.org": 4,
@@ -943,6 +1404,39 @@
         "www.imdb.com": 2,
         "careers.monster.com": 2,
         "support.microsoft.com": 1
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=MONSTER+%e6%b5%a6%e6%b2%a2%e7%9b%b4%e6%a8%b9+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=15765540C98F6AA5178942B8C8AD6B1E"
+        ],
+        "www.monster.com": [
+          "https://www.monster.com/?msockid=2e3842785b7c67d40b2255805a5e6670",
+          "https://www.monster.com/?msockid=2e3842785b7c67d40b2255805a5e6670"
+        ],
+        "www.monsterenergy.com": [
+          "https://www.monsterenergy.com/",
+          "https://www.monsterenergy.com/"
+        ],
+        "en.wikipedia.org": [
+          "https://en.wikipedia.org/wiki/Monster_(American_TV_series)",
+          "https://en.wikipedia.org/wiki/Monster_(American_TV_series)"
+        ],
+        "hiring.monster.com": [
+          "https://hiring.monster.com/",
+          "https://hiring.monster.com/"
+        ],
+        "www.imdb.com": [
+          "https://www.imdb.com/title/tt13207736",
+          "https://www.imdb.com/title/tt13207736"
+        ],
+        "careers.monster.com": [
+          "https://careers.monster.com/en",
+          "https://careers.monster.com/en"
+        ],
+        "support.microsoft.com": [
+          "https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3?"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": true,
@@ -964,6 +1458,28 @@
         "www.imdb.com": 1,
         "careers.monster.com": 1
       },
+      "rejected_host_samples": {
+        "www.monster.com": [
+          "https://www.monster.com/",
+          "https://www.monster.com/jobs"
+        ],
+        "www.monsterenergy.com": [
+          "https://www.monsterenergy.com/"
+        ],
+        "en.wikipedia.org": [
+          "https://en.wikipedia.org/wiki/Monster_(American_TV_series)",
+          "https://en.wikipedia.org/wiki/Monster:_The_Lizzie_Borden_Story"
+        ],
+        "hiring.monster.com": [
+          "https://hiring.monster.com/"
+        ],
+        "www.imdb.com": [
+          "https://www.imdb.com/title/tt13207736"
+        ],
+        "careers.monster.com": [
+          "https://careers.monster.com/en"
+        ]
+      },
       "rejected_path_samples": [],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -972,12 +1488,17 @@
       "manga_id": "vinland-saga",
       "search_url": "https://html.duckduckgo.com/html/?q=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "html.duckduckgo.com",
-      "response_bytes": 14756,
+      "response_bytes": 14762,
       "anchor_count": 1,
       "candidate_count": 0,
       "fallback_used": false,
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
+      },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -987,16 +1508,19 @@
       "manga_id": "vinland-saga",
       "search_url": "https://www.bing.com/search?q=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 99660,
-      "anchor_count": 29,
+      "response_bytes": 102919,
+      "anchor_count": 24,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
-        "invalid_or_non_https": 7,
-        "html.duckduckgo.com": 9,
-        "www.bing.com": 10,
-        "go.microsoft.com": 2,
-        "support.microsoft.com": 1
+        "invalid_or_non_https": 6,
+        "www.bing.com": 18
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=%e3%83%b4%e3%82%a3%e3%83%b3%e3%83%a9%e3%83%b3%e3%83%89%e3%83%bb%e3%82%b5%e3%82%ac+%e5%b9%b8%e6%9d%91%e8%aa%a0+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=11EA949CB946679807548364B8D0663C"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -1011,6 +1535,7 @@
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {},
+      "rejected_host_samples": {},
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -1019,12 +1544,17 @@
       "manga_id": "heavenly-delusion",
       "search_url": "https://html.duckduckgo.com/html/?q=%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83%20%E7%9F%B3%E9%BB%92%E6%AD%A3%E6%95%B0%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "html.duckduckgo.com",
-      "response_bytes": 14732,
+      "response_bytes": 14726,
       "anchor_count": 1,
       "candidate_count": 0,
       "fallback_used": false,
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
+      },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -1034,27 +1564,22 @@
       "manga_id": "heavenly-delusion",
       "search_url": "https://www.bing.com/search?q=%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83%20%E7%9F%B3%E9%BB%92%E6%AD%A3%E6%95%B0%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 133555,
-      "anchor_count": 50,
+      "response_bytes": 95024,
+      "anchor_count": 23,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
-        "invalid_or_non_https": 7,
-        "html.duckduckgo.com": 13,
-        "www.bing.com": 9,
-        "en.wikipedia.org": 2,
-        "www.ibm.com": 2,
-        "www.wallstreetmojo.com": 2,
-        "www.agilebusiness.org": 4,
-        "www.projectmanager.com": 2,
-        "agilemania.com": 2,
-        "www.workpath.com": 2,
-        "www.productplan.com": 2,
-        "practicetestgeeks.com": 2,
-        "support.microsoft.com": 1
+        "invalid_or_non_https": 6,
+        "www.bing.com": 17
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=%e5%a4%a9%e5%9b%bd%e5%a4%a7%e9%ad%94%e5%a2%83+%e7%9f%b3%e9%bb%92%e6%ad%a3%e6%95%b0+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=0CB637754AB465E00E7C208D4B85645F"
+        ]
       },
       "rejected_path_samples": [],
-      "has_result_marker": true,
+      "has_result_marker": false,
       "page_appears_blocked": false
     },
     {
@@ -1066,6 +1591,7 @@
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {},
+      "rejected_host_samples": {},
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -1074,12 +1600,17 @@
       "manga_id": "kekkaishi",
       "search_url": "https://html.duckduckgo.com/html/?q=%E7%B5%90%E7%95%8C%E5%B8%AB%20%E7%94%B0%E8%BE%BA%E3%82%A4%E3%82%A8%E3%83%AD%E3%82%A6%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "html.duckduckgo.com",
-      "response_bytes": 14720,
+      "response_bytes": 14732,
       "anchor_count": 1,
       "candidate_count": 0,
       "fallback_used": false,
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
+      },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -1089,14 +1620,19 @@
       "manga_id": "kekkaishi",
       "search_url": "https://www.bing.com/search?q=%E7%B5%90%E7%95%8C%E5%B8%AB%20%E7%94%B0%E8%BE%BA%E3%82%A4%E3%82%A8%E3%83%AD%E3%82%A6%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 98171,
+      "response_bytes": 101165,
       "anchor_count": 23,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
         "invalid_or_non_https": 6,
-        "html.duckduckgo.com": 9,
-        "www.bing.com": 8
+        "www.bing.com": 17
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=%e7%b5%90%e7%95%8c%e5%b8%ab+%e7%94%b0%e8%be%ba%e3%82%a4%e3%82%a8%e3%83%ad%e3%82%a6+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=262E242D4B316B701BC733D54AB16AC3"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -1111,6 +1647,7 @@
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {},
+      "rejected_host_samples": {},
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -1119,12 +1656,17 @@
       "manga_id": "psyren",
       "search_url": "https://html.duckduckgo.com/html/?q=PSYREN%20%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3%20%E5%B2%A9%E4%BB%A3%E4%BF%8A%E6%98%8E%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "html.duckduckgo.com",
-      "response_bytes": 14734,
+      "response_bytes": 14740,
       "anchor_count": 1,
       "candidate_count": 0,
       "fallback_used": false,
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
+      },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -1134,14 +1676,13 @@
       "manga_id": "psyren",
       "search_url": "https://www.bing.com/search?q=PSYREN%20%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3%20%E5%B2%A9%E4%BB%A3%E4%BF%8A%E6%98%8E%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 131492,
+      "response_bytes": 129637,
       "anchor_count": 50,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
         "invalid_or_non_https": 7,
-        "html.duckduckgo.com": 13,
-        "www.bing.com": 9,
+        "www.bing.com": 22,
         "en.wikipedia.org": 2,
         "psyren.fandom.com": 4,
         "myanimelist.net": 2,
@@ -1152,6 +1693,51 @@
         "www.youtube.com": 2,
         "psyren-anime.com": 2,
         "support.microsoft.com": 1
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=PSYREN+%e3%82%b5%e3%82%a4%e3%83%ac%e3%83%b3+%e5%b2%a9%e4%bb%a3%e4%bf%8a%e6%98%8e+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=28D82FDA09F86F90238F382208AD6E41"
+        ],
+        "en.wikipedia.org": [
+          "https://en.wikipedia.org/wiki/Psyren",
+          "https://en.wikipedia.org/wiki/Psyren"
+        ],
+        "psyren.fandom.com": [
+          "https://psyren.fandom.com/wiki/Psyren_Wiki",
+          "https://psyren.fandom.com/wiki/Psyren_Wiki"
+        ],
+        "myanimelist.net": [
+          "https://myanimelist.net/anime/63098/Psyren",
+          "https://myanimelist.net/anime/63098/Psyren"
+        ],
+        "www.crunchyroll.com": [
+          "https://www.crunchyroll.com/series/GT00371866/psyren",
+          "https://www.crunchyroll.com/series/GT00371866/psyren"
+        ],
+        "ja.wikipedia.org": [
+          "https://ja.wikipedia.org/wiki/PSYREN_-%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3-",
+          "https://ja.wikipedia.org/wiki/PSYREN_-%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3-"
+        ],
+        "www.imdb.com": [
+          "https://www.imdb.com/title/tt39181351/",
+          "https://www.imdb.com/title/tt39181351/"
+        ],
+        "psyren-anime-global.com": [
+          "https://psyren-anime-global.com/",
+          "https://psyren-anime-global.com/"
+        ],
+        "www.youtube.com": [
+          "https://www.youtube.com/watch?v=WS2spKg_z8M",
+          "https://www.youtube.com/watch?v=WS2spKg_z8M"
+        ],
+        "psyren-anime.com": [
+          "https://psyren-anime.com/",
+          "https://psyren-anime.com/"
+        ],
+        "support.microsoft.com": [
+          "https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3?"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": true,
@@ -1176,6 +1762,36 @@
         "www.youtube.com": 1,
         "psyren-anime.com": 1
       },
+      "rejected_host_samples": {
+        "en.wikipedia.org": [
+          "https://en.wikipedia.org/wiki/Psyren"
+        ],
+        "psyren.fandom.com": [
+          "https://psyren.fandom.com/wiki/Psyren_Wiki",
+          "https://psyren.fandom.com/wiki/Psyren"
+        ],
+        "myanimelist.net": [
+          "https://myanimelist.net/anime/63098/Psyren"
+        ],
+        "www.crunchyroll.com": [
+          "https://www.crunchyroll.com/series/GT00371866/psyren"
+        ],
+        "ja.wikipedia.org": [
+          "https://ja.wikipedia.org/wiki/PSYREN_-%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3-"
+        ],
+        "www.imdb.com": [
+          "https://www.imdb.com/title/tt39181351/"
+        ],
+        "psyren-anime-global.com": [
+          "https://psyren-anime-global.com/"
+        ],
+        "www.youtube.com": [
+          "https://www.youtube.com/watch?v=WS2spKg_z8M"
+        ],
+        "psyren-anime.com": [
+          "https://psyren-anime.com/"
+        ]
+      },
       "rejected_path_samples": [],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -1184,12 +1800,17 @@
       "manga_id": "mononogatari",
       "search_url": "https://html.duckduckgo.com/html/?q=%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A%20%E3%82%AA%E3%83%8B%E3%82%B0%E3%83%B3%E3%82%BD%E3%82%A6%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "html.duckduckgo.com",
-      "response_bytes": 14756,
+      "response_bytes": 14750,
       "anchor_count": 1,
       "candidate_count": 0,
       "fallback_used": false,
       "rejected_host_counts": {
         "html.duckduckgo.com": 1
+      },
+      "rejected_host_samples": {
+        "html.duckduckgo.com": [
+          "https://html.duckduckgo.com/html/"
+        ]
       },
       "rejected_path_samples": [],
       "has_result_marker": false,
@@ -1199,17 +1820,66 @@
       "manga_id": "mononogatari",
       "search_url": "https://www.bing.com/search?q=%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A%20%E3%82%AA%E3%83%8B%E3%82%B0%E3%83%B3%E3%82%BD%E3%82%A6%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%28site%3Ajp.mercari.com%20OR%20site%3Ashopping.bookoff.co.jp%20OR%20site%3Aitem.rakuten.co.jp%20OR%20site%3Ashopping.yahoo.co.jp%20OR%20site%3Aauctions.yahoo.co.jp%20OR%20site%3Asuruga-ya.jp%20OR%20site%3Anetoff.co.jp%20OR%20site%3Amandarake.co.jp%29",
       "search_engine": "www.bing.com",
-      "response_bytes": 95721,
-      "anchor_count": 23,
+      "response_bytes": 135629,
+      "anchor_count": 49,
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {
-        "invalid_or_non_https": 6,
-        "html.duckduckgo.com": 9,
-        "www.bing.com": 8
+        "invalid_or_non_https": 7,
+        "www.bing.com": 21,
+        "translate.google.co.jp": 2,
+        "www.deepl.com": 6,
+        "translate.google.com": 2,
+        "translate.weblio.jp": 2,
+        "chatgpt.com": 2,
+        "nani.now": 2,
+        "translatiz.com": 2,
+        "dictionary.cambridge.org": 2,
+        "support.microsoft.com": 1
+      },
+      "rejected_host_samples": {
+        "www.bing.com": [
+          "https://www.bing.com/?FORM=Z9FD1",
+          "https://www.bing.com/search?q=%e3%82%82%e3%81%ae%e3%81%ae%e3%81%8c%e3%81%9f%e3%82%8a+%e3%82%aa%e3%83%8b%e3%82%b0%e3%83%b3%e3%82%bd%e3%82%a6+%e4%b8%ad%e5%8f%a4+%e5%85%a8%e5%b7%bb%e3%82%bb%e3%83%83%e3%83%88+(site%3ajp.mercari.com+OR+site%3ashopping.bookoff.co.jp+OR+site%3aitem.rakuten.co.jp+OR+site%3ashopping.yahoo.co.jp+OR+site%3aauctions.yahoo.co.jp+OR+site%3asuruga-ya.jp+OR+site%3anetoff.co.jp+OR+site%3amandarake.co.jp)&setlang=en&sid=19E6E9E54C3D62961BD7FE1D4D9063A9"
+        ],
+        "translate.google.co.jp": [
+          "https://translate.google.co.jp/",
+          "https://translate.google.co.jp/"
+        ],
+        "www.deepl.com": [
+          "https://www.deepl.com/ja/translator",
+          "https://www.deepl.com/ja/translator"
+        ],
+        "translate.google.com": [
+          "https://translate.google.com/?hl=ja",
+          "https://translate.google.com/?hl=ja"
+        ],
+        "translate.weblio.jp": [
+          "https://translate.weblio.jp/",
+          "https://translate.weblio.jp/"
+        ],
+        "chatgpt.com": [
+          "https://chatgpt.com/ja-JP/translate/",
+          "https://chatgpt.com/ja-JP/translate/"
+        ],
+        "nani.now": [
+          "https://nani.now/ja",
+          "https://nani.now/ja"
+        ],
+        "translatiz.com": [
+          "https://translatiz.com/ja",
+          "https://translatiz.com/ja"
+        ],
+        "dictionary.cambridge.org": [
+          "https://dictionary.cambridge.org/ja/translate/japanese-english/",
+          "https://dictionary.cambridge.org/ja/translate/japanese-english/"
+        ],
+        "support.microsoft.com": [
+          "https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3?"
+        ]
       },
       "rejected_path_samples": [],
-      "has_result_marker": false,
+      "has_result_marker": true,
       "page_appears_blocked": false
     },
     {
@@ -1221,13 +1891,14 @@
       "candidate_count": 0,
       "fallback_used": true,
       "rejected_host_counts": {},
+      "rejected_host_samples": {},
       "rejected_path_samples": [],
       "has_result_marker": false,
       "page_appears_blocked": false
     }
   ],
   "queries_with_anchors": 55,
-  "queries_with_result_marker": 11,
+  "queries_with_result_marker": 12,
   "queries_using_fallback": 50,
   "queries_finding_candidates": 0,
   "queries_appearing_blocked": 0,
