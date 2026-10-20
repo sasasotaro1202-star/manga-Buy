@@ -4,7 +4,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
-from discover import SearchResultsParser, unwrap_search_url, is_product_candidate, parse_bing_rss
+from discover import SearchResultsParser, unwrap_search_url, is_product_candidate, parse_bing_rss, search_engine_urls
 
 
 class DiscoveryTests(unittest.TestCase):
@@ -44,6 +44,13 @@ class DiscoveryTests(unittest.TestCase):
     def test_bing_rss_parser_rejects_malformed_xml(self):
         with self.assertRaises(Exception):
             parse_bing_rss(b"<rss>")
+
+    def test_default_search_fallback_includes_bing_rss(self):
+        urls = search_engine_urls({"engine_url": "https://html.duckduckgo.com/html/?q={query}"})
+        self.assertEqual(len(urls), 2)
+        self.assertIn("duckduckgo.com", urls[0])
+        self.assertIn("format=rss", urls[1])
+        self.assertTrue(all(url.startswith("https://") and "{query}" in url for url in urls))
 
     def test_http_url_is_rejected(self):
         self.assertFalse(is_product_candidate("http://jp.mercari.com/item/m123", ["mercari.com"]))
