@@ -298,8 +298,8 @@ def extract_product_data(html, url):
 
     method = "JSON_LD" if offer_values else None
     if not offer_values:
-        meta_price = parser.meta.get("itemprop:price") or parser.meta.get("product:price:amount")
-        currency = (parser.meta.get("itemprop:pricecurrency")
+        meta_price = parser.meta.get("price") or parser.meta.get("product:price:amount")
+        currency = (parser.meta.get("pricecurrency")
                     or parser.meta.get("product:price:currency") or "").upper()
         price = as_positive_int(meta_price)
         if price is not None and currency:
