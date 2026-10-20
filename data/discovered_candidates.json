@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-21T04:23:33+09:00",
+  "generated_at": "2026-10-21T04:26:53+09:00",
   "discovery_status": "EMPTY",
   "queries_checked": 25,
   "query_errors": [],
@@ -8,7 +8,7 @@
     {
       "manga_id": "kusuriya-neko-kurage",
       "search_url": "https://html.duckduckgo.com/html/?q=%E8%96%AC%E5%B1%8B%E3%81%AE%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%94%E3%81%A8%20%E3%81%AD%E3%81%93%E3%82%AF%E3%83%A9%E3%82%B2%E7%89%88%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
-      "response_bytes": 14354,
+      "response_bytes": 14347,
       "anchor_count": 1,
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -16,7 +16,7 @@
     {
       "manga_id": "frieren",
       "search_url": "https://html.duckduckgo.com/html/?q=%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
-      "response_bytes": 14352,
+      "response_bytes": 14304,
       "anchor_count": 1,
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -32,7 +32,7 @@
     {
       "manga_id": "jujutsu-modulo",
       "search_url": "https://html.duckduckgo.com/html/?q=%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1%20%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
-      "response_bytes": 14312,
+      "response_bytes": 14324,
       "anchor_count": 1,
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -40,7 +40,7 @@
     {
       "manga_id": "ajin",
       "search_url": "https://html.duckduckgo.com/html/?q=%E4%BA%9C%E4%BA%BA%20%E6%A1%9C%E4%BA%95%E7%94%BB%E9%96%80%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
-      "response_bytes": 14306,
+      "response_bytes": 14318,
       "anchor_count": 1,
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -48,7 +48,7 @@
     {
       "manga_id": "golden-kamuy",
       "search_url": "https://html.duckduckgo.com/html/?q=%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
-      "response_bytes": 14304,
+      "response_bytes": 14328,
       "anchor_count": 1,
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -56,7 +56,7 @@
     {
       "manga_id": "chainsaw-man",
       "search_url": "https://html.duckduckgo.com/html/?q=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
-      "response_bytes": 14341,
+      "response_bytes": 14335,
       "anchor_count": 1,
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -64,7 +64,7 @@
     {
       "manga_id": "kagurabachi",
       "search_url": "https://html.duckduckgo.com/html/?q=%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81%20%E5%A4%96%E8%96%97%E5%81%A5%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
-      "response_bytes": 14318,
+      "response_bytes": 14312,
       "anchor_count": 1,
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -72,7 +72,7 @@
     {
       "manga_id": "gachiakuta",
       "search_url": "https://html.duckduckgo.com/html/?q=%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF%20%E8%A3%8F%E9%82%A3%E5%9C%AD%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
-      "response_bytes": 14312,
+      "response_bytes": 14336,
       "anchor_count": 1,
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -88,7 +88,7 @@
     {
       "manga_id": "tongari-atelier",
       "search_url": "https://html.duckduckgo.com/html/?q=%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8%20%E7%99%BD%E6%B5%9C%E9%B4%8E%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
-      "response_bytes": 14354,
+      "response_bytes": 14360,
       "anchor_count": 1,
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -96,7 +96,7 @@
     {
       "manga_id": "tenmaku-jadugal",
       "search_url": "https://html.duckduckgo.com/html/?q=%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB%20%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
-      "response_bytes": 14372,
+      "response_bytes": 14366,
       "anchor_count": 1,
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -104,7 +104,7 @@
     {
       "manga_id": "magi",
       "search_url": "https://html.duckduckgo.com/html/?q=%E3%83%9E%E3%82%AE%20%E5%A4%A7%E9%AB%98%E5%BF%8D%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
-      "response_bytes": 14306,
+      "response_bytes": 14294,
       "anchor_count": 1,
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -112,7 +112,7 @@
     {
       "manga_id": "chi",
       "search_url": "https://html.duckduckgo.com/html/?q=%E3%83%81%E3%80%82%20%E5%9C%B0%E7%90%83%E3%81%AE%E9%81%8B%E5%8B%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E9%AD%9A%E8%B1%8A%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
-      "response_bytes": 14350,
+      "response_bytes": 14344,
       "anchor_count": 1,
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -120,7 +120,7 @@
     {
       "manga_id": "houseki-no-kuni",
       "search_url": "https://html.duckduckgo.com/html/?q=%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD%20%E5%B8%82%E5%B7%9D%E6%98%A5%E5%AD%90%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
-      "response_bytes": 14318,
+      "response_bytes": 14312,
       "anchor_count": 1,
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -128,7 +128,7 @@
     {
       "manga_id": "dandadan",
       "search_url": "https://html.duckduckgo.com/html/?q=%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3%20%E9%BE%8D%E5%B9%B8%E4%BC%B8%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
-      "response_bytes": 14324,
+      "response_bytes": 14317,
       "anchor_count": 1,
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -136,7 +136,7 @@
     {
       "manga_id": "pluto",
       "search_url": "https://html.duckduckgo.com/html/?q=PLUTO%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E6%89%8B%E5%A1%9A%E6%B2%BB%E8%99%AB%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
-      "response_bytes": 14336,
+      "response_bytes": 14318,
       "anchor_count": 1,
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -160,7 +160,7 @@
     {
       "manga_id": "monster",
       "search_url": "https://html.duckduckgo.com/html/?q=MONSTER%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
-      "response_bytes": 14302,
+      "response_bytes": 14313,
       "anchor_count": 1,
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -168,7 +168,7 @@
     {
       "manga_id": "vinland-saga",
       "search_url": "https://html.duckduckgo.com/html/?q=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
-      "response_bytes": 14354,
+      "response_bytes": 14348,
       "anchor_count": 1,
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -176,7 +176,7 @@
     {
       "manga_id": "heavenly-delusion",
       "search_url": "https://html.duckduckgo.com/html/?q=%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83%20%E7%9F%B3%E9%BB%92%E6%AD%A3%E6%95%B0%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
-      "response_bytes": 14318,
+      "response_bytes": 14341,
       "anchor_count": 1,
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -184,7 +184,7 @@
     {
       "manga_id": "kekkaishi",
       "search_url": "https://html.duckduckgo.com/html/?q=%E7%B5%90%E7%95%8C%E5%B8%AB%20%E7%94%B0%E8%BE%BA%E3%82%A4%E3%82%A8%E3%83%AD%E3%82%A6%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
-      "response_bytes": 14312,
+      "response_bytes": 14318,
       "anchor_count": 1,
       "has_result_marker": false,
       "page_appears_blocked": false
@@ -192,7 +192,7 @@
     {
       "manga_id": "psyren",
       "search_url": "https://html.duckduckgo.com/html/?q=PSYREN%20%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3%20%E5%B2%A9%E4%BB%A3%E4%BF%8A%E6%98%8E%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
-      "response_bytes": 14320,
+      "response_bytes": 14332,
       "anchor_count": 1,
       "has_result_marker": false,
       "page_appears_blocked": false
