@@ -91,6 +91,22 @@ def is_product_candidate(url, allowed_domains):
     return True
 
 
+def search_engine_urls(discovery_config):
+    """Use configured public HTML search pages; a second engine is a fallback, not bypass."""
+    raw = discovery_config.get("engine_urls")
+    if not isinstance(raw, list) or not raw:
+        raw = [
+            discovery_config.get("engine_url") or "https://html.duckduckgo.com/html/?q={query}",
+            "https://www.bing.com/search?q={query}",
+        ]
+    result = []
+    for item in raw:
+        template = str(item or "").strip()
+        if template.startswith("https://") and "{query}" in template and template not in result:
+            result.append(template)
+    return result
+
+
 def run_discovery(limit=None):
     catalog = load_json(CATALOG_PATH, {"manga": []})
     marketplace_config = load_json(MARKETPLACES_PATH, {})
@@ -113,137 +129,87 @@ def run_discovery(limit=None):
     diagnostics = []
     queries_checked = 0
     now = now_jst().isoformat()
-    query_base = str(discovery_config.get("engine_url") or "https://html.duckduckgo.com/html/?q={query}")
-
-    def collect_candidates(results, manga, query, engine, seen_for_manga):
-        accepted = 0
-        for result in results:
-            url = unwrap_search_url(result.get("url", ""))
-            if not is_product_candidate(url, allowed_domains) or url in seen_for_manga:
-                continue
-            seen_for_manga.add(url)
-            old = previous_by_url.get(url, {})
-            current_by_url[url] = {
-                "manga_id": manga.get("id"),
-                "manga_title": manga.get("title"),
-                "listing_url": url,
-                "search_result_title": result.get("title"),
-                "source_domain": urlparse(url).hostname,
-                "first_seen_at": old.get("first_seen_at") or now,
-                "last_seen_at": now,
-                "discovered_by_query": query,
-                "search_engine": engine,
-                "verification_status": "UNVERIFIED_LEAD",
-                "price_jpy": None,
-                "availability": "UNKNOWN",
-                "volume_coverage": None,
-                "condition": "UNKNOWN",
-                "shipping_jpy": None,
-                "notes": "検索で発見したリンク。販売価格や全巻条件の証拠ではない。",
-            }
-            accepted += 1
-            if accepted >= max_per_manga:
-                break
-        return accepted
+    engine_urls = search_engine_urls(discovery_config)
 
     for manga in catalog.get("manga", [])[:max_queries]:
         query = str(manga.get("search_title") or manga.get("title") or "") + " 中古 全巻セット"
-        search_url = query_base.format(query=quote(query))
-        queries_checked += 1
-        diag = {
-            "manga_id": manga.get("id"),
-            "search_url": search_url,
-            "fallback_used": False,
-            "fallback_url": None,
-            "anchor_count": 0,
-            "has_result_marker": False,
-            "page_appears_blocked": False,
-            "primary_candidate_count": 0,
-            "fallback_candidate_count": 0,
-            "anchor_samples": [],
-        }
         seen_for_manga = set()
         accepted = 0
-
-        try:
-            request = Request(search_url, headers={
-                "User-Agent": "manga-Buy/0.1 (+https://github.com/sasasotaro1202-star/manga-Buy)",
-                "Accept-Language": "ja-JP,ja;q=0.9,en;q=0.5",
-            })
-            with urlopen(request, timeout=timeout) as response:
-                raw = response.read(max_bytes + 1)
-                if len(raw) > max_bytes:
-                    raise ValueError("SEARCH_RESPONSE_TOO_LARGE")
-                charset = response.headers.get_content_charset() or "utf-8"
-                html = raw.decode(charset, errors="replace")
-            parser = SearchResultsParser()
-            parser.feed(html)
-            diag.update({
-                "response_bytes": len(raw),
-                "anchor_count": len(parser.items),
-                "has_result_marker": "result__a" in html or "result__body" in html,
-                "page_appears_blocked": any(token in html.lower() for token in (
-                    "captcha", "bot detection", "unusual traffic", "verify you are human"
-                )),
-                "anchor_samples": [
-                    {"title": str(item.get("title") or "")[:120], "url": str(item.get("url") or "")[:350]}
-                    for item in parser.items[:3]
-                ],
-            })
-            accepted = collect_candidates(parser.items, manga, query, "duckduckgo-html", seen_for_manga)
-            diag["primary_candidate_count"] = accepted
-        except Exception as exc:
-            errors.append({
-                "manga_id": manga.get("id"),
-                "manga_title": manga.get("title"),
-                "source": "duckduckgo-html",
-                "search_url": search_url,
-                "error": type(exc).__name__ + ": " + str(exc)[:240],
-                "checked_at": now,
-            })
-
-        # GitHub-hosted runners may receive an empty/minimal DuckDuckGo page.
-        # Fall back to public Bing RSS only when no allowlisted product URL was found.
-        if accepted == 0:
-            diag["fallback_used"] = True
-            fallback_url = "https://www.bing.com/search?format=rss&q=" + quote(query)
-            diag["fallback_url"] = fallback_url
+        for engine_url in engine_urls:
+            if accepted >= max_per_manga:
+                break
+            search_url = engine_url.format(query=quote(query, safe=""))
+            queries_checked += 1
             try:
-                time.sleep(min(max(delay / 2, 0.5), 1.0))
-                request = Request(fallback_url, headers={
+                request = Request(search_url, headers={
                     "User-Agent": "manga-Buy/0.1 (+https://github.com/sasasotaro1202-star/manga-Buy)",
-                    "Accept": "application/rss+xml,application/xml,text/xml,*/*",
+                    "Accept": "text/html,application/xhtml+xml",
                     "Accept-Language": "ja-JP,ja;q=0.9,en;q=0.5",
                 })
                 with urlopen(request, timeout=timeout) as response:
-                    fallback_raw = response.read(max_bytes + 1)
-                    if len(fallback_raw) > max_bytes:
-                        raise ValueError("FALLBACK_RESPONSE_TOO_LARGE")
-                root = ET.fromstring(fallback_raw)
-                rss_items = []
-                for item in root.findall(".//item"):
-                    link = (item.findtext("link") or "").strip()
-                    title = (item.findtext("title") or "").strip()
-                    if link:
-                        rss_items.append({"url": link, "title": title, "classes": "bing-rss"})
-                diag["fallback_response_bytes"] = len(fallback_raw)
-                diag["fallback_item_count"] = len(rss_items)
-                fallback_added = collect_candidates(rss_items, manga, query, "bing-rss", seen_for_manga)
-                diag["fallback_candidate_count"] = fallback_added
-                accepted += fallback_added
+                    raw = response.read(max_bytes + 1)
+                    if len(raw) > max_bytes:
+                        raise ValueError("SEARCH_RESPONSE_TOO_LARGE")
+                    charset = response.headers.get_content_charset() or "utf-8"
+                    html = raw.decode(charset, errors="replace")
+                parser = SearchResultsParser()
+                parser.feed(html)
+                new_from_engine = 0
+                for result in parser.items:
+                    url = unwrap_search_url(result.get("url", ""))
+                    if not is_product_candidate(url, allowed_domains) or url in seen_for_manga:
+                        continue
+                    seen_for_manga.add(url)
+                    old = previous_by_url.get(url, {})
+                    current_by_url[url] = {
+                        "manga_id": manga.get("id"),
+                        "manga_title": manga.get("title"),
+                        "listing_url": url,
+                        "search_result_title": result.get("title"),
+                        "source_domain": urlparse(url).hostname,
+                        "first_seen_at": old.get("first_seen_at") or now,
+                        "last_seen_at": now,
+                        "discovered_by_query": query,
+                        "discovered_by_engine": urlparse(search_url).hostname,
+                        "verification_status": "UNVERIFIED_LEAD",
+                        "price_jpy": None,
+                        "availability": "UNKNOWN",
+                        "volume_coverage": None,
+                        "condition": "UNKNOWN",
+                        "shipping_jpy": None,
+                        "notes": "検索で発見したリンク。販売価格や全巻条件の証拠ではない。",
+                    }
+                    accepted += 1
+                    new_from_engine += 1
+                    if accepted >= max_per_manga:
+                        break
+                lower_html = html.lower()
+                diagnostics.append({
+                    "manga_id": manga.get("id"),
+                    "search_url": search_url,
+                    "search_engine": urlparse(search_url).hostname,
+                    "response_bytes": len(raw),
+                    "anchor_count": len(parser.items),
+                    "candidate_count": new_from_engine,
+                    "has_result_marker": any(token in lower_html for token in (
+                        "result__a", "b_algo", "web-result", "result__body"
+                    )),
+                    "page_appears_blocked": any(token in lower_html for token in (
+                        "captcha", "bot detection", "unusual traffic", "verify you are human",
+                        "consent required", "enable javascript to continue"
+                    )),
+                })
             except Exception as exc:
                 errors.append({
                     "manga_id": manga.get("id"),
                     "manga_title": manga.get("title"),
-                    "source": "bing-rss",
-                    "search_url": fallback_url,
+                    "search_url": search_url,
+                    "search_engine": urlparse(search_url).hostname,
                     "error": type(exc).__name__ + ": " + str(exc)[:240],
                     "checked_at": now,
                 })
-
-        diag["candidate_count"] = accepted
-        diagnostics.append(diag)
-        time.sleep(delay)
+            finally:
+                time.sleep(delay)
 
     # Keep earlier discoveries so transient search outages don't erase useful leads.
     merged = dict(previous_by_url)
