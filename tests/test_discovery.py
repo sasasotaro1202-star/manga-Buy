@@ -4,7 +4,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
-from discover import SearchResultsParser, unwrap_search_url, is_product_candidate
+from discover import SearchResultsParser, unwrap_search_url, is_product_candidate, parse_bing_rss
 
 
 class DiscoveryTests(unittest.TestCase):
@@ -28,6 +28,22 @@ class DiscoveryTests(unittest.TestCase):
         domains = ["jp.mercari.com", "mercari.com"]
         self.assertTrue(is_product_candidate("https://jp.mercari.com/item/m123", domains))
         self.assertFalse(is_product_candidate("https://jp.mercari.com/search?keyword=manga", domains))
+
+    def test_bing_rss_parser_extracts_product_links_without_prices(self):
+        xml = b"""<?xml version="1.0" encoding="UTF-8"?>
+        <rss version="2.0"><channel><item>
+          <title>中古漫画セット</title><link>https://jp.mercari.com/item/m123</link>
+          <description>4,000円</description>
+        </item></channel></rss>"""
+        results = parse_bing_rss(xml)
+        self.assertEqual(len(results), 1)
+        self.assertEqual(results[0]["title"], "中古漫画セット")
+        self.assertEqual(results[0]["url"], "https://jp.mercari.com/item/m123")
+        self.assertNotIn("price_jpy", results[0])
+
+    def test_bing_rss_parser_rejects_malformed_xml(self):
+        with self.assertRaises(Exception):
+            parse_bing_rss(b"<rss>")
 
     def test_http_url_is_rejected(self):
         self.assertFalse(is_product_candidate("http://jp.mercari.com/item/m123", ["mercari.com"]))
