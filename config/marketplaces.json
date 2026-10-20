@@ -40,6 +40,9 @@
     "max_response_bytes": 3000000,
     "max_price_age_hours": 24,
     "max_cost_check_age_days": 7,
+    "max_auto_watch_candidates": 75,
+    "max_auto_candidates_per_manga": 3,
+    "request_delay_seconds": 0.8,
     "user_agent": "manga-Buy/0.1 (+https://github.com/sasasotaro1202-star/manga-Buy)"
   }
 }
