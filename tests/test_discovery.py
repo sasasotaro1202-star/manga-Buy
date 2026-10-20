@@ -11,14 +11,20 @@ class DiscoveryTests(unittest.TestCase):
     def test_parser_does_not_depend_on_one_css_class(self):
         html = """
         <html><body>
-          <a href="https://jp.mercari.com/item/m123">Used manga set</a>
+          <a href="https://www.bing.com/?FORM=Z9FD1">Bing home</a>
+          <a href="https://www.bing.com/search?q=manga">Search again</a>
+          <li class="b_algo"><h2>
+            <a href="https://jp.mercari.com/item/m123">Used manga set</a>
+          </h2></li>
           <a class="result__a" href="https://shopping.bookoff.co.jp/used/123">BOOKOFF item</a>
+          <div class="related-search"><a href="https://hunterboots.com/">Related topic</a></div>
         </body></html>
         """
         parser = SearchResultsParser()
         parser.feed(html)
         self.assertEqual(len(parser.items), 2)
-        self.assertIn("Used manga set", parser.items[0]["title"])
+        self.assertEqual(parser.items[0]["title"], "Used manga set")
+        self.assertTrue(any("BOOKOFF item" in item["title"] for item in parser.items))
 
     def test_duckduckgo_redirect_url_is_unwrapped(self):
         url = "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fjp.mercari.com%2Fitem%2Fm123"
