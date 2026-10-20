@@ -361,7 +361,7 @@ def extract_product_data(html, url):
 
 
 def listing_decision(listing, observation, manga, condition_policy, now=None,
-                     max_price_age_hours=24, max_cost_age_days=7):
+                     max_price_age_hours=24, max_cost_age_days=7, require_complete=True):
     """Return eligibility, final known total and explicit reasons; never fill unknowns with zero."""
     now = parse_dt(now) if now is not None else now_jst()
     reasons = []
@@ -404,7 +404,7 @@ def listing_decision(listing, observation, manga, condition_policy, now=None,
         reasons.append("VOLUME_COVERAGE_UNKNOWN_OR_INVALID")
     elif count is None:
         reasons.append("VOLUME_COUNT_UNKNOWN")
-    elif not ranges_cover_all(ranges, count):
+    elif require_complete and not ranges_cover_all(ranges, count):
         reasons.append("NOT_ALL_REQUIRED_VOLUMES_COVERED")
     if not count_confirmed:
         reasons.append("VOLUME_COUNT_NOT_SOURCE_CONFIRMED")
@@ -441,7 +441,7 @@ def listing_decision(listing, observation, manga, condition_policy, now=None,
         and not bool(flags & blockers)
         and ranges is not None
         and count is not None
-        and ranges_cover_all(ranges, count)
+        and (not require_complete or ranges_cover_all(ranges, count))
         and cost_fields_ok
     )
     if price is not None and shipping is not None and fees is not None:
