@@ -114,7 +114,7 @@ def search_engine_urls(discovery_config):
     if not isinstance(raw, list) or not raw:
         raw = [
             discovery_config.get("engine_url") or "https://html.duckduckgo.com/html/?q={query}",
-            "https://www.bing.com/search?q={query}",
+            "https://www.bing.com/search?format=rss&q={query}",
         ]
     result = []
     for item in raw:
@@ -169,10 +169,16 @@ def run_discovery(limit=None):
                         raise ValueError("SEARCH_RESPONSE_TOO_LARGE")
                     charset = response.headers.get_content_charset() or "utf-8"
                     html = raw.decode(charset, errors="replace")
-                parser = SearchResultsParser()
-                parser.feed(html)
+                is_rss = "format=rss" in search_url.lower()
+                if is_rss:
+                    # Bing RSS is XML, not HTML. Parse only link/title; snippets never become prices.
+                    search_results = parse_bing_rss(raw)
+                else:
+                    parser = SearchResultsParser()
+                    parser.feed(html)
+                    search_results = parser.items
                 new_from_engine = 0
-                for result in parser.items:
+                for result in search_results:
                     url = unwrap_search_url(result.get("url", ""))
                     if not is_product_candidate(url, allowed_domains) or url in seen_for_manga:
                         continue
@@ -206,10 +212,10 @@ def run_discovery(limit=None):
                     "search_url": search_url,
                     "search_engine": urlparse(search_url).hostname,
                     "response_bytes": len(raw),
-                    "anchor_count": len(parser.items),
+                    "anchor_count": len(search_results),
                     "candidate_count": new_from_engine,
-                    "has_result_marker": any(token in lower_html for token in (
-                        "result__a", "b_algo", "web-result", "result__body"
+                    "has_result_marker": bool(new_from_engine) or any(token in lower_html for token in (
+                        "result__a", "b_algo", "web-result", "result__body", "<item>"
                     )),
                     "page_appears_blocked": any(token in lower_html for token in (
                         "captcha", "bot detection", "unusual traffic", "verify you are human",
