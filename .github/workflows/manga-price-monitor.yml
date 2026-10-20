@@ -52,14 +52,71 @@ jobs:
         run: python scripts/report.py
 
       - name: Commit generated evidence
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A data/
-          if git diff --cached --quiet; then
-            echo "No generated data changes."
-          else
+
+          # Preserve append-only price history from the newest main commit before
+          # replacing report snapshots with this run's freshly generated evidence.
+          merge_history() {
+            git show origin/main:data/price_history.jsonl > /tmp/manga-history-remote.jsonl 2>/dev/null || true
+            python - <<'PY'
+          import json
+          from pathlib import Path
+
+          target = Path("data/price_history.jsonl")
+          remote = Path("/tmp/manga-history-remote.jsonl")
+          target.parent.mkdir(parents=True, exist_ok=True)
+
+          def load(path):
+              if not path.exists():
+                  return []
+              return [line.strip() for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+
+          remote_lines = load(remote)
+          local_lines = load(target)
+          merged = []
+          seen = set()
+
+          def identity(line):
+              try:
+                  row = json.loads(line)
+                  key = (row.get("listing_id"), row.get("retrieved_at"), row.get("listing_url"))
+                  if any(value is not None for value in key):
+                      return ("observation",) + key
+              except (json.JSONDecodeError, TypeError):
+                  pass
+              return ("raw", line)
+
+          for line in remote_lines + local_lines:
+              key = identity(line)
+              if key not in seen:
+                  seen.add(key)
+                  merged.append(line)
+          target.write_text("".join(line + "\n" for line in merged), encoding="utf-8")
+          print(f"Price history merged: remote={len(remote_lines)} local={len(local_lines)} final={len(merged)}")
+          PY
+          }
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            merge_history
+            # Use latest remote main as the parent without rebasing conflicting
+            # generated snapshots. Only data/ is staged below.
+            git reset --mixed origin/main
+            git add -A data/
+            if git diff --cached --quiet; then
+              echo "No generated data changes."
+              exit 0
+            fi
             git commit -m "Update manga price evidence"
-            git pull --rebase origin main
-            git push
-          fi
+            if git push origin HEAD:main; then
+              echo "Generated evidence pushed successfully."
+              exit 0
+            fi
+            echo "Push race on retry $attempt; refetching main and retrying."
+          done
+          echo "Could not push generated evidence after three attempts." >&2
+          exit 1
