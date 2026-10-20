@@ -99,6 +99,17 @@ class MangaCoreTests(unittest.TestCase):
         self.assertEqual(decision["status"], "NOT_ELIGIBLE")
         self.assertIn("NOT_ALL_REQUIRED_VOLUMES_COVERED", decision["reasons"])
 
+    def test_verified_partial_set_can_enter_basket_optimizer_only(self):
+        partial = sample_listing(included_ranges=[[1, 2]])
+        full_result = listing_decision(partial, sample_observation(), sample_manga(), POLICY)
+        self.assertEqual(full_result["status"], "NOT_ELIGIBLE")
+        partial_result = listing_decision(
+            partial, sample_observation(), sample_manga(), POLICY, require_complete=False
+        )
+        self.assertEqual(partial_result["status"], "CONFIRMED")
+        self.assertEqual(partial_result["included_ranges"], [(1, 2)])
+        self.assertNotIn("NOT_ALL_REQUIRED_VOLUMES_COVERED", partial_result["reasons"])
+
     def test_stale_price_is_excluded(self):
         old = (now_jst() - timedelta(hours=30)).isoformat()
         decision = listing_decision(sample_listing(), sample_observation(retrieved_at=old), sample_manga(), POLICY)
