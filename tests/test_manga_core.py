@@ -153,6 +153,18 @@ class MangaCoreTests(unittest.TestCase):
         self.assertEqual(result["parse_status"], "PRICE_NOT_FOUND")
         self.assertIsNone(result["price_jpy"])
 
+    def test_aggregate_offer_low_price_is_not_checkout_price(self):
+        html = """
+        <script type="application/ld+json">
+        {"@type":"Product","name":"全巻セット",
+         "offers":{"@type":"AggregateOffer","lowPrice":"1200","highPrice":"2800",
+         "priceCurrency":"JPY","availability":"https://schema.org/InStock"}}
+        </script>
+        """
+        result = extract_product_data(html, "https://jp.mercari.com/item/m123")
+        self.assertEqual(result["parse_status"], "PRICE_NOT_FOUND")
+        self.assertIsNone(result["price_jpy"])
+
     def test_different_offer_prices_are_ambiguous(self):
         html = """
         <script type="application/ld+json">
