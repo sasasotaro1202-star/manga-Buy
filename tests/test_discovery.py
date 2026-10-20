@@ -32,8 +32,8 @@ class DiscoveryTests(unittest.TestCase):
     def test_bing_rss_parser_extracts_product_links_without_prices(self):
         xml = b"""<?xml version="1.0" encoding="UTF-8"?>
         <rss version="2.0"><channel><item>
-          <title>中古漫画セット</title><link>https://jp.mercari.com/item/m123</link>
-          <description>4,000円</description>
+          <title>Used manga set</title><link>https://jp.mercari.com/item/m123</link>
+          <description>4000 yen</description>
         </item></channel></rss>"""
         results = parse_bing_rss(xml)
         self.assertEqual(len(results), 1)
