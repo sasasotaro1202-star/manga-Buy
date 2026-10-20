@@ -65,6 +65,32 @@ def main():
     allowed_domains = marketplace_config.get("allowed_domains", [])
     if not allowed_domains:
         errors.append("Marketplace allowlist is empty.")
+    discovery_config = marketplace_config.get("discovery", {})
+    search_engines = discovery_config.get("engine_urls", [])
+    search_targets = discovery_config.get("search_targets", [])
+    if not search_engines:
+        errors.append("Discovery needs at least one configured search engine.")
+    for engine_url in search_engines:
+        if not str(engine_url).startswith("https://") or "{query}" not in str(engine_url):
+            errors.append("Every discovery engine URL must be HTTPS and contain {query}.")
+    target_ids = [target.get("id") for target in search_targets if isinstance(target, dict)]
+    if not search_targets:
+        errors.append("Discovery needs marketplace-specific search targets.")
+    if len(target_ids) != len(set(target_ids)):
+        errors.append("Discovery target IDs must be unique.")
+    for target in search_targets:
+        if not isinstance(target, dict):
+            errors.append("Every discovery target must be an object.")
+            continue
+        domain = str(target.get("domain") or "").lower()
+        template = str(target.get("query_template") or "")
+        if not domain or not any(domain == item or domain.endswith("." + item) or item.endswith("." + domain) for item in allowed_domains):
+            errors.append(f"Discovery target {target.get('id')!r} domain is not allowlisted.")
+        if "{title}" not in template or not template.startswith("site:"):
+            errors.append(f"Discovery target {target.get('id')!r} needs a title and site-scoped query template.")
+        if " OR " in template:
+            errors.append(f"Discovery target {target.get('id')!r} must not use an ambiguous OR mega-query.")
+
     for site in marketplace_config.get("marketplaces", []):
         if site.get("enabled") and "{query}" not in str(site.get("search_template") or ""):
             errors.append(f"Marketplace {site.get('id')} needs a search template containing {{query}}.")

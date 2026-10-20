@@ -19,7 +19,7 @@ permissions:
 
 concurrency:
   group: manga-price-intelligence-main
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   monitor:

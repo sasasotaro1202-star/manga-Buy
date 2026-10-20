@@ -4,7 +4,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
-from discover import SearchResultsParser, unwrap_search_url, is_product_candidate, parse_bing_rss, search_engine_urls
+from discover import SearchResultsParser, unwrap_search_url, is_product_candidate, parse_bing_rss, search_engine_urls, search_queries_for_manga
 
 
 class DiscoveryTests(unittest.TestCase):
@@ -69,6 +69,22 @@ class DiscoveryTests(unittest.TestCase):
         self.assertIn("bing.com/search?q=", urls[1])
         self.assertIn("format=rss", urls[2])
         self.assertTrue(all(url.startswith("https://") and "{query}" in url for url in urls))
+
+    def test_queries_target_marketplaces_individually(self):
+        config = {
+            "search_targets": [
+                {"id": "mercari", "domain": "jp.mercari.com",
+                 "query_template": 'site:jp.mercari.com/item "{title}" 中古 全巻セット'},
+                {"id": "bookoff", "domain": "shopping.bookoff.co.jp",
+                 "query_template": 'site:shopping.bookoff.co.jp/used "{title}" 全巻セット'},
+            ]
+        }
+        queries = search_queries_for_manga({"search_title": "HUNTER×HUNTER"}, config)
+        self.assertEqual([query["id"] for query in queries], ["mercari", "bookoff"])
+        self.assertIn("site:jp.mercari.com/item", queries[0]["query"])
+        self.assertIn("site:shopping.bookoff.co.jp/used", queries[1]["query"])
+        self.assertTrue(all(" OR " not in query["query"] for query in queries))
+        self.assertTrue(all("HUNTER×HUNTER" in query["query"] for query in queries))
 
     def test_http_url_is_rejected(self):
         self.assertFalse(is_product_candidate("http://jp.mercari.com/item/m123", ["mercari.com"]))

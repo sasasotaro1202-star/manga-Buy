@@ -178,15 +178,43 @@ def search_engine_urls(discovery_config):
     return result
 
 
+
+def search_queries_for_manga(manga, discovery_config):
+    """Build independent marketplace-specific queries; avoid ambiguous OR mega-queries."""
+    title = str(manga.get("search_title") or manga.get("title") or "").replace('"', " ").strip()
+    targets = discovery_config.get("search_targets")
+    if not isinstance(targets, list) or not targets:
+        return [{
+            "id": "fallback-broad",
+            "domain": None,
+            "query": '"' + title + '" 漫画 中古 全巻セット',
+        }]
+    queries = []
+    for target in targets:
+        if not isinstance(target, dict):
+            continue
+        template = str(target.get("query_template") or "").strip()
+        target_id = str(target.get("id") or "").strip()
+        domain = str(target.get("domain") or "").strip().lower()
+        if not template or not target_id or not domain:
+            continue
+        try:
+            query = template.format(title=title)
+        except (KeyError, ValueError):
+            continue
+        queries.append({"id": target_id, "domain": domain, "query": query})
+    return queries
+
 def run_discovery(limit=None):
     catalog = load_json(CATALOG_PATH, {"manga": []})
     marketplace_config = load_json(MARKETPLACES_PATH, {})
     discovery_config = marketplace_config.get("discovery", {})
     allowed_domains = marketplace_config.get("allowed_domains", [])
-    timeout = int(discovery_config.get("timeout_seconds", 20))
+    timeout = int(discovery_config.get("timeout_seconds", 8))
     max_bytes = int(discovery_config.get("max_response_bytes", 2_000_000))
-    max_per_manga = int(discovery_config.get("max_candidates_per_manga", 12))
-    delay = float(discovery_config.get("delay_seconds", 2))
+    max_per_manga = max(1, int(discovery_config.get("max_candidates_per_manga", 8)))
+    max_per_target = max(1, int(discovery_config.get("max_candidates_per_target", 2)))
+    delay = max(0.0, min(float(discovery_config.get("delay_seconds", 1.0)), 30.0))
     max_queries = min(int(discovery_config.get("max_queries_per_run", 25)), limit or 25)
 
     old_data = load_json(OUTPUT_PATH, {"candidates": []})
@@ -203,118 +231,144 @@ def run_discovery(limit=None):
     engine_urls = search_engine_urls(discovery_config)
 
     for manga in catalog.get("manga", [])[:max_queries]:
-        query = (
-            str(manga.get("search_title") or manga.get("title") or "")
-            + ' 中古 全巻セット (site:jp.mercari.com OR site:shopping.bookoff.co.jp OR '
-            + 'site:item.rakuten.co.jp OR site:shopping.yahoo.co.jp OR site:auctions.yahoo.co.jp '
-            + 'OR site:suruga-ya.jp OR site:netoff.co.jp OR site:mandarake.co.jp)'
-        )
+        manga_id = manga.get("id")
+        queries = search_queries_for_manga(manga, discovery_config)
         seen_for_manga = set()
         accepted = 0
-        for engine_index, engine_url in enumerate(engine_urls):
+        for target_index, query_spec in enumerate(queries):
             if accepted >= max_per_manga:
                 break
-            search_url = engine_url.format(query=quote(query, safe=""))
-            queries_checked += 1
-            try:
-                request = Request(search_url, headers={
-                    "User-Agent": "manga-Buy/0.1 (+https://github.com/sasasotaro1202-star/manga-Buy)",
-                    "Accept": "text/html,application/xhtml+xml",
-                    "Accept-Language": "ja-JP,ja;q=0.9,en;q=0.5",
-                })
-                with urlopen(request, timeout=timeout) as response:
-                    raw = response.read(max_bytes + 1)
-                    if len(raw) > max_bytes:
-                        raise ValueError("SEARCH_RESPONSE_TOO_LARGE")
-                    charset = response.headers.get_content_charset() or "utf-8"
-                    html = raw.decode(charset, errors="replace")
-                is_rss = "format=rss" in search_url.lower()
-                if is_rss:
-                    # Bing RSS is XML, not HTML. Parse only link/title; snippets never become prices.
-                    search_results = parse_bing_rss(raw)
-                else:
-                    parser = SearchResultsParser()
-                    parser.feed(html)
-                    search_results = parser.items
-                new_from_engine = 0
-                rejected_hosts = {}
-                rejected_host_samples = {}
-                rejected_paths = []
-                for result in search_results:
-                    url = unwrap_search_url(result.get("url", ""), base_url=search_url)
-                    if not valid_https_url(url):
-                        rejected_hosts["invalid_or_non_https"] = rejected_hosts.get("invalid_or_non_https", 0) + 1
-                        continue
-                    if not allowed_host(url, allowed_domains):
-                        host = urlparse(url).hostname or "unknown"
-                        rejected_hosts[host] = rejected_hosts.get(host, 0) + 1
-                        rejected_host_samples.setdefault(host, [])
-                        if len(rejected_host_samples[host]) < 2:
-                            rejected_host_samples[host].append(url[:500])
-                        continue
-                    if not is_product_candidate(url, allowed_domains):
-                        if len(rejected_paths) < 3:
-                            rejected_paths.append(url)
-                        continue
-                    if url in seen_for_manga:
-                        continue
-                    seen_for_manga.add(url)
-                    old = previous_by_url.get(url, {})
-                    current_by_url[url] = {
-                        "manga_id": manga.get("id"),
-                        "manga_title": manga.get("title"),
-                        "listing_url": url,
-                        "search_result_title": result.get("title"),
-                        "source_domain": urlparse(url).hostname,
-                        "first_seen_at": old.get("first_seen_at") or now,
-                        "last_seen_at": now,
-                        "discovered_by_query": query,
-                        "discovered_by_engine": urlparse(search_url).hostname,
-                        "verification_status": "UNVERIFIED_LEAD",
-                        "price_jpy": None,
-                        "availability": "UNKNOWN",
-                        "volume_coverage": None,
-                        "condition": "UNKNOWN",
-                        "shipping_jpy": None,
-                        "notes": "検索で発見したリンク。販売価格や全巻条件の証拠ではない。",
-                    }
-                    accepted += 1
-                    new_from_engine += 1
-                    if accepted >= max_per_manga:
-                        break
-                lower_html = html.lower()
-                diagnostics.append({
-                    "manga_id": manga.get("id"),
-                    "search_url": search_url,
-                    "search_engine": urlparse(search_url).hostname,
-                    "response_bytes": len(raw),
-                    "anchor_count": len(search_results),
-                    "candidate_count": new_from_engine,
-                    "fallback_used": engine_index > 0,
-                    "rejected_host_counts": rejected_hosts,
-                    "rejected_host_samples": rejected_host_samples,
-                    "rejected_path_samples": rejected_paths,
-                    "has_result_marker": bool(new_from_engine) or any(token in lower_html for token in (
-                        "result__a", "b_algo", "web-result", "result__body", "<item>"
-                    )),
-                    "page_appears_blocked": any(token in lower_html for token in (
-                        "captcha", "bot detection", "unusual traffic", "verify you are human",
-                        "consent required", "enable javascript to continue"
-                    )),
-                })
-            except Exception as exc:
-                errors.append({
-                    "manga_id": manga.get("id"),
-                    "manga_title": manga.get("title"),
-                    "search_url": search_url,
-                    "search_engine": urlparse(search_url).hostname,
-                    "error": type(exc).__name__ + ": " + str(exc)[:240],
-                    "checked_at": now,
-                })
-            finally:
-                time.sleep(delay)
+            target_id = query_spec.get("id")
+            target_domain = query_spec.get("domain")
+            query = query_spec["query"]
+            accepted_for_target = 0
 
-    # Keep earlier discoveries so transient search outages don't erase useful leads.
+            for engine_index, engine_url in enumerate(engine_urls):
+                if accepted >= max_per_manga or accepted_for_target >= max_per_target:
+                    break
+                search_url = engine_url.format(query=quote(query, safe=""))
+                queries_checked += 1
+                try:
+                    request = Request(search_url, headers={
+                        "User-Agent": "manga-Buy/0.1 (+https://github.com/sasasotaro1202-star/manga-Buy)",
+                        "Accept": "text/html,application/xhtml+xml,application/rss+xml,application/xml",
+                        "Accept-Language": "ja-JP,ja;q=0.9,en;q=0.5",
+                    })
+                    with urlopen(request, timeout=timeout) as response:
+                        raw = response.read(max_bytes + 1)
+                        if len(raw) > max_bytes:
+                            raise ValueError("SEARCH_RESPONSE_TOO_LARGE")
+                        charset = response.headers.get_content_charset() or "utf-8"
+                        html = raw.decode(charset, errors="replace")
+
+                    is_rss = "format=rss" in search_url.lower()
+                    if is_rss:
+                        search_results = parse_bing_rss(raw)
+                    else:
+                        parser = SearchResultsParser()
+                        parser.feed(html)
+                        search_results = parser.items
+
+                    new_from_engine = 0
+                    rejected_hosts = {}
+                    rejected_host_samples = {}
+                    rejected_paths = []
+                    for result in search_results:
+                        url = unwrap_search_url(result.get("url", ""), base_url=search_url)
+                        if not valid_https_url(url):
+                            rejected_hosts["invalid_or_non_https"] = rejected_hosts.get("invalid_or_non_https", 0) + 1
+                            continue
+
+                        host = urlparse(url).hostname or "unknown"
+                        if target_domain and not allowed_host(url, [target_domain]):
+                            key = "off_target:" + host
+                            rejected_hosts[key] = rejected_hosts.get(key, 0) + 1
+                            rejected_host_samples.setdefault(key, [])
+                            if len(rejected_host_samples[key]) < 2:
+                                rejected_host_samples[key].append(url[:500])
+                            continue
+                        if not allowed_host(url, allowed_domains):
+                            rejected_hosts[host] = rejected_hosts.get(host, 0) + 1
+                            rejected_host_samples.setdefault(host, [])
+                            if len(rejected_host_samples[host]) < 2:
+                                rejected_host_samples[host].append(url[:500])
+                            continue
+                        if not is_product_candidate(url, allowed_domains):
+                            if len(rejected_paths) < 3:
+                                rejected_paths.append(url)
+                            continue
+                        if url in seen_for_manga:
+                            continue
+                        existing = current_by_url.get(url)
+                        if existing and existing.get("manga_id") != manga_id:
+                            continue
+
+                        seen_for_manga.add(url)
+                        old = previous_by_url.get(url, {})
+                        current_by_url[url] = {
+                            "manga_id": manga_id,
+                            "manga_title": manga.get("title"),
+                            "listing_url": url,
+                            "search_result_title": result.get("title"),
+                            "source_domain": host,
+                            "first_seen_at": old.get("first_seen_at") or now,
+                            "last_seen_at": now,
+                            "discovered_by_query": query,
+                            "discovered_by_target": target_id,
+                            "discovered_by_engine": urlparse(search_url).hostname,
+                            "verification_status": "UNVERIFIED_LEAD",
+                            "price_jpy": None,
+                            "availability": "UNKNOWN",
+                            "volume_coverage": None,
+                            "condition": "UNKNOWN",
+                            "shipping_jpy": None,
+                            "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。",
+                        }
+                        accepted += 1
+                        accepted_for_target += 1
+                        new_from_engine += 1
+                        if accepted >= max_per_manga or accepted_for_target >= max_per_target:
+                            break
+
+                    lower_html = html.lower()
+                    diagnostics.append({
+                        "manga_id": manga_id,
+                        "target_id": target_id,
+                        "target_domain": target_domain,
+                        "target_index": target_index,
+                        "search_url": search_url,
+                        "search_engine": urlparse(search_url).hostname,
+                        "response_bytes": len(raw),
+                        "result_link_count": len(search_results),
+                        "candidate_count": new_from_engine,
+                        "fallback_used": engine_index > 0,
+                        "rejected_host_counts": rejected_hosts,
+                        "rejected_host_samples": rejected_host_samples,
+                        "rejected_path_samples": rejected_paths,
+                        "has_result_marker": bool(search_results) or any(token in lower_html for token in (
+                            "result__a", "b_algo", "web-result", "result__body", "<item>"
+                        )),
+                        "page_appears_blocked": any(token in lower_html for token in (
+                            "captcha", "bot detection", "unusual traffic", "verify you are human",
+                            "consent required", "enable javascript to continue"
+                        )),
+                    })
+                except Exception as exc:
+                    errors.append({
+                        "manga_id": manga_id,
+                        "manga_title": manga.get("title"),
+                        "target_id": target_id,
+                        "target_domain": target_domain,
+                        "query": query,
+                        "search_url": search_url,
+                        "search_engine": urlparse(search_url).hostname,
+                        "error": type(exc).__name__ + ": " + str(exc)[:240],
+                        "checked_at": now,
+                    })
+                finally:
+                    time.sleep(delay)
+
+    # Retain previous leads for inspection, while only current results refresh last_seen_at.
     merged = dict(previous_by_url)
     merged.update(current_by_url)
     candidates = list(merged.values())
@@ -330,9 +384,10 @@ def run_discovery(limit=None):
         "generated_at": now,
         "discovery_status": status,
         "queries_checked": queries_checked,
+        "search_targets_checked": len(queries),
         "query_errors": errors,
         "query_diagnostics": diagnostics,
-        "queries_with_anchors": sum(1 for item in diagnostics if item.get("anchor_count")),
+        "queries_with_anchors": sum(1 for item in diagnostics if item.get("result_link_count")),
         "queries_with_result_marker": sum(1 for item in diagnostics if item.get("has_result_marker")),
         "queries_using_fallback": sum(1 for item in diagnostics if item.get("fallback_used")),
         "queries_finding_candidates": sum(1 for item in diagnostics if item.get("candidate_count", 0) > 0),
@@ -350,7 +405,6 @@ def run_discovery(limit=None):
         "current_seen_count", "retained_candidate_count"
     )}, ensure_ascii=False))
     return result
-
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

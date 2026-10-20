@@ -68,12 +68,38 @@
     }
   ],
   "discovery": {
-    "engine_url": "https://html.duckduckgo.com/html/?q={query}",
     "max_queries_per_run": 25,
-    "max_candidates_per_manga": 12,
+    "max_candidates_per_manga": 8,
     "delay_seconds": 1,
     "timeout_seconds": 8,
-    "max_response_bytes": 2000000
+    "max_response_bytes": 2000000,
+    "engine_urls": [
+      "https://www.bing.com/search?q={query}&mkt=ja-JP&setlang=ja",
+      "https://www.bing.com/search?format=rss&mkt=ja-JP&setlang=ja&q={query}"
+    ],
+    "search_targets": [
+      {
+        "id": "mercari",
+        "domain": "jp.mercari.com",
+        "query_template": "site:jp.mercari.com/item \"{title}\" 中古 全巻セット"
+      },
+      {
+        "id": "bookoff",
+        "domain": "shopping.bookoff.co.jp",
+        "query_template": "site:shopping.bookoff.co.jp/used \"{title}\" 全巻セット 中古"
+      },
+      {
+        "id": "yahoo-auctions",
+        "domain": "auctions.yahoo.co.jp",
+        "query_template": "site:auctions.yahoo.co.jp \"{title}\" 全巻セット 中古"
+      },
+      {
+        "id": "rakuten",
+        "domain": "item.rakuten.co.jp",
+        "query_template": "site:item.rakuten.co.jp \"{title}\" 全巻セット 中古"
+      }
+    ],
+    "max_candidates_per_target": 2
   },
   "monitor": {
     "timeout_seconds": 10,
