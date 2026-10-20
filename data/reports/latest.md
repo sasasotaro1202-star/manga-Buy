@@ -1,6 +1,6 @@
 # manga-Buy 最新レポート
 
-確認時刻（JST）： 2026-10-21T04:20:11+09:00
+確認時刻（JST）： 2026-10-21T04:24:27+09:00
 
 ## このレポートの読み方
 
@@ -17,7 +17,10 @@
 - 発見候補URL：0
 - 直近の商品取得成功：0
 - 直近の商品取得エラー：0
-- 検索発見状態：OK
+- 検索発見状態：EMPTY
+- 検索結果リンクを含むページ：25/25
+- 検索結果マーカーを検出したページ：0/25
+- ブロック/認証画面の疑い：0
 
 ## 第一候補・第二候補の比較
 
@@ -40,7 +43,8 @@
 
 #### 葬送のフリーレン
 
-- 対象巻数：15巻（暫定・再確認必要）
+- 対象巻数：15巻（公式/基準確認済み）
+- 巻数確認元：[公式/確認ページ](https://www.shogakukan.co.jp/books/09854346)
 - 確認済みの購入可能な全巻セット：まだなし。
 - 各サイトで現在の出品を探す：
   - [Amazon.co.jp](https://www.amazon.co.jp/s?k=%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3%20%E6%97%A2%E5%88%8A%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
@@ -69,7 +73,8 @@
 
 #### 呪術廻戦≡（モジュロ）
 
-- 対象巻数：3巻（暫定・再確認必要）
+- 対象巻数：3巻（公式/基準確認済み）
+- 巻数確認元：[公式/確認ページ](https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-885042-9)
 - 確認済みの購入可能な全巻セット：まだなし。
 - 各サイトで現在の出品を探す：
   - [Amazon.co.jp](https://www.amazon.co.jp/s?k=%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1%20%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
@@ -84,6 +89,7 @@
 #### 亜人
 
 - 対象巻数：17巻（公式/基準確認済み）
+- 巻数確認元：[公式/確認ページ](https://www.kodansha.co.jp/comic/products/0000350670)
 - 確認済みの購入可能な全巻セット：まだなし。
 - 各サイトで現在の出品を探す：
   - [Amazon.co.jp](https://www.amazon.co.jp/s?k=%E4%BA%9C%E4%BA%BA%20%E6%A1%9C%E4%BA%95%E7%94%BB%E9%96%80%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
@@ -98,6 +104,7 @@
 #### ゴールデンカムイ
 
 - 対象巻数：31巻（公式/基準確認済み）
+- 巻数確認元：[公式/確認ページ](https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-892370-3)
 - 確認済みの購入可能な全巻セット：まだなし。
 - 各サイトで現在の出品を探す：
   - [Amazon.co.jp](https://www.amazon.co.jp/s?k=%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
@@ -111,17 +118,18 @@
 
 #### チェンソーマン
 
-- 対象巻数：24巻（暫定・再確認必要）
+- 対象巻数：24巻（公式/基準確認済み）
+- 巻数確認元：[公式/確認ページ](https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-885051-1)
 - 確認済みの購入可能な全巻セット：まだなし。
 - 各サイトで現在の出品を探す：
-  - [Amazon.co.jp](https://www.amazon.co.jp/s?k=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E6%97%A2%E5%88%8A%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
-  - [メルカリ](https://jp.mercari.com/search?keyword=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E6%97%A2%E5%88%8A%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
-  - [楽天市場](https://search.rakuten.co.jp/search/mall/%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E6%97%A2%E5%88%8A%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4/)
-  - [Yahoo!ショッピング](https://shopping.yahoo.co.jp/search?p=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E6%97%A2%E5%88%8A%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
-  - [Yahoo!オークション](https://auctions.yahoo.co.jp/search/search?p=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E6%97%A2%E5%88%8A%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
-  - [BOOKOFFオンライン](https://shopping.bookoff.co.jp/search/keyword/%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E6%97%A2%E5%88%8A%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
-  - [駿河屋（サイト内検索）](https://www.google.com/search?q=site%3Asuruga-ya.jp+%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E6%97%A2%E5%88%8A%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
-  - [ネットオフ（サイト内検索）](https://www.google.com/search?q=site%3Anettof.co.jp+%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E6%97%A2%E5%88%8A%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
+  - [Amazon.co.jp](https://www.amazon.co.jp/s?k=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
+  - [メルカリ](https://jp.mercari.com/search?keyword=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
+  - [楽天市場](https://search.rakuten.co.jp/search/mall/%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4/)
+  - [Yahoo!ショッピング](https://shopping.yahoo.co.jp/search?p=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
+  - [Yahoo!オークション](https://auctions.yahoo.co.jp/search/search?p=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
+  - [BOOKOFFオンライン](https://shopping.bookoff.co.jp/search/keyword/%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
+  - [駿河屋（サイト内検索）](https://www.google.com/search?q=site%3Asuruga-ya.jp+%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
+  - [ネットオフ（サイト内検索）](https://www.google.com/search?q=site%3Anettof.co.jp+%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
 
 #### カグラバチ
 
@@ -140,7 +148,8 @@
 
 #### ガチアクタ
 
-- 対象巻数：19巻（暫定・再確認必要）
+- 対象巻数：19巻（公式/基準確認済み）
+- 巻数確認元：[公式/確認ページ](https://www.kodansha.co.jp/comic/products/0000426881)
 - 確認済みの購入可能な全巻セット：まだなし。
 - 各サイトで現在の出品を探す：
   - [Amazon.co.jp](https://www.amazon.co.jp/s?k=%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF%20%E8%A3%8F%E9%82%A3%E5%9C%AD%20%E6%97%A2%E5%88%8A%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
@@ -156,7 +165,8 @@
 
 #### ワールドトリガー
 
-- 対象巻数：30巻（暫定・再確認必要）
+- 対象巻数：30巻（公式/基準確認済み）
+- 巻数確認元：[公式/確認ページ](https://www.shueisha.co.jp/books/items/contents_amp.html?isbn=978-4-08-885150-1)
 - 確認済みの購入可能な全巻セット：まだなし。
 - 各サイトで現在の出品を探す：
   - [Amazon.co.jp](https://www.amazon.co.jp/s?k=%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC%20%E8%91%A6%E5%8E%9F%E5%A4%A7%E4%BB%8B%20%E6%97%A2%E5%88%8A%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
@@ -170,7 +180,8 @@
 
 #### とんがり帽子のアトリエ
 
-- 対象巻数：16巻（暫定・再確認必要）
+- 対象巻数：16巻（公式/基準確認済み）
+- 巻数確認元：[公式/確認ページ](https://www.kodansha.co.jp/comic/products/0000425340)
 - 確認済みの購入可能な全巻セット：まだなし。
 - 各サイトで現在の出品を探す：
   - [Amazon.co.jp](https://www.amazon.co.jp/s?k=%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8%20%E7%99%BD%E6%B5%9C%E9%B4%8E%20%E6%97%A2%E5%88%8A%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
@@ -184,7 +195,8 @@
 
 #### 天幕のジャードゥーガル
 
-- 対象巻数：6巻（暫定・再確認必要）
+- 対象巻数：6巻（公式/基準確認済み）
+- 巻数確認元：[公式/確認ページ](https://www.akitashoten.co.jp/series/11986)
 - 確認済みの購入可能な全巻セット：まだなし。
 - 各サイトで現在の出品を探す：
   - [Amazon.co.jp](https://www.amazon.co.jp/s?k=%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB%20%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97%20%E6%97%A2%E5%88%8A%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
@@ -229,6 +241,7 @@
 #### 宝石の国
 
 - 対象巻数：13巻（公式/基準確認済み）
+- 巻数確認元：[公式/確認ページ](https://www.kodansha.co.jp/comic/products/0000399728)
 - 確認済みの購入可能な全巻セット：まだなし。
 - 各サイトで現在の出品を探す：
   - [Amazon.co.jp](https://www.amazon.co.jp/s?k=%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD%20%E5%B8%82%E5%B7%9D%E6%98%A5%E5%AD%90%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
@@ -242,7 +255,8 @@
 
 #### ダンダダン
 
-- 対象巻数：25巻（暫定・再確認必要）
+- 対象巻数：25巻（公式/基準確認済み）
+- 巻数確認元：[公式/確認ページ](https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-885188-4)
 - 確認済みの購入可能な全巻セット：まだなし。
 - 各サイトで現在の出品を探す：
   - [Amazon.co.jp](https://www.amazon.co.jp/s?k=%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3%20%E9%BE%8D%E5%B9%B8%E4%BC%B8%20%E6%97%A2%E5%88%8A%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
@@ -271,6 +285,7 @@
 #### 東京喰種＋東京喰種:re
 
 - 対象巻数：30巻（公式/基準確認済み）
+- 巻数確認元：[公式/確認ページ](https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-891050-5)
 - 確認済みの購入可能な全巻セット：まだなし。
 - 各サイトで現在の出品を探す：
   - [Amazon.co.jp](https://www.amazon.co.jp/s?k=%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%20%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are%20%E3%82%BB%E3%83%83%E3%83%88%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
@@ -285,6 +300,7 @@
 #### 寄生獣
 
 - 対象巻数：10巻（公式/基準確認済み）
+- 巻数確認元：[公式/確認ページ](https://www.kodansha.co.jp/comic/products/0000030023)
 - 確認済みの購入可能な全巻セット：まだなし。
 - 各サイトで現在の出品を探す：
   - [Amazon.co.jp](https://www.amazon.co.jp/s?k=%E5%AF%84%E7%94%9F%E7%8D%A3%20%E5%B2%A9%E6%98%8E%E5%9D%87%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
@@ -312,21 +328,23 @@
 
 #### ヴィンランド・サガ
 
-- 対象巻数：29巻（暫定・再確認必要）
+- 対象巻数：29巻（公式/基準確認済み）
+- 巻数確認元：[公式/確認ページ](https://afternoon.kodansha.co.jp/c/vinlandsaga/)
 - 確認済みの購入可能な全巻セット：まだなし。
 - 各サイトで現在の出品を探す：
-  - [Amazon.co.jp](https://www.amazon.co.jp/s?k=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E6%97%A2%E5%88%8A%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
-  - [メルカリ](https://jp.mercari.com/search?keyword=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E6%97%A2%E5%88%8A%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
-  - [楽天市場](https://search.rakuten.co.jp/search/mall/%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E6%97%A2%E5%88%8A%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4/)
-  - [Yahoo!ショッピング](https://shopping.yahoo.co.jp/search?p=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E6%97%A2%E5%88%8A%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
-  - [Yahoo!オークション](https://auctions.yahoo.co.jp/search/search?p=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E6%97%A2%E5%88%8A%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
-  - [BOOKOFFオンライン](https://shopping.bookoff.co.jp/search/keyword/%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E6%97%A2%E5%88%8A%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
-  - [駿河屋（サイト内検索）](https://www.google.com/search?q=site%3Asuruga-ya.jp+%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E6%97%A2%E5%88%8A%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
-  - [ネットオフ（サイト内検索）](https://www.google.com/search?q=site%3Anettof.co.jp+%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E6%97%A2%E5%88%8A%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
+  - [Amazon.co.jp](https://www.amazon.co.jp/s?k=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
+  - [メルカリ](https://jp.mercari.com/search?keyword=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
+  - [楽天市場](https://search.rakuten.co.jp/search/mall/%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4/)
+  - [Yahoo!ショッピング](https://shopping.yahoo.co.jp/search?p=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
+  - [Yahoo!オークション](https://auctions.yahoo.co.jp/search/search?p=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
+  - [BOOKOFFオンライン](https://shopping.bookoff.co.jp/search/keyword/%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
+  - [駿河屋（サイト内検索）](https://www.google.com/search?q=site%3Asuruga-ya.jp+%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
+  - [ネットオフ（サイト内検索）](https://www.google.com/search?q=site%3Anettof.co.jp+%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
 
 #### 天国大魔境
 
-- 対象巻数：13巻（暫定・再確認必要）
+- 対象巻数：14巻（暫定・再確認必要）
+- 巻数確認元：[公式/確認ページ](https://www.kodansha.co.jp/titles/1000031494)
 - 確認済みの購入可能な全巻セット：まだなし。
 - 各サイトで現在の出品を探す：
   - [Amazon.co.jp](https://www.amazon.co.jp/s?k=%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83%20%E7%9F%B3%E9%BB%92%E6%AD%A3%E6%95%B0%20%E6%97%A2%E5%88%8A%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
@@ -369,6 +387,7 @@
 #### もののがたり
 
 - 対象巻数：16巻（公式/基準確認済み）
+- 巻数確認元：[公式/確認ページ](https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-892766-4)
 - 確認済みの購入可能な全巻セット：まだなし。
 - 各サイトで現在の出品を探す：
   - [Amazon.co.jp](https://www.amazon.co.jp/s?k=%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A%20%E3%82%AA%E3%83%8B%E3%82%B0%E3%83%B3%E3%82%BD%E3%82%A6%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
@@ -386,11 +405,12 @@
 - 価格を抽出できない、通貨が不明、複数価格が競合する場合は最安ランキングに入れません。
 - 送料/必須手数料が不明、状態が不明、版や巻の収録範囲が未確認の場合は確認済みの合計にしません。
 - robots.txtで不許可、アクセス制限、ネットワーク障害、HTTPエラーは在庫切れではなく取得エラーとして扱います。
+- 検索状態 EMPTY は「検索成功」ではなく候補URLを1件も抽出できなかったことを示します。ブロック/HTML変更の診断を確認し、検索リンクから実際の商品ページを登録してください。
 - 価格履歴は data/price_history.jsonl に保存されます。単発観測のみで値下がり傾向を断定しません。
 
 ## 更新・検証
 
-- 観測生成時刻：2026-10-21T04:20:11+09:00
-- 検索生成時刻：2026-10-21T04:19:17+09:00
+- 観測生成時刻：2026-10-21T04:24:27+09:00
+- 検索生成時刻：2026-10-21T04:23:33+09:00
 - 巻数メタデータ監査は scripts/validate.py の結果も参照してください。
 
