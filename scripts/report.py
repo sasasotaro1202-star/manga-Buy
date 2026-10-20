@@ -1,0 +1,183 @@
+"""Produce an evidence-aware Markdown report with every known product URL."""
+from __future__ import annotations
+
+from datetime import timedelta
+from urllib.parse import quote
+
+from manga_core import (
+    ROOT, now_jst, load_json, save_json, manga_map, listing_decision,
+    expected_count, safe_markdown, minimum_cost_cover
+)
+
+CATALOG_PATH = ROOT / "config" / "manga_catalog.json"
+MARKETPLACES_PATH = ROOT / "config" / "marketplaces.json"
+CONDITION_PATH = ROOT / "config" / "condition_policy.json"
+LISTINGS_PATH = ROOT / "data" / "listings.json"
+OBSERVATIONS_PATH = ROOT / "data" / "observations.json"
+DISCOVERED_PATH = ROOT / "data" / "discovered_candidates.json"
+REPORT_PATH = ROOT / "data" / "reports" / "latest.md"
+
+
+def search_url(template, query):
+    encoded = quote(query, safe="")
+    return str(template).replace("{query}", encoded)
+
+
+def yen(value):
+    if not isinstance(value, int):
+        return "未確認"
+    return "¥" + format(value, ",")
+
+
+def generate_report():
+    catalog_data = load_json(CATALOG_PATH, {"manga": []})
+    marketplace_config = load_json(MARKETPLACES_PATH, {"marketplaces": []})
+    policy = load_json(CONDITION_PATH, {})
+    listing_data = load_json(LISTINGS_PATH, {"listings": []})
+    observations_data = load_json(OBSERVATIONS_PATH, {"observations": {}})
+    discovered_data = load_json(DISCOVERED_PATH, {"candidates": []})
+    observed_by_id = observations_data.get("observations", {})
+    manga_entries = catalog_data.get("manga", [])
+    manga_by_id = manga_map(catalog_data)
+    listings_by_manga = {}
+    for listing in listing_data.get("listings", []):
+        if isinstance(listing, dict):
+            listings_by_manga.setdefault(listing.get("manga_id"), []).append(listing)
+    discovered_by_manga = {}
+    for item in discovered_data.get("candidates", []):
+        if isinstance(item, dict):
+            discovered_by_manga.setdefault(item.get("manga_id"), []).append(item)
+
+    confirmed_count = 0
+    provisional_count = 0
+    error_count = 0
+    lines = [
+        "# manga-Buy 最新レポート",
+        "",
+        "確認時刻（JST）： " + now_jst().isoformat(),
+        "",
+        "## このレポートの読み方",
+        "",
+        "- **確認済み最安**：登録済み出品の中で、全巻・版・状態・在庫・24時間以内の価格観測・7日以内の送料/手数料確認をすべて通過した最安値。",
+        "- **暫定候補**：出品は見つかったが、巻数または取引条件の確認が足りず、購入可能な全巻セットとは断定できない。",
+        "- **未確認/エラー**：元の商品URLを必ず残す。取得エラーは売り切れを意味しない。",
+        "- 検索リンクは出品探し用であり、表示価格や在庫をこの監視システムが確認したことを意味しない。",
+        "- 表示対象は登録/発見済み候補だけです。全インターネットの絶対最安値を保証するものではありません。",
+        "",
+        "## 全体状況",
+        "",
+        f"- 追跡作品：{len(manga_entries)}",
+        f"- 登録商品URL：{len(listing_data.get('listings', []))}",
+        f"- 発見候補URL：{len(discovered_data.get('candidates', []))}",
+        f"- 直近の商品取得成功：{observations_data.get('summary', {}).get('ok_count', 0)}",
+        f"- 直近の商品取得エラー：{observations_data.get('summary', {}).get('error_count', 0)}",
+        f"- 検索発見状態：{discovered_data.get('discovery_status', 'NOT_RUN')}",
+        "",
+        "## 第一候補・第二候補の比較",
+        "",
+    ]
+
+    for group, label in (("first", "第一候補"), ("second", "第二候補")):
+        group_items = [entry for entry in manga_entries if entry.get("candidate_group") == group]
+        lines.extend(["### " + label, ""])
+        for manga in group_items:
+            count, count_confirmed = expected_count(manga, allow_provisional=True)
+            confirmed = []
+            provisional = []
+            registered = listings_by_manga.get(manga.get("id"), [])
+            all_decisions = []
+            for listing in registered:
+                observation = observed_by_id.get(str(listing.get("id") or ""), {})
+                decision = listing_decision(
+                    listing, observation, manga, policy,
+                    now=now_jst(),
+                    max_price_age_hours=int(marketplace_config.get("monitor", {}).get("max_price_age_hours", 24)),
+                    max_cost_age_days=int(marketplace_config.get("monitor", {}).get("max_cost_check_age_days", 7)),
+                )
+                all_decisions.append(decision)
+                if decision["status"] == "CONFIRMED":
+                    confirmed.append(decision)
+                elif decision["status"] == "PROVISIONAL":
+                    provisional.append(decision)
+                if observation.get("retrieval_status") != "OK":
+                    error_count += 1
+            confirmed.sort(key=lambda row: (row.get("total_jpy") or 10**12, row.get("condition") == "RENTAL_USED"))
+            provisional.sort(key=lambda row: (row.get("total_jpy") or 10**12, row.get("condition") == "RENTAL_USED"))
+            lines.append("#### " + safe_markdown(manga.get("title")) )
+            lines.append("")
+            if count is not None:
+                status_text = "公式/基準確認済み" if count_confirmed else "暫定・再確認必要"
+                lines.append(f"- 対象巻数：{count}巻（{status_text}）")
+            else:
+                lines.append("- 対象巻数：未確認。確定全巻判定不可。")
+            if manga.get("volume_count_source_url"):
+                lines.append("- 巻数確認元：[公式/確認ページ](" + manga["volume_count_source_url"] + ")")
+            if confirmed:
+                cheapest = confirmed[0]
+                confirmed_count += 1
+                lines.append(f"- **登録済み出品内の確認済み最安：{yen(cheapest['total_jpy'])}**")
+                lines.append(f"  - 商品価格 {yen(cheapest['price_jpy'])} + 送料 {yen(cheapest['shipping_jpy'])} + 必須手数料 {yen(cheapest['mandatory_fees_jpy'])}")
+                lines.append(f"  - 状態：{cheapest['condition']} / 在庫：{cheapest['availability']} / 観測：{cheapest.get('retrieved_at')}")
+                if cheapest.get("quality_note"):
+                    lines.append("  - 注意：" + safe_markdown(cheapest["quality_note"]))
+                lines.append("  - [商品ページ](" + cheapest["listing_url"] + ")")
+                for alternative in confirmed[1:5]:
+                    lines.append(f"  - 比較候補：{yen(alternative['total_jpy'])} — [" + safe_markdown(alternative.get("seller") or "販売ページ") + "](" + alternative["listing_url"] + ")")
+            elif provisional:
+                provisional_count += 1
+                cheapest = provisional[0]
+                lines.append(f"- 暫定候補の最安表示：{yen(cheapest['total_jpy'])} — [商品ページ](" + cheapest["listing_url"] + ")")
+                lines.append("  - **購入可能な全巻最安とは確定していません。** 巻数メタデータまたは登録情報を再確認してください。")
+            else:
+                lines.append("- 確認済みの購入可能な全巻セット：まだなし。")
+
+            if all_decisions:
+                lines.append("- 登録商品ページの確認結果：")
+                for decision in all_decisions:
+                    observation = observed_by_id.get(str(decision.get("listing_id") or ""), {})
+                    label_text = decision.get("status")
+                    reasons = ", ".join(decision.get("reasons") or []) or "条件通過"
+                    lines.append("  - [" + safe_markdown(decision.get("seller") or decision.get("listing_id") or "商品") + "](" + str(decision.get("listing_url") or "") + ") — " + label_text + " / " + reasons)
+                    if observation.get("retrieval_status") != "OK":
+                        lines.append("    - 取得状態：" + safe_markdown(observation.get("retrieval_status")) + " / " + safe_markdown(observation.get("error")))
+            discovered = discovered_by_manga.get(manga.get("id"), [])
+            if discovered:
+                lines.append("- 検索で見つかった未検証リンク（価格・全巻・状態・在庫は未確認）：")
+                for item in discovered[:8]:
+                    lines.append("  - [" + safe_markdown(item.get("search_result_title") or item.get("source_domain") or "候補リンク") + "](" + str(item.get("listing_url") or "") + ")")
+            query = str(manga.get("search_title") or manga.get("title") or "") + " " + ("全巻セット 中古" if manga.get("series_status") == "completed" else "既刊全巻セット 中古")
+            lines.append("- 各サイトで現在の出品を探す：")
+            enabled = [site for site in marketplace_config.get("marketplaces", []) if site.get("enabled")]
+            for site in enabled:
+                link = search_url(site.get("search_template", ""), query)
+                lines.append("  - [" + safe_markdown(site.get("name")) + "](" + link + ")")
+            lines.append("")
+
+    lines.extend([
+        "## データ品質・未解決事項",
+        "",
+        "- 各価格の出所は商品ページと取得時刻にひも付けて保存します。",
+        "- 価格を抽出できない、通貨が不明、複数価格が競合する場合は最安ランキングに入れません。",
+        "- 送料/必須手数料が不明、状態が不明、版や巻の収録範囲が未確認の場合は確認済みの合計にしません。",
+        "- robots.txtで不許可、アクセス制限、ネットワーク障害、HTTPエラーは在庫切れではなく取得エラーとして扱います。",
+        "- 価格履歴は data/price_history.jsonl に保存されます。単発観測のみで値下がり傾向を断定しません。",
+        "",
+        "## 更新・検証",
+        "",
+        "- 観測生成時刻：" + str(observations_data.get("generated_at") or "未実行"),
+        "- 検索生成時刻：" + str(discovered_data.get("generated_at") or "未実行"),
+        "- 巻数メタデータ監査は scripts/validate.py の結果も参照してください。",
+        "",
+    ])
+    content = "\n".join(lines)
+    REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    REPORT_PATH.write_text(content + "\n", encoding="utf-8")
+    print("REPORT_WRITTEN=" + str(REPORT_PATH))
+    print("CONFIRMED_SERIES_WITH_AT_LEAST_ONE_OFFER=" + str(confirmed_count))
+    print("PROVISIONAL_SERIES_WITH_AT_LEAST_ONE_OFFER=" + str(provisional_count))
+    print("LISTING_RETRIEVAL_ERRORS=" + str(error_count))
+    return content
+
+
+if __name__ == "__main__":
+    generate_report()

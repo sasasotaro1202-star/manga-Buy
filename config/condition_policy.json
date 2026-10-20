@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "accepted_conditions": ["GOOD", "ACCEPTABLE", "RENTAL_USED"],
+  "unknown_condition_is_eligible": false,
+  "blocking_damage_flags": [
+    "WATER_DAMAGE",
+    "MOLD",
+    "MISSING_PAGES",
+    "UNREADABLE",
+    "SEVERE_TEAR",
+    "HEAVY_WRITING",
+    "STRONG_ODOR"
+  ],
+  "non_blocking_flags_that_must_be_disclosed": [
+    "YELLOWING",
+    "SUN_FADE",
+    "LIGHT_COVER_WEAR",
+    "MINOR_FOLD",
+    "NO_OBI",
+    "DUST_JACKET_MISSING",
+    "RENTAL_LABELS"
+  ],
+  "notes": [
+    "A non-blocking flag is not proof the overall book is acceptable; condition must still be checked.",
+    "RENTAL_USED is rankable only if explicitly disclosed and other conditions pass.",
+    "POOR and UNKNOWN are excluded from the confirmed ranking."
+  ]
+}
