@@ -19,7 +19,7 @@ permissions:
 
 concurrency:
   group: manga-price-intelligence-main
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   monitor:
@@ -60,5 +60,6 @@ jobs:
             echo "No generated data changes."
           else
             git commit -m "Update manga price evidence"
+            git pull --rebase origin main
             git push
           fi
