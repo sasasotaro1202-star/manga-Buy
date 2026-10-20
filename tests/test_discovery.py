@@ -37,7 +37,7 @@ class DiscoveryTests(unittest.TestCase):
         </item></channel></rss>"""
         results = parse_bing_rss(xml)
         self.assertEqual(len(results), 1)
-        self.assertEqual(results[0]["title"], "中古漫画セット")
+        self.assertEqual(results[0]["title"], "Used manga set")
         self.assertEqual(results[0]["url"], "https://jp.mercari.com/item/m123")
         self.assertNotIn("price_jpy", results[0])
 
