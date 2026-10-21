@@ -9,6 +9,8 @@ import argparse
 import base64
 import json
 import time
+import urllib.robotparser
+from urllib.error import HTTPError
 from datetime import timedelta
 from html.parser import HTMLParser
 from urllib.parse import parse_qs, quote, urljoin, urlparse
@@ -79,6 +81,71 @@ class SearchResultsParser(HTMLParser):
     def handle_startendtag(self, tag, attrs):
         self.handle_starttag(tag, attrs)
         self.handle_endtag(tag)
+
+
+class MarketplaceResultsParser(HTMLParser):
+    """Extract anchor destinations from a marketplace's own result page."""
+    VOID_TAGS = {"area", "base", "br", "col", "embed", "hr", "img", "input",
+                 "link", "meta", "param", "source", "track", "wbr"}
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.items = []
+        self._current = None
+
+    def handle_starttag(self, tag, attrs):
+        if tag.lower() != "a":
+            return
+        data = {key.lower(): value for key, value in attrs if key}
+        href = data.get("href")
+        if href:
+            self._current = {"url": href, "title": "", "classes": str(data.get("class") or "")}
+
+    def handle_data(self, data):
+        if self._current is not None:
+            self._current["title"] += data
+
+    def handle_endtag(self, tag):
+        if tag.lower() == "a" and self._current is not None:
+            self._current["title"] = self._current["title"].strip()
+            self.items.append(self._current)
+            self._current = None
+
+    def handle_startendtag(self, tag, attrs):
+        self.handle_starttag(tag, attrs)
+        self.handle_endtag(tag)
+
+
+def robots_can_fetch(url, user_agent, timeout, cache):
+    """Fail closed on unknown robots policy; allow only a true robots.txt 404."""
+    parsed = urlparse(url)
+    if not parsed.scheme or not parsed.netloc:
+        return False, "INVALID_ORIGIN"
+    robots_url = parsed.scheme + "://" + parsed.netloc + "/robots.txt"
+    if robots_url not in cache:
+        parser = urllib.robotparser.RobotFileParser()
+        parser.set_url(robots_url)
+        try:
+            request = Request(robots_url, headers={"User-Agent": user_agent})
+            with urlopen(request, timeout=timeout) as response:
+                text = response.read(512_000).decode("utf-8", errors="replace")
+            parser.parse(text.splitlines())
+            cache[robots_url] = (True, parser, "ROBOTS_CHECKED")
+        except HTTPError as exc:
+            if exc.code == 404:
+                parser.parse([])
+                cache[robots_url] = (True, parser, "ROBOTS_404")
+            else:
+                cache[robots_url] = (False, None, "ROBOTS_HTTP_" + str(exc.code))
+        except Exception as exc:
+            cache[robots_url] = (False, None, "ROBOTS_UNVERIFIED:" + type(exc).__name__)
+    allowed, parser, reason = cache[robots_url]
+    if not allowed:
+        return False, reason
+    try:
+        return bool(parser.can_fetch(user_agent, url)), reason if parser.can_fetch(user_agent, url) else "ROBOTS_DISALLOWED"
+    except Exception:
+        return False, "ROBOTS_UNVERIFIED"
 
 
 def unwrap_search_url(url, base_url=None):
@@ -180,7 +247,7 @@ def search_engine_urls(discovery_config):
 
 
 def search_queries_for_manga(manga, discovery_config):
-    """Build independent marketplace-specific queries; avoid ambiguous OR mega-queries."""
+    """Build independent marketplace-specific searches plus direct marketplace URLs."""
     title = str(manga.get("search_title") or manga.get("title") or "").replace('"', " ").strip()
     targets = discovery_config.get("search_targets")
     if not isinstance(targets, list) or not targets:
@@ -188,6 +255,8 @@ def search_queries_for_manga(manga, discovery_config):
             "id": "fallback-broad",
             "domain": None,
             "query": '"' + title + '" 漫画 中古 全巻セット',
+            "search_page_template": None,
+            "search_term_template": "{title}",
         }]
     queries = []
     for target in targets:
@@ -196,13 +265,21 @@ def search_queries_for_manga(manga, discovery_config):
         template = str(target.get("query_template") or "").strip()
         target_id = str(target.get("id") or "").strip()
         domain = str(target.get("domain") or "").strip().lower()
+        search_page_template = str(target.get("search_page_template") or "").strip() or None
+        search_term_template = str(target.get("search_term_template") or "{title}")
         if not template or not target_id or not domain:
             continue
         try:
             query = template.format(title=title)
         except (KeyError, ValueError):
             continue
-        queries.append({"id": target_id, "domain": domain, "query": query})
+        queries.append({
+            "id": target_id,
+            "domain": domain,
+            "query": query,
+            "search_page_template": search_page_template,
+            "search_term_template": search_term_template,
+        })
     return queries
 
 def run_discovery(limit=None):
@@ -210,12 +287,15 @@ def run_discovery(limit=None):
     marketplace_config = load_json(MARKETPLACES_PATH, {})
     discovery_config = marketplace_config.get("discovery", {})
     allowed_domains = marketplace_config.get("allowed_domains", [])
-    timeout = int(discovery_config.get("timeout_seconds", 8))
+    timeout = int(discovery_config.get("timeout_seconds", 10))
     max_bytes = int(discovery_config.get("max_response_bytes", 2_000_000))
     max_per_manga = max(1, int(discovery_config.get("max_candidates_per_manga", 8)))
     max_per_target = max(1, int(discovery_config.get("max_candidates_per_target", 2)))
-    delay = max(0.0, min(float(discovery_config.get("delay_seconds", 1.0)), 30.0))
+    delay = max(0.0, min(float(discovery_config.get("delay_seconds", 0.7)), 30.0))
     max_queries = min(int(discovery_config.get("max_queries_per_run", 25)), limit or 25)
+    user_agent = str((marketplace_config.get("monitor") or {}).get(
+        "user_agent", "manga-Buy/0.1 (+https://github.com/sasasotaro1202-star/manga-Buy)"
+    ))
 
     old_data = load_json(OUTPUT_PATH, {"candidates": []})
     old_candidates = old_data.get("candidates", [])
@@ -229,56 +309,103 @@ def run_discovery(limit=None):
     queries_checked = 0
     now = now_jst().isoformat()
     engine_urls = search_engine_urls(discovery_config)
+    robots_cache = {}
 
     for manga in catalog.get("manga", [])[:max_queries]:
         manga_id = manga.get("id")
-        queries = search_queries_for_manga(manga, discovery_config)
+        query_specs = search_queries_for_manga(manga, discovery_config)
+        accepted_for_manga = 0
         seen_for_manga = set()
-        accepted = 0
-        for target_index, query_spec in enumerate(queries):
-            if accepted >= max_per_manga:
+
+        for query_spec in query_specs:
+            if accepted_for_manga >= max_per_manga:
                 break
             target_id = query_spec.get("id")
             target_domain = query_spec.get("domain")
-            query = query_spec["query"]
-            accepted_for_target = 0
+            search_query = query_spec.get("query", "")
+            search_title = str(manga.get("search_title") or manga.get("title") or "").strip()
+            direct_template = str(query_spec.get("search_page_template") or "")
+            direct_term_template = str(query_spec.get("search_term_template") or "{title}")
+            try:
+                direct_term = direct_term_template.format(title=search_title)
+            except (KeyError, ValueError):
+                direct_term = search_title
+            source_queue = []
+            if direct_template:
+                source_queue.append({
+                    "kind": "marketplace",
+                    "template": direct_template,
+                    "term": direct_term,
+                    "engine_index": -1,
+                })
+            # Search-engine fallback is used only if the marketplace page did not yield
+            # enough direct product URLs. It remains domain-filtered and never supplies prices.
+            for engine_index, engine_template in enumerate(engine_urls):
+                source_queue.append({
+                    "kind": "search_engine",
+                    "template": engine_template,
+                    "term": search_query,
+                    "engine_index": engine_index,
+                })
 
-            for engine_index, engine_url in enumerate(engine_urls):
-                if accepted >= max_per_manga or accepted_for_target >= max_per_target:
+            accepted_for_target = 0
+            for source in source_queue:
+                if accepted_for_manga >= max_per_manga or accepted_for_target >= max_per_target:
                     break
-                search_url = engine_url.format(query=quote(query, safe=""))
+                search_url = source["template"].format(query=quote(source["term"], safe=""))
                 queries_checked += 1
                 try:
+                    robots_ok, robots_reason = robots_can_fetch(search_url, user_agent, timeout, robots_cache)
+                    if not robots_ok:
+                        diagnostics.append({
+                            "manga_id": manga_id,
+                            "target_id": target_id,
+                            "target_domain": target_domain,
+                            "search_engine": urlparse(search_url).hostname,
+                            "search_url": search_url,
+                            "source_kind": source["kind"],
+                            "result_link_count": 0,
+                            "candidate_count": 0,
+                            "robots_allowed": False,
+                            "robots_reason": robots_reason,
+                            "response_bytes": 0,
+                        })
+                        continue
+
                     request = Request(search_url, headers={
-                        "User-Agent": "manga-Buy/0.1 (+https://github.com/sasasotaro1202-star/manga-Buy)",
+                        "User-Agent": user_agent,
                         "Accept": "text/html,application/xhtml+xml,application/rss+xml,application/xml",
-                        "Accept-Language": "ja-JP,ja;q=0.9,en;q=0.5",
+                        "Accept-Language": "ja-JP,ja;q=0.9",
                     })
                     with urlopen(request, timeout=timeout) as response:
+                        final_url = response.geturl()
                         raw = response.read(max_bytes + 1)
                         if len(raw) > max_bytes:
                             raise ValueError("SEARCH_RESPONSE_TOO_LARGE")
                         charset = response.headers.get_content_charset() or "utf-8"
                         html = raw.decode(charset, errors="replace")
 
-                    is_rss = "format=rss" in search_url.lower()
+                    is_rss = source["kind"] == "search_engine" and "format=rss" in search_url.lower()
                     if is_rss:
                         search_results = parse_bing_rss(raw)
+                    elif source["kind"] == "marketplace":
+                        parser = MarketplaceResultsParser()
+                        parser.feed(html)
+                        search_results = parser.items
                     else:
                         parser = SearchResultsParser()
                         parser.feed(html)
                         search_results = parser.items
 
-                    new_from_engine = 0
+                    new_from_source = 0
                     rejected_hosts = {}
                     rejected_host_samples = {}
                     rejected_paths = []
                     for result in search_results:
-                        url = unwrap_search_url(result.get("url", ""), base_url=search_url)
+                        url = unwrap_search_url(result.get("url", ""), base_url=final_url or search_url)
                         if not valid_https_url(url):
                             rejected_hosts["invalid_or_non_https"] = rejected_hosts.get("invalid_or_non_https", 0) + 1
                             continue
-
                         host = urlparse(url).hostname or "unknown"
                         if target_domain and not allowed_host(url, [target_domain]):
                             key = "off_target:" + host
@@ -299,13 +426,8 @@ def run_discovery(limit=None):
                             continue
                         if url in seen_for_manga:
                             continue
-                        existing = current_by_url.get(url)
-                        if existing and existing.get("manga_id") != manga_id:
-                            continue
-
-                        seen_for_manga.add(url)
                         old = previous_by_url.get(url, {})
-                        current_by_url[url] = {
+                        candidate = {
                             "manga_id": manga_id,
                             "manga_title": manga.get("title"),
                             "listing_url": url,
@@ -313,8 +435,9 @@ def run_discovery(limit=None):
                             "source_domain": host,
                             "first_seen_at": old.get("first_seen_at") or now,
                             "last_seen_at": now,
-                            "discovered_by_query": query,
+                            "discovered_by_query": search_query,
                             "discovered_by_target": target_id,
+                            "discovered_by_source": source["kind"],
                             "discovered_by_engine": urlparse(search_url).hostname,
                             "verification_status": "UNVERIFIED_LEAD",
                             "price_jpy": None,
@@ -324,10 +447,12 @@ def run_discovery(limit=None):
                             "shipping_jpy": None,
                             "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。",
                         }
-                        accepted += 1
+                        current_by_url[url] = candidate
+                        seen_for_manga.add(url)
+                        accepted_for_manga += 1
                         accepted_for_target += 1
-                        new_from_engine += 1
-                        if accepted >= max_per_manga or accepted_for_target >= max_per_target:
+                        new_from_source += 1
+                        if accepted_for_manga >= max_per_manga or accepted_for_target >= max_per_target:
                             break
 
                     lower_html = html.lower()
@@ -335,22 +460,25 @@ def run_discovery(limit=None):
                         "manga_id": manga_id,
                         "target_id": target_id,
                         "target_domain": target_domain,
-                        "target_index": target_index,
                         "search_url": search_url,
+                        "final_url": final_url,
                         "search_engine": urlparse(search_url).hostname,
+                        "source_kind": source["kind"],
                         "response_bytes": len(raw),
                         "result_link_count": len(search_results),
-                        "candidate_count": new_from_engine,
-                        "fallback_used": engine_index > 0,
+                        "candidate_count": new_from_source,
+                        "fallback_used": source["kind"] == "search_engine",
+                        "robots_allowed": True,
+                        "robots_reason": robots_reason,
                         "rejected_host_counts": rejected_hosts,
                         "rejected_host_samples": rejected_host_samples,
                         "rejected_path_samples": rejected_paths,
                         "has_result_marker": bool(search_results) or any(token in lower_html for token in (
-                            "result__a", "b_algo", "web-result", "result__body", "<item>"
+                            "result__a", "b_algo", "web-result", "検索結果", "商品一覧", "<item>"
                         )),
                         "page_appears_blocked": any(token in lower_html for token in (
                             "captcha", "bot detection", "unusual traffic", "verify you are human",
-                            "consent required", "enable javascript to continue"
+                            "consent required", "enable javascript to continue", "アクセスが集中"
                         )),
                     })
                 except Exception as exc:
@@ -359,7 +487,8 @@ def run_discovery(limit=None):
                         "manga_title": manga.get("title"),
                         "target_id": target_id,
                         "target_domain": target_domain,
-                        "query": query,
+                        "source_kind": source["kind"],
+                        "query": source["term"],
                         "search_url": search_url,
                         "search_engine": urlparse(search_url).hostname,
                         "error": type(exc).__name__ + ": " + str(exc)[:240],
@@ -368,7 +497,6 @@ def run_discovery(limit=None):
                 finally:
                     time.sleep(delay)
 
-    # Retain previous leads for inspection, while only current results refresh last_seen_at.
     merged = dict(previous_by_url)
     merged.update(current_by_url)
     candidates = list(merged.values())
@@ -384,7 +512,6 @@ def run_discovery(limit=None):
         "generated_at": now,
         "discovery_status": status,
         "queries_checked": queries_checked,
-        "search_targets_checked": len(queries),
         "query_errors": errors,
         "query_diagnostics": diagnostics,
         "queries_with_anchors": sum(1 for item in diagnostics if item.get("result_link_count")),

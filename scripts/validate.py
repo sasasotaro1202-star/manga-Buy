@@ -90,6 +90,9 @@ def main():
             errors.append(f"Discovery target {target.get('id')!r} needs a title and site-scoped query template.")
         if " OR " in template:
             errors.append(f"Discovery target {target.get('id')!r} must not use an ambiguous OR mega-query.")
+        direct_url = str(target.get("search_page_template") or "")
+        if not direct_url.startswith("https://") or "{query}" not in direct_url:
+            errors.append(f"Discovery target {target.get('id')!r} needs an HTTPS direct-search URL template.")
 
     for site in marketplace_config.get("marketplaces", []):
         if site.get("enabled") and "{query}" not in str(site.get("search_template") or ""):

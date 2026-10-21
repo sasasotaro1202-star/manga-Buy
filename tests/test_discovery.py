@@ -4,7 +4,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
-from discover import SearchResultsParser, unwrap_search_url, is_product_candidate, parse_bing_rss, search_engine_urls, search_queries_for_manga
+from discover import SearchResultsParser, MarketplaceResultsParser, unwrap_search_url, is_product_candidate, parse_bing_rss, search_engine_urls, search_queries_for_manga
 
 
 class DiscoveryTests(unittest.TestCase):
@@ -85,6 +85,20 @@ class DiscoveryTests(unittest.TestCase):
         self.assertIn("site:shopping.bookoff.co.jp/used", queries[1]["query"])
         self.assertTrue(all(" OR " not in query["query"] for query in queries))
         self.assertTrue(all("HUNTER×HUNTER" in query["query"] for query in queries))
+
+    def test_marketplace_parser_extracts_item_links_from_direct_search_page(self):
+        html = """
+        <html><body>
+          <a href="/search?keyword=manga">Search page</a>
+          <a href="/item/m123"><span>Used manga full set</span></a>
+          <a href="https://jp.mercari.com/item/m456">Another listing</a>
+        </body></html>
+        """
+        parser = MarketplaceResultsParser()
+        parser.feed(html)
+        self.assertEqual(len(parser.items), 3)
+        self.assertEqual(parser.items[1]["url"], "/item/m123")
+        self.assertIn("Used manga full set", parser.items[1]["title"])
 
     def test_http_url_is_rejected(self):
         self.assertFalse(is_product_candidate("http://jp.mercari.com/item/m123", ["mercari.com"]))
