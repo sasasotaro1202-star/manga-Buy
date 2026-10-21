@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-21T13:47:59+09:00",
-  "discovery_status": "OK",
+  "generated_at": "2026-10-21T14:44:39+09:00",
+  "discovery_status": "SEEDS_ONLY",
   "queries_checked": 125,
   "query_errors": [],
   "query_diagnostics": [
@@ -9,11 +9,11 @@
       "manga_id": "kusuriya-neko-kurage",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=%E8%96%AC%E5%B1%8B%E3%81%AE%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%94%E3%81%A8%20%E3%81%AD%E3%81%93%E3%82%AF%E3%83%A9%E3%82%B2%E7%89%88",
-      "final_url": "https://jp.mercari.com/search?keyword=%E8%96%AC%E5%B1%8B%E3%81%AE%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%94%E3%81%A8%20%E3%81%AD%E3%81%93%E3%82%AF%E3%83%A9%E3%82%B2%E7%89%88",
+      "search_url": "https://jp.mercari.com/search?keyword=%E8%96%AC%E5%B1%8B%E3%81%AE%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%94%E3%81%A8%20%E3%81%AD%E3%81%93%E3%82%AF%E3%83%A9%E3%82%B2%E7%89%88%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=%E8%96%AC%E5%B1%8B%E3%81%AE%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%94%E3%81%A8%20%E3%81%AD%E3%81%93%E3%82%AF%E3%83%A9%E3%82%B2%E7%89%88%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 552609,
+      "response_bytes": 554039,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -92,21 +92,28 @@
       "manga_id": "kusuriya-neko-kurage",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E8%96%AC%E5%B1%8B%E3%81%AE%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%94%E3%81%A8%20%E3%81%AD%E3%81%93%E3%82%AF%E3%83%A9%E3%82%B2%E7%89%88",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E8%96%AC%E5%B1%8B%E3%81%AE%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%94%E3%81%A8%20%E3%81%AD%E3%81%93%E3%82%AF%E3%83%A9%E3%82%B2%E7%89%88",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E8%96%AC%E5%B1%8B%E3%81%AE%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%94%E3%81%A8%20%E3%81%AD%E3%81%93%E3%82%AF%E3%83%A9%E3%82%B2%E7%89%88%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E8%96%AC%E5%B1%8B%E3%81%AE%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%94%E3%81%A8%20%E3%81%AD%E3%81%93%E3%82%AF%E3%83%A9%E3%82%B2%E7%89%88%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 157921,
-      "result_link_count": 74,
-      "candidate_count": 2,
+      "response_bytes": 145865,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -124,6 +131,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -138,11 +165,11 @@
       "manga_id": "kusuriya-neko-kurage",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E8%96%AC%E5%B1%8B%E3%81%AE%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%94%E3%81%A8%20%E3%81%AD%E3%81%93%E3%82%AF%E3%83%A9%E3%82%B2%E7%89%88",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E8%96%AC%E5%B1%8B%E3%81%AE%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%94%E3%81%A8%20%E3%81%AD%E3%81%93%E3%82%AF%E3%83%A9%E3%82%B2%E7%89%88",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E8%96%AC%E5%B1%8B%E3%81%AE%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%94%E3%81%A8%20%E3%81%AD%E3%81%93%E3%82%AF%E3%83%A9%E3%82%B2%E7%89%88%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E8%96%AC%E5%B1%8B%E3%81%AE%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%94%E3%81%A8%20%E3%81%AD%E3%81%93%E3%82%AF%E3%83%A9%E3%82%B2%E7%89%88%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 239660,
+      "response_bytes": 188816,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -165,7 +192,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E8%96%AC%E5%B1%8B%E3%81%AE%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%94%E3%81%A8+%E3%81%AD%E3%81%93%E3%82%AF%E3%83%A9%E3%82%B2%E7%89%88"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E8%96%AC%E5%B1%8B%E3%81%AE%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%94%E3%81%A8+%E3%81%AD%E3%81%93%E3%82%AF%E3%83%A9%E3%82%B2%E7%89%88+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -189,7 +216,7 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search?p=%E8%96%AC%E5%B1%8B%E3%81%AE%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%94%E3%81%A8&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/search/search?p=%E8%96%AC%E5%B1%8B%E3%81%AE%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%94%E3%81%A8+%E3%81%AD%E3%81%93%E3%82%AF%E3%83%A9%E3%82%B2%E7%89%88&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
         "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
@@ -200,7 +227,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/%E8%96%AC%E5%B1%8B%E3%81%AE%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%94%E3%81%A8%20%E3%81%AD%E3%81%93%E3%82%AF%E3%83%A9%E3%82%B2%E7%89%88/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/%E8%96%AC%E5%B1%8B%E3%81%AE%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%94%E3%81%A8%20%E3%81%AD%E3%81%93%E3%82%AF%E3%83%A9%E3%82%B2%E7%89%88%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -212,11 +239,11 @@
       "manga_id": "frieren",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3",
-      "final_url": "https://jp.mercari.com/search?keyword=%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3",
+      "search_url": "https://jp.mercari.com/search?keyword=%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 550737,
+      "response_bytes": 552489,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -295,21 +322,28 @@
       "manga_id": "frieren",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 253368,
-      "result_link_count": 177,
-      "candidate_count": 2,
+      "response_bytes": 145466,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -327,6 +361,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -341,12 +395,12 @@
       "manga_id": "frieren",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 372169,
-      "result_link_count": 41,
+      "response_bytes": 382100,
+      "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
@@ -368,7 +422,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -392,8 +446,8 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search/%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3%20%E3%83%95%E3%82%A3%E3%82%AE%E3%83%A5%E3%82%A2/0?fixed=0&b=1&n=50&select=23&mode=3&rs=1",
-        "https://auctions.yahoo.co.jp/search/search/%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3%E5%85%A8%E5%B7%BB/0?n=50&select=23&mode=3&dest_pref_code=13&rs=2"
+        "https://auctions.yahoo.co.jp/search/search?p=%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -403,7 +457,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -415,11 +469,11 @@
       "manga_id": "hunter-x-hunter",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=HUNTER%C3%97HUNTER",
-      "final_url": "https://jp.mercari.com/search?keyword=HUNTER%C3%97HUNTER",
+      "search_url": "https://jp.mercari.com/search?keyword=HUNTER%C3%97HUNTER%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=HUNTER%C3%97HUNTER%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 550480,
+      "response_bytes": 551923,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -498,21 +552,28 @@
       "manga_id": "hunter-x-hunter",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/HUNTER%C3%97HUNTER",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/HUNTER%C3%97HUNTER",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/HUNTER%C3%97HUNTER%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/HUNTER%C3%97HUNTER%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 256451,
-      "result_link_count": 197,
-      "candidate_count": 2,
+      "response_bytes": 145112,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -530,6 +591,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -544,12 +625,12 @@
       "manga_id": "hunter-x-hunter",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=HUNTER%C3%97HUNTER",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=HUNTER%C3%97HUNTER",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=HUNTER%C3%97HUNTER%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=HUNTER%C3%97HUNTER%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 365496,
-      "result_link_count": 41,
+      "response_bytes": 379264,
+      "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
@@ -571,7 +652,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=HUNTER%C3%97HUNTER"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=HUNTER%C3%97HUNTER+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -595,8 +676,8 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search/hunter%C3%97hunter%200/0?n=50&select=23&mode=3&dest_pref_code=13&rs=1",
-        "https://auctions.yahoo.co.jp/search/search/hunter%C3%97hunter%20%E3%82%BB%E3%83%AB%E7%94%BB/0?n=50&select=23&mode=3&dest_pref_code=13&rs=2"
+        "https://auctions.yahoo.co.jp/search/search?p=HUNTER%C3%97HUNTER&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -606,7 +687,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/HUNTER%C3%97HUNTER/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/HUNTER%C3%97HUNTER%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -618,11 +699,11 @@
       "manga_id": "jujutsu-modulo",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1%20%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD",
-      "final_url": "https://jp.mercari.com/search?keyword=%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1%20%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD",
+      "search_url": "https://jp.mercari.com/search?keyword=%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1%20%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1%20%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 552033,
+      "response_bytes": 553468,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -701,21 +782,28 @@
       "manga_id": "jujutsu-modulo",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1%20%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1%20%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1%20%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1%20%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 160174,
-      "result_link_count": 78,
-      "candidate_count": 2,
+      "response_bytes": 145550,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -733,6 +821,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -747,11 +855,11 @@
       "manga_id": "jujutsu-modulo",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1%20%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1%20%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1%20%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1%20%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 343408,
+      "response_bytes": 342166,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -774,7 +882,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1+%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1+%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -798,7 +906,7 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search?p=%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/search/search?p=%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1+%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
         "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
@@ -809,7 +917,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1%20%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1%20%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -821,11 +929,11 @@
       "manga_id": "ajin",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=%E4%BA%9C%E4%BA%BA%20%E6%A1%9C%E4%BA%95%E7%94%BB%E9%96%80",
-      "final_url": "https://jp.mercari.com/search?keyword=%E4%BA%9C%E4%BA%BA%20%E6%A1%9C%E4%BA%95%E7%94%BB%E9%96%80",
+      "search_url": "https://jp.mercari.com/search?keyword=%E4%BA%9C%E4%BA%BA%20%E6%A1%9C%E4%BA%95%E7%94%BB%E9%96%80%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=%E4%BA%9C%E4%BA%BA%20%E6%A1%9C%E4%BA%95%E7%94%BB%E9%96%80%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 551690,
+      "response_bytes": 553127,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -904,21 +1012,28 @@
       "manga_id": "ajin",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E4%BA%9C%E4%BA%BA%20%E6%A1%9C%E4%BA%95%E7%94%BB%E9%96%80",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E4%BA%9C%E4%BA%BA%20%E6%A1%9C%E4%BA%95%E7%94%BB%E9%96%80",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E4%BA%9C%E4%BA%BA%20%E6%A1%9C%E4%BA%95%E7%94%BB%E9%96%80%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E4%BA%9C%E4%BA%BA%20%E6%A1%9C%E4%BA%95%E7%94%BB%E9%96%80%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 249490,
-      "result_link_count": 175,
-      "candidate_count": 2,
+      "response_bytes": 145361,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -936,6 +1051,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -950,11 +1085,11 @@
       "manga_id": "ajin",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E4%BA%9C%E4%BA%BA%20%E6%A1%9C%E4%BA%95%E7%94%BB%E9%96%80",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E4%BA%9C%E4%BA%BA%20%E6%A1%9C%E4%BA%95%E7%94%BB%E9%96%80",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E4%BA%9C%E4%BA%BA%20%E6%A1%9C%E4%BA%95%E7%94%BB%E9%96%80%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E4%BA%9C%E4%BA%BA%20%E6%A1%9C%E4%BA%95%E7%94%BB%E9%96%80%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 314542,
+      "response_bytes": 308577,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -977,7 +1112,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E4%BA%9C%E4%BA%BA+%E6%A1%9C%E4%BA%95%E7%94%BB%E9%96%80"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E4%BA%9C%E4%BA%BA+%E6%A1%9C%E4%BA%95%E7%94%BB%E9%96%80+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -1001,7 +1136,7 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search?p=%E4%BA%9C%E4%BA%BA&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/search/search?p=%E4%BA%9C%E4%BA%BA+%E6%A1%9C%E4%BA%95%E7%94%BB%E9%96%80&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
         "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
@@ -1012,7 +1147,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/%E4%BA%9C%E4%BA%BA%20%E6%A1%9C%E4%BA%95%E7%94%BB%E9%96%80/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/%E4%BA%9C%E4%BA%BA%20%E6%A1%9C%E4%BA%95%E7%94%BB%E9%96%80%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -1024,11 +1159,11 @@
       "manga_id": "golden-kamuy",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
-      "final_url": "https://jp.mercari.com/search?keyword=%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
+      "search_url": "https://jp.mercari.com/search?keyword=%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 551060,
+      "response_bytes": 552489,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -1107,21 +1242,28 @@
       "manga_id": "golden-kamuy",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 254737,
-      "result_link_count": 192,
-      "candidate_count": 2,
+      "response_bytes": 145466,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -1139,6 +1281,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -1153,12 +1315,12 @@
       "manga_id": "golden-kamuy",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 340881,
-      "result_link_count": 41,
+      "response_bytes": 378263,
+      "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
@@ -1180,7 +1342,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -1204,8 +1366,8 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4%20%E5%85%A8%E5%B7%BB/0?fixed=0&b=1&n=50&select=23&mode=3&rs=1",
-        "https://auctions.yahoo.co.jp/search/search/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4%20%E5%85%A831%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/0?fixed=0&b=1&n=50&select=23&mode=3&rs=2"
+        "https://auctions.yahoo.co.jp/search/search?p=%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -1215,7 +1377,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -1227,11 +1389,11 @@
       "manga_id": "chainsaw-man",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD",
-      "final_url": "https://jp.mercari.com/search?keyword=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD",
+      "search_url": "https://jp.mercari.com/search?keyword=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 552375,
+      "response_bytes": 553818,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -1310,21 +1472,28 @@
       "manga_id": "chainsaw-man",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 251746,
-      "result_link_count": 182,
-      "candidate_count": 2,
+      "response_bytes": 145739,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -1342,6 +1511,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -1356,11 +1545,11 @@
       "manga_id": "chainsaw-man",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 325150,
+      "response_bytes": 290498,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -1383,7 +1572,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3+%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3+%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -1407,7 +1596,7 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search?p=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/search/search?p=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3+%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
         "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
@@ -1418,7 +1607,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -1430,11 +1619,11 @@
       "manga_id": "kagurabachi",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81%20%E5%A4%96%E8%96%97%E5%81%A5",
-      "final_url": "https://jp.mercari.com/search?keyword=%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81%20%E5%A4%96%E8%96%97%E5%81%A5",
+      "search_url": "https://jp.mercari.com/search?keyword=%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81%20%E5%A4%96%E8%96%97%E5%81%A5%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81%20%E5%A4%96%E8%96%97%E5%81%A5%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 551926,
+      "response_bytes": 553361,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -1513,21 +1702,28 @@
       "manga_id": "kagurabachi",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81%20%E5%A4%96%E8%96%97%E5%81%A5",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81%20%E5%A4%96%E8%96%97%E5%81%A5",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81%20%E5%A4%96%E8%96%97%E5%81%A5%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81%20%E5%A4%96%E8%96%97%E5%81%A5%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 192100,
-      "result_link_count": 125,
-      "candidate_count": 2,
+      "response_bytes": 145487,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -1545,6 +1741,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -1559,11 +1775,11 @@
       "manga_id": "kagurabachi",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81%20%E5%A4%96%E8%96%97%E5%81%A5",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81%20%E5%A4%96%E8%96%97%E5%81%A5",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81%20%E5%A4%96%E8%96%97%E5%81%A5%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81%20%E5%A4%96%E8%96%97%E5%81%A5%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 322479,
+      "response_bytes": 360852,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -1586,7 +1802,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81+%E5%A4%96%E8%96%97%E5%81%A5"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81+%E5%A4%96%E8%96%97%E5%81%A5+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -1610,7 +1826,7 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search?p=%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/search/search?p=%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81+%E5%A4%96%E8%96%97%E5%81%A5&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
         "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
@@ -1621,7 +1837,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81%20%E5%A4%96%E8%96%97%E5%81%A5/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81%20%E5%A4%96%E8%96%97%E5%81%A5%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -1633,11 +1849,11 @@
       "manga_id": "gachiakuta",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF%20%E8%A3%8F%E9%82%A3%E5%9C%AD",
-      "final_url": "https://jp.mercari.com/search?keyword=%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF%20%E8%A3%8F%E9%82%A3%E5%9C%AD",
+      "search_url": "https://jp.mercari.com/search?keyword=%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF%20%E8%A3%8F%E9%82%A3%E5%9C%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF%20%E8%A3%8F%E9%82%A3%E5%9C%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 551919,
+      "response_bytes": 553354,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -1716,21 +1932,28 @@
       "manga_id": "gachiakuta",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF%20%E8%A3%8F%E9%82%A3%E5%9C%AD",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF%20%E8%A3%8F%E9%82%A3%E5%9C%AD",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF%20%E8%A3%8F%E9%82%A3%E5%9C%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF%20%E8%A3%8F%E9%82%A3%E5%9C%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 226404,
-      "result_link_count": 142,
-      "candidate_count": 2,
+      "response_bytes": 145487,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -1748,6 +1971,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -1762,11 +2005,11 @@
       "manga_id": "gachiakuta",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF%20%E8%A3%8F%E9%82%A3%E5%9C%AD",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF%20%E8%A3%8F%E9%82%A3%E5%9C%AD",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF%20%E8%A3%8F%E9%82%A3%E5%9C%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF%20%E8%A3%8F%E9%82%A3%E5%9C%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 319595,
+      "response_bytes": 238009,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -1789,7 +2032,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF+%E8%A3%8F%E9%82%A3%E5%9C%AD"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF+%E8%A3%8F%E9%82%A3%E5%9C%AD+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -1813,7 +2056,7 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search?p=%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/search/search?p=%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF+%E8%A3%8F%E9%82%A3%E5%9C%AD&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
         "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
@@ -1824,7 +2067,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF%20%E8%A3%8F%E9%82%A3%E5%9C%AD/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF%20%E8%A3%8F%E9%82%A3%E5%9C%AD%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -1836,11 +2079,11 @@
       "manga_id": "world-trigger",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC%20%E8%91%A6%E5%8E%9F%E5%A4%A7%E4%BB%8B",
-      "final_url": "https://jp.mercari.com/search?keyword=%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC%20%E8%91%A6%E5%8E%9F%E5%A4%A7%E4%BB%8B",
+      "search_url": "https://jp.mercari.com/search?keyword=%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC%20%E8%91%A6%E5%8E%9F%E5%A4%A7%E4%BB%8B%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC%20%E8%91%A6%E5%8E%9F%E5%A4%A7%E4%BB%8B%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 552375,
+      "response_bytes": 553817,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -1919,21 +2162,28 @@
       "manga_id": "world-trigger",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC%20%E8%91%A6%E5%8E%9F%E5%A4%A7%E4%BB%8B",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC%20%E8%91%A6%E5%8E%9F%E5%A4%A7%E4%BB%8B",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC%20%E8%91%A6%E5%8E%9F%E5%A4%A7%E4%BB%8B%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC%20%E8%91%A6%E5%8E%9F%E5%A4%A7%E4%BB%8B%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 251447,
-      "result_link_count": 187,
-      "candidate_count": 2,
+      "response_bytes": 145739,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -1951,6 +2201,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -1965,11 +2235,11 @@
       "manga_id": "world-trigger",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC%20%E8%91%A6%E5%8E%9F%E5%A4%A7%E4%BB%8B",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC%20%E8%91%A6%E5%8E%9F%E5%A4%A7%E4%BB%8B",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC%20%E8%91%A6%E5%8E%9F%E5%A4%A7%E4%BB%8B%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC%20%E8%91%A6%E5%8E%9F%E5%A4%A7%E4%BB%8B%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 321074,
+      "response_bytes": 243791,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -1992,7 +2262,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC+%E8%91%A6%E5%8E%9F%E5%A4%A7%E4%BB%8B"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC+%E8%91%A6%E5%8E%9F%E5%A4%A7%E4%BB%8B+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -2016,7 +2286,7 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search?p=%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/search/search?p=%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC+%E8%91%A6%E5%8E%9F%E5%A4%A7%E4%BB%8B&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
         "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
@@ -2027,7 +2297,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC%20%E8%91%A6%E5%8E%9F%E5%A4%A7%E4%BB%8B/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC%20%E8%91%A6%E5%8E%9F%E5%A4%A7%E4%BB%8B%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -2039,11 +2309,11 @@
       "manga_id": "tongari-atelier",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8%20%E7%99%BD%E6%B5%9C%E9%B4%8E",
-      "final_url": "https://jp.mercari.com/search?keyword=%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8%20%E7%99%BD%E6%B5%9C%E9%B4%8E",
+      "search_url": "https://jp.mercari.com/search?keyword=%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8%20%E7%99%BD%E6%B5%9C%E9%B4%8E%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8%20%E7%99%BD%E6%B5%9C%E9%B4%8E%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 552602,
+      "response_bytes": 554045,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -2122,21 +2392,28 @@
       "manga_id": "tongari-atelier",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8%20%E7%99%BD%E6%B5%9C%E9%B4%8E",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8%20%E7%99%BD%E6%B5%9C%E9%B4%8E",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8%20%E7%99%BD%E6%B5%9C%E9%B4%8E%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8%20%E7%99%BD%E6%B5%9C%E9%B4%8E%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 252161,
-      "result_link_count": 174,
-      "candidate_count": 2,
+      "response_bytes": 145865,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -2154,6 +2431,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -2168,11 +2465,11 @@
       "manga_id": "tongari-atelier",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8%20%E7%99%BD%E6%B5%9C%E9%B4%8E",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8%20%E7%99%BD%E6%B5%9C%E9%B4%8E",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8%20%E7%99%BD%E6%B5%9C%E9%B4%8E%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8%20%E7%99%BD%E6%B5%9C%E9%B4%8E%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 323207,
+      "response_bytes": 244953,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -2195,7 +2492,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8+%E7%99%BD%E6%B5%9C%E9%B4%8E"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8+%E7%99%BD%E6%B5%9C%E9%B4%8E+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -2219,7 +2516,7 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search?p=%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/search/search?p=%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8+%E7%99%BD%E6%B5%9C%E9%B4%8E&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
         "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
@@ -2230,7 +2527,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8%20%E7%99%BD%E6%B5%9C%E9%B4%8E/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8%20%E7%99%BD%E6%B5%9C%E9%B4%8E%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -2242,11 +2539,11 @@
       "manga_id": "tenmaku-jadugal",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB%20%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97",
-      "final_url": "https://jp.mercari.com/search?keyword=%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB%20%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97",
+      "search_url": "https://jp.mercari.com/search?keyword=%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB%20%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB%20%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 552945,
+      "response_bytes": 554380,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -2325,21 +2622,28 @@
       "manga_id": "tenmaku-jadugal",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB%20%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB%20%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB%20%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB%20%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 181912,
-      "result_link_count": 114,
-      "candidate_count": 2,
+      "response_bytes": 146054,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -2357,6 +2661,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -2371,11 +2695,11 @@
       "manga_id": "tenmaku-jadugal",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB%20%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB%20%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB%20%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB%20%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 299206,
+      "response_bytes": 217161,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -2398,7 +2722,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB+%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB+%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -2422,7 +2746,7 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search?p=%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/search/search?p=%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB+%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
         "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
@@ -2433,7 +2757,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB%20%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB%20%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -2445,11 +2769,11 @@
       "manga_id": "magi",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=%E3%83%9E%E3%82%AE%20%E5%A4%A7%E9%AB%98%E5%BF%8D",
-      "final_url": "https://jp.mercari.com/search?keyword=%E3%83%9E%E3%82%AE%20%E5%A4%A7%E9%AB%98%E5%BF%8D",
+      "search_url": "https://jp.mercari.com/search?keyword=%E3%83%9E%E3%82%AE%20%E5%A4%A7%E9%AB%98%E5%BF%8D%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=%E3%83%9E%E3%82%AE%20%E5%A4%A7%E9%AB%98%E5%BF%8D%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 551577,
+      "response_bytes": 553013,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -2528,21 +2852,28 @@
       "manga_id": "magi",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%9E%E3%82%AE%20%E5%A4%A7%E9%AB%98%E5%BF%8D",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%9E%E3%82%AE%20%E5%A4%A7%E9%AB%98%E5%BF%8D",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%9E%E3%82%AE%20%E5%A4%A7%E9%AB%98%E5%BF%8D%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%9E%E3%82%AE%20%E5%A4%A7%E9%AB%98%E5%BF%8D%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 249684,
-      "result_link_count": 191,
-      "candidate_count": 2,
+      "response_bytes": 145298,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -2560,6 +2891,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -2574,11 +2925,11 @@
       "manga_id": "magi",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%9E%E3%82%AE%20%E5%A4%A7%E9%AB%98%E5%BF%8D",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%9E%E3%82%AE%20%E5%A4%A7%E9%AB%98%E5%BF%8D",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%9E%E3%82%AE%20%E5%A4%A7%E9%AB%98%E5%BF%8D%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%9E%E3%82%AE%20%E5%A4%A7%E9%AB%98%E5%BF%8D%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 343619,
+      "response_bytes": 382326,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -2601,7 +2952,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E3%83%9E%E3%82%AE+%E5%A4%A7%E9%AB%98%E5%BF%8D"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E3%83%9E%E3%82%AE+%E5%A4%A7%E9%AB%98%E5%BF%8D+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -2625,7 +2976,7 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search?p=%E3%83%9E%E3%82%AE&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/search/search?p=%E3%83%9E%E3%82%AE+%E5%A4%A7%E9%AB%98%E5%BF%8D&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
         "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
@@ -2636,7 +2987,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/%E3%83%9E%E3%82%AE%20%E5%A4%A7%E9%AB%98%E5%BF%8D/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/%E3%83%9E%E3%82%AE%20%E5%A4%A7%E9%AB%98%E5%BF%8D%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -2648,11 +2999,11 @@
       "manga_id": "chi",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=%E3%83%81%E3%80%82%20%E5%9C%B0%E7%90%83%E3%81%AE%E9%81%8B%E5%8B%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E9%AD%9A%E8%B1%8A",
-      "final_url": "https://jp.mercari.com/search?keyword=%E3%83%81%E3%80%82%20%E5%9C%B0%E7%90%83%E3%81%AE%E9%81%8B%E5%8B%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E9%AD%9A%E8%B1%8A",
+      "search_url": "https://jp.mercari.com/search?keyword=%E3%83%81%E3%80%82%20%E5%9C%B0%E7%90%83%E3%81%AE%E9%81%8B%E5%8B%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E9%AD%9A%E8%B1%8A%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=%E3%83%81%E3%80%82%20%E5%9C%B0%E7%90%83%E3%81%AE%E9%81%8B%E5%8B%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E9%AD%9A%E8%B1%8A%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 553362,
+      "response_bytes": 554790,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -2731,21 +3082,28 @@
       "manga_id": "chi",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%81%E3%80%82%20%E5%9C%B0%E7%90%83%E3%81%AE%E9%81%8B%E5%8B%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E9%AD%9A%E8%B1%8A",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%81%E3%80%82%20%E5%9C%B0%E7%90%83%E3%81%AE%E9%81%8B%E5%8B%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E9%AD%9A%E8%B1%8A",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%81%E3%80%82%20%E5%9C%B0%E7%90%83%E3%81%AE%E9%81%8B%E5%8B%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E9%AD%9A%E8%B1%8A%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%81%E3%80%82%20%E5%9C%B0%E7%90%83%E3%81%AE%E9%81%8B%E5%8B%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E9%AD%9A%E8%B1%8A%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 191382,
-      "result_link_count": 122,
-      "candidate_count": 2,
+      "response_bytes": 145823,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -2763,6 +3121,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -2777,11 +3155,11 @@
       "manga_id": "chi",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%81%E3%80%82%20%E5%9C%B0%E7%90%83%E3%81%AE%E9%81%8B%E5%8B%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E9%AD%9A%E8%B1%8A",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%81%E3%80%82%20%E5%9C%B0%E7%90%83%E3%81%AE%E9%81%8B%E5%8B%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E9%AD%9A%E8%B1%8A",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%81%E3%80%82%20%E5%9C%B0%E7%90%83%E3%81%AE%E9%81%8B%E5%8B%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E9%AD%9A%E8%B1%8A%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%81%E3%80%82%20%E5%9C%B0%E7%90%83%E3%81%AE%E9%81%8B%E5%8B%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E9%AD%9A%E8%B1%8A%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 212183,
+      "response_bytes": 193520,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -2804,7 +3182,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E3%83%81%E3%80%82+%E5%9C%B0%E7%90%83%E3%81%AE%E9%81%8B%E5%8B%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6+%E9%AD%9A%E8%B1%8A"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E3%83%81%E3%80%82+%E5%9C%B0%E7%90%83%E3%81%AE%E9%81%8B%E5%8B%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6+%E9%AD%9A%E8%B1%8A+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -2828,7 +3206,7 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search?p=%E3%83%81%E3%80%82+%E5%9C%B0%E7%90%83%E3%81%AE%E9%81%8B%E5%8B%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/search/search?p=%E3%83%81%E3%80%82+%E5%9C%B0%E7%90%83%E3%81%AE%E9%81%8B%E5%8B%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6+%E9%AD%9A%E8%B1%8A&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
         "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
@@ -2839,7 +3217,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/%E3%83%81%E3%80%82%20%E5%9C%B0%E7%90%83%E3%81%AE%E9%81%8B%E5%8B%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E9%AD%9A%E8%B1%8A/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/%E3%83%81%E3%80%82%20%E5%9C%B0%E7%90%83%E3%81%AE%E9%81%8B%E5%8B%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E9%AD%9A%E8%B1%8A%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -2851,11 +3229,11 @@
       "manga_id": "houseki-no-kuni",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD%20%E5%B8%82%E5%B7%9D%E6%98%A5%E5%AD%90",
-      "final_url": "https://jp.mercari.com/search?keyword=%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD%20%E5%B8%82%E5%B7%9D%E6%98%A5%E5%AD%90",
+      "search_url": "https://jp.mercari.com/search?keyword=%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD%20%E5%B8%82%E5%B7%9D%E6%98%A5%E5%AD%90%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD%20%E5%B8%82%E5%B7%9D%E6%98%A5%E5%AD%90%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 551919,
+      "response_bytes": 553362,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -2934,21 +3312,28 @@
       "manga_id": "houseki-no-kuni",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD%20%E5%B8%82%E5%B7%9D%E6%98%A5%E5%AD%90",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD%20%E5%B8%82%E5%B7%9D%E6%98%A5%E5%AD%90",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD%20%E5%B8%82%E5%B7%9D%E6%98%A5%E5%AD%90%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD%20%E5%B8%82%E5%B7%9D%E6%98%A5%E5%AD%90%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 247455,
-      "result_link_count": 168,
-      "candidate_count": 2,
+      "response_bytes": 145487,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -2966,6 +3351,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -2980,11 +3385,11 @@
       "manga_id": "houseki-no-kuni",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD%20%E5%B8%82%E5%B7%9D%E6%98%A5%E5%AD%90",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD%20%E5%B8%82%E5%B7%9D%E6%98%A5%E5%AD%90",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD%20%E5%B8%82%E5%B7%9D%E6%98%A5%E5%AD%90%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD%20%E5%B8%82%E5%B7%9D%E6%98%A5%E5%AD%90%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 319033,
+      "response_bytes": 311921,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -3007,7 +3412,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD+%E5%B8%82%E5%B7%9D%E6%98%A5%E5%AD%90"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD+%E5%B8%82%E5%B7%9D%E6%98%A5%E5%AD%90+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -3031,7 +3436,7 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search?p=%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/search/search?p=%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD+%E5%B8%82%E5%B7%9D%E6%98%A5%E5%AD%90&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
         "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
@@ -3042,7 +3447,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD%20%E5%B8%82%E5%B7%9D%E6%98%A5%E5%AD%90/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD%20%E5%B8%82%E5%B7%9D%E6%98%A5%E5%AD%90%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -3054,11 +3459,11 @@
       "manga_id": "dandadan",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3%20%E9%BE%8D%E5%B9%B8%E4%BC%B8",
-      "final_url": "https://jp.mercari.com/search?keyword=%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3%20%E9%BE%8D%E5%B9%B8%E4%BC%B8",
+      "search_url": "https://jp.mercari.com/search?keyword=%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3%20%E9%BE%8D%E5%B9%B8%E4%BC%B8%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3%20%E9%BE%8D%E5%B9%B8%E4%BC%B8%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 551919,
+      "response_bytes": 553354,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -3137,21 +3542,28 @@
       "manga_id": "dandadan",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3%20%E9%BE%8D%E5%B9%B8%E4%BC%B8",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3%20%E9%BE%8D%E5%B9%B8%E4%BC%B8",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3%20%E9%BE%8D%E5%B9%B8%E4%BC%B8%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3%20%E9%BE%8D%E5%B9%B8%E4%BC%B8%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 251583,
-      "result_link_count": 183,
-      "candidate_count": 2,
+      "response_bytes": 145487,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -3169,6 +3581,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -3183,11 +3615,11 @@
       "manga_id": "dandadan",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3%20%E9%BE%8D%E5%B9%B8%E4%BC%B8",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3%20%E9%BE%8D%E5%B9%B8%E4%BC%B8",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3%20%E9%BE%8D%E5%B9%B8%E4%BC%B8%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3%20%E9%BE%8D%E5%B9%B8%E4%BC%B8%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 323565,
+      "response_bytes": 361518,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -3210,7 +3642,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3+%E9%BE%8D%E5%B9%B8%E4%BC%B8"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3+%E9%BE%8D%E5%B9%B8%E4%BC%B8+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -3234,7 +3666,7 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search?p=%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/search/search?p=%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3+%E9%BE%8D%E5%B9%B8%E4%BC%B8&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
         "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
@@ -3245,7 +3677,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3%20%E9%BE%8D%E5%B9%B8%E4%BC%B8/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3%20%E9%BE%8D%E5%B9%B8%E4%BC%B8%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -3257,11 +3689,11 @@
       "manga_id": "pluto",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=PLUTO%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E6%89%8B%E5%A1%9A%E6%B2%BB%E8%99%AB",
-      "final_url": "https://jp.mercari.com/search?keyword=PLUTO%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E6%89%8B%E5%A1%9A%E6%B2%BB%E8%99%AB",
+      "search_url": "https://jp.mercari.com/search?keyword=PLUTO%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E6%89%8B%E5%A1%9A%E6%B2%BB%E8%99%AB%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=PLUTO%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E6%89%8B%E5%A1%9A%E6%B2%BB%E8%99%AB%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 552894,
+      "response_bytes": 554338,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -3340,21 +3772,28 @@
       "manga_id": "pluto",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/PLUTO%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E6%89%8B%E5%A1%9A%E6%B2%BB%E8%99%AB",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/PLUTO%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E6%89%8B%E5%A1%9A%E6%B2%BB%E8%99%AB",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/PLUTO%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E6%89%8B%E5%A1%9A%E6%B2%BB%E8%99%AB%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/PLUTO%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E6%89%8B%E5%A1%9A%E6%B2%BB%E8%99%AB%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 185615,
-      "result_link_count": 119,
-      "candidate_count": 2,
+      "response_bytes": 145553,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -3372,6 +3811,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -3386,11 +3845,11 @@
       "manga_id": "pluto",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=PLUTO%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E6%89%8B%E5%A1%9A%E6%B2%BB%E8%99%AB",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=PLUTO%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E6%89%8B%E5%A1%9A%E6%B2%BB%E8%99%AB",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=PLUTO%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E6%89%8B%E5%A1%9A%E6%B2%BB%E8%99%AB%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=PLUTO%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E6%89%8B%E5%A1%9A%E6%B2%BB%E8%99%AB%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 397536,
+      "response_bytes": 341627,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -3413,7 +3872,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=PLUTO+%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9+%E6%89%8B%E5%A1%9A%E6%B2%BB%E8%99%AB"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=PLUTO+%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9+%E6%89%8B%E5%A1%9A%E6%B2%BB%E8%99%AB+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -3437,7 +3896,7 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search?p=PLUTO+%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/search/search?p=PLUTO+%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9+%E6%89%8B%E5%A1%9A%E6%B2%BB%E8%99%AB&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
         "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
@@ -3448,7 +3907,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/PLUTO%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E6%89%8B%E5%A1%9A%E6%B2%BB%E8%99%AB/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/PLUTO%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E6%89%8B%E5%A1%9A%E6%B2%BB%E8%99%AB%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -3460,11 +3919,11 @@
       "manga_id": "tokyo-ghoul-franchise",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%20%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are%20%E3%82%BB%E3%83%83%E3%83%88",
-      "final_url": "https://jp.mercari.com/search?keyword=%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%20%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are%20%E3%82%BB%E3%83%83%E3%83%88",
+      "search_url": "https://jp.mercari.com/search?keyword=%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%20%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are%20%E3%82%BB%E3%83%83%E3%83%88%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%20%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are%20%E3%82%BB%E3%83%83%E3%83%88%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 553216,
+      "response_bytes": 554646,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -3543,11 +4002,11 @@
       "manga_id": "tokyo-ghoul-franchise",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%20%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are%20%E3%82%BB%E3%83%83%E3%83%88",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%20%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are%20%E3%82%BB%E3%83%83%E3%83%88",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%20%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are%20%E3%82%BB%E3%83%83%E3%83%88%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%20%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are%20%E3%82%BB%E3%83%83%E3%83%88%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 145396,
+      "response_bytes": 145732,
       "result_link_count": 68,
       "candidate_count": 0,
       "fallback_used": false,
@@ -3616,11 +4075,11 @@
       "manga_id": "tokyo-ghoul-franchise",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%20%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are%20%E3%82%BB%E3%83%83%E3%83%88",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%20%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are%20%E3%82%BB%E3%83%83%E3%83%88",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%20%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are%20%E3%82%BB%E3%83%83%E3%83%88%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%20%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are%20%E3%82%BB%E3%83%83%E3%83%88%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 383513,
+      "response_bytes": 326698,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -3643,7 +4102,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE+%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are+%E3%82%BB%E3%83%83%E3%83%88"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE+%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are+%E3%82%BB%E3%83%83%E3%83%88+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -3667,7 +4126,7 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search?p=%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE+%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/search/search?p=%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE+%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are+%E3%82%BB%E3%83%83%E3%83%88&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
         "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
@@ -3678,7 +4137,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%20%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are%20%E3%82%BB%E3%83%83%E3%83%88/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%20%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are%20%E3%82%BB%E3%83%83%E3%83%88%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -3690,11 +4149,11 @@
       "manga_id": "parasyte",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=%E5%AF%84%E7%94%9F%E7%8D%A3%20%E5%B2%A9%E6%98%8E%E5%9D%87",
-      "final_url": "https://jp.mercari.com/search?keyword=%E5%AF%84%E7%94%9F%E7%8D%A3%20%E5%B2%A9%E6%98%8E%E5%9D%87",
+      "search_url": "https://jp.mercari.com/search?keyword=%E5%AF%84%E7%94%9F%E7%8D%A3%20%E5%B2%A9%E6%98%8E%E5%9D%87%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=%E5%AF%84%E7%94%9F%E7%8D%A3%20%E5%B2%A9%E6%98%8E%E5%9D%87%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 551690,
+      "response_bytes": 553126,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -3773,21 +4232,28 @@
       "manga_id": "parasyte",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E5%AF%84%E7%94%9F%E7%8D%A3%20%E5%B2%A9%E6%98%8E%E5%9D%87",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E5%AF%84%E7%94%9F%E7%8D%A3%20%E5%B2%A9%E6%98%8E%E5%9D%87",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E5%AF%84%E7%94%9F%E7%8D%A3%20%E5%B2%A9%E6%98%8E%E5%9D%87%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E5%AF%84%E7%94%9F%E7%8D%A3%20%E5%B2%A9%E6%98%8E%E5%9D%87%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 249938,
-      "result_link_count": 189,
-      "candidate_count": 2,
+      "response_bytes": 145361,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -3805,6 +4271,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -3819,11 +4305,11 @@
       "manga_id": "parasyte",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%AF%84%E7%94%9F%E7%8D%A3%20%E5%B2%A9%E6%98%8E%E5%9D%87",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%AF%84%E7%94%9F%E7%8D%A3%20%E5%B2%A9%E6%98%8E%E5%9D%87",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%AF%84%E7%94%9F%E7%8D%A3%20%E5%B2%A9%E6%98%8E%E5%9D%87%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%AF%84%E7%94%9F%E7%8D%A3%20%E5%B2%A9%E6%98%8E%E5%9D%87%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 316631,
+      "response_bytes": 381448,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -3846,7 +4332,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E5%AF%84%E7%94%9F%E7%8D%A3+%E5%B2%A9%E6%98%8E%E5%9D%87"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E5%AF%84%E7%94%9F%E7%8D%A3+%E5%B2%A9%E6%98%8E%E5%9D%87+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -3870,7 +4356,7 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search?p=%E5%AF%84%E7%94%9F%E7%8D%A3&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/search/search?p=%E5%AF%84%E7%94%9F%E7%8D%A3+%E5%B2%A9%E6%98%8E%E5%9D%87&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
         "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
@@ -3881,7 +4367,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/%E5%AF%84%E7%94%9F%E7%8D%A3%20%E5%B2%A9%E6%98%8E%E5%9D%87/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/%E5%AF%84%E7%94%9F%E7%8D%A3%20%E5%B2%A9%E6%98%8E%E5%9D%87%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -3893,11 +4379,11 @@
       "manga_id": "monster",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=MONSTER%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9",
-      "final_url": "https://jp.mercari.com/search?keyword=MONSTER%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9",
+      "search_url": "https://jp.mercari.com/search?keyword=MONSTER%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=MONSTER%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 551616,
+      "response_bytes": 553052,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -3976,21 +4462,28 @@
       "manga_id": "monster",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/MONSTER%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/MONSTER%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/MONSTER%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/MONSTER%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 249302,
-      "result_link_count": 179,
-      "candidate_count": 2,
+      "response_bytes": 145298,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -4008,6 +4501,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -4022,11 +4535,11 @@
       "manga_id": "monster",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=MONSTER%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=MONSTER%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=MONSTER%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=MONSTER%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 421258,
+      "response_bytes": 347692,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -4049,7 +4562,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=MONSTER+%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=MONSTER+%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -4073,7 +4586,7 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search?p=MONSTER&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/search/search?p=MONSTER+%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
         "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
@@ -4084,7 +4597,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/MONSTER%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/MONSTER%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -4096,11 +4609,11 @@
       "manga_id": "vinland-saga",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0",
-      "final_url": "https://jp.mercari.com/search?keyword=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0",
+      "search_url": "https://jp.mercari.com/search?keyword=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 552382,
+      "response_bytes": 553811,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -4179,21 +4692,28 @@
       "manga_id": "vinland-saga",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 251390,
-      "result_link_count": 184,
-      "candidate_count": 2,
+      "response_bytes": 145739,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -4211,6 +4731,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -4225,11 +4765,11 @@
       "manga_id": "vinland-saga",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 318917,
+      "response_bytes": 247957,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -4252,7 +4792,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC+%E5%B9%B8%E6%9D%91%E8%AA%A0"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC+%E5%B9%B8%E6%9D%91%E8%AA%A0+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -4276,7 +4816,7 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search?p=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/search/search?p=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC+%E5%B9%B8%E6%9D%91%E8%AA%A0&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
         "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
@@ -4287,7 +4827,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -4299,11 +4839,11 @@
       "manga_id": "heavenly-delusion",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83%20%E7%9F%B3%E9%BB%92%E6%AD%A3%E6%95%B0",
-      "final_url": "https://jp.mercari.com/search?keyword=%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83%20%E7%9F%B3%E9%BB%92%E6%AD%A3%E6%95%B0",
+      "search_url": "https://jp.mercari.com/search?keyword=%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83%20%E7%9F%B3%E9%BB%92%E6%AD%A3%E6%95%B0%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83%20%E7%9F%B3%E9%BB%92%E6%AD%A3%E6%95%B0%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 552040,
+      "response_bytes": 553468,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -4382,21 +4922,28 @@
       "manga_id": "heavenly-delusion",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83%20%E7%9F%B3%E9%BB%92%E6%AD%A3%E6%95%B0",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83%20%E7%9F%B3%E9%BB%92%E6%AD%A3%E6%95%B0",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83%20%E7%9F%B3%E9%BB%92%E6%AD%A3%E6%95%B0%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83%20%E7%9F%B3%E9%BB%92%E6%AD%A3%E6%95%B0%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 208154,
-      "result_link_count": 140,
-      "candidate_count": 2,
+      "response_bytes": 145550,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -4414,6 +4961,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -4428,11 +4995,11 @@
       "manga_id": "heavenly-delusion",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83%20%E7%9F%B3%E9%BB%92%E6%AD%A3%E6%95%B0",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83%20%E7%9F%B3%E9%BB%92%E6%AD%A3%E6%95%B0",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83%20%E7%9F%B3%E9%BB%92%E6%AD%A3%E6%95%B0%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83%20%E7%9F%B3%E9%BB%92%E6%AD%A3%E6%95%B0%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 312740,
+      "response_bytes": 246495,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -4455,7 +5022,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83+%E7%9F%B3%E9%BB%92%E6%AD%A3%E6%95%B0"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83+%E7%9F%B3%E9%BB%92%E6%AD%A3%E6%95%B0+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -4479,7 +5046,7 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search?p=%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/search/search?p=%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83+%E7%9F%B3%E9%BB%92%E6%AD%A3%E6%95%B0&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
         "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
@@ -4490,7 +5057,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83%20%E7%9F%B3%E9%BB%92%E6%AD%A3%E6%95%B0/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83%20%E7%9F%B3%E9%BB%92%E6%AD%A3%E6%95%B0%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -4502,11 +5069,11 @@
       "manga_id": "kekkaishi",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=%E7%B5%90%E7%95%8C%E5%B8%AB%20%E7%94%B0%E8%BE%BA%E3%82%A4%E3%82%A8%E3%83%AD%E3%82%A6",
-      "final_url": "https://jp.mercari.com/search?keyword=%E7%B5%90%E7%95%8C%E5%B8%AB%20%E7%94%B0%E8%BE%BA%E3%82%A4%E3%82%A8%E3%83%AD%E3%82%A6",
+      "search_url": "https://jp.mercari.com/search?keyword=%E7%B5%90%E7%95%8C%E5%B8%AB%20%E7%94%B0%E8%BE%BA%E3%82%A4%E3%82%A8%E3%83%AD%E3%82%A6%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=%E7%B5%90%E7%95%8C%E5%B8%AB%20%E7%94%B0%E8%BE%BA%E3%82%A4%E3%82%A8%E3%83%AD%E3%82%A6%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 552046,
+      "response_bytes": 553483,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -4585,21 +5152,28 @@
       "manga_id": "kekkaishi",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E7%B5%90%E7%95%8C%E5%B8%AB%20%E7%94%B0%E8%BE%BA%E3%82%A4%E3%82%A8%E3%83%AD%E3%82%A6",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E7%B5%90%E7%95%8C%E5%B8%AB%20%E7%94%B0%E8%BE%BA%E3%82%A4%E3%82%A8%E3%83%AD%E3%82%A6",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E7%B5%90%E7%95%8C%E5%B8%AB%20%E7%94%B0%E8%BE%BA%E3%82%A4%E3%82%A8%E3%83%AD%E3%82%A6%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E7%B5%90%E7%95%8C%E5%B8%AB%20%E7%94%B0%E8%BE%BA%E3%82%A4%E3%82%A8%E3%83%AD%E3%82%A6%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 252048,
-      "result_link_count": 190,
-      "candidate_count": 2,
+      "response_bytes": 145550,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -4617,6 +5191,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -4631,11 +5225,11 @@
       "manga_id": "kekkaishi",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E7%B5%90%E7%95%8C%E5%B8%AB%20%E7%94%B0%E8%BE%BA%E3%82%A4%E3%82%A8%E3%83%AD%E3%82%A6",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E7%B5%90%E7%95%8C%E5%B8%AB%20%E7%94%B0%E8%BE%BA%E3%82%A4%E3%82%A8%E3%83%AD%E3%82%A6",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E7%B5%90%E7%95%8C%E5%B8%AB%20%E7%94%B0%E8%BE%BA%E3%82%A4%E3%82%A8%E3%83%AD%E3%82%A6%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E7%B5%90%E7%95%8C%E5%B8%AB%20%E7%94%B0%E8%BE%BA%E3%82%A4%E3%82%A8%E3%83%AD%E3%82%A6%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 319579,
+      "response_bytes": 274718,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -4658,7 +5252,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E7%B5%90%E7%95%8C%E5%B8%AB+%E7%94%B0%E8%BE%BA%E3%82%A4%E3%82%A8%E3%83%AD%E3%82%A6"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E7%B5%90%E7%95%8C%E5%B8%AB+%E7%94%B0%E8%BE%BA%E3%82%A4%E3%82%A8%E3%83%AD%E3%82%A6+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -4682,7 +5276,7 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search?p=%E7%B5%90%E7%95%8C%E5%B8%AB&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/search/search?p=%E7%B5%90%E7%95%8C%E5%B8%AB+%E7%94%B0%E8%BE%BA%E3%82%A4%E3%82%A8%E3%83%AD%E3%82%A6&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
         "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
@@ -4693,7 +5287,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/%E7%B5%90%E7%95%8C%E5%B8%AB%20%E7%94%B0%E8%BE%BA%E3%82%A4%E3%82%A8%E3%83%AD%E3%82%A6/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/%E7%B5%90%E7%95%8C%E5%B8%AB%20%E7%94%B0%E8%BE%BA%E3%82%A4%E3%82%A8%E3%83%AD%E3%82%A6%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -4705,11 +5299,11 @@
       "manga_id": "psyren",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=PSYREN%20%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3%20%E5%B2%A9%E4%BB%A3%E4%BF%8A%E6%98%8E",
-      "final_url": "https://jp.mercari.com/search?keyword=PSYREN%20%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3%20%E5%B2%A9%E4%BB%A3%E4%BF%8A%E6%98%8E",
+      "search_url": "https://jp.mercari.com/search?keyword=PSYREN%20%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3%20%E5%B2%A9%E4%BB%A3%E4%BF%8A%E6%98%8E%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=PSYREN%20%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3%20%E5%B2%A9%E4%BB%A3%E4%BF%8A%E6%98%8E%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 552917,
+      "response_bytes": 554352,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -4788,21 +5382,28 @@
       "manga_id": "psyren",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/PSYREN%20%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3%20%E5%B2%A9%E4%BB%A3%E4%BF%8A%E6%98%8E",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/PSYREN%20%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3%20%E5%B2%A9%E4%BB%A3%E4%BF%8A%E6%98%8E",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/PSYREN%20%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3%20%E5%B2%A9%E4%BB%A3%E4%BF%8A%E6%98%8E%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/PSYREN%20%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3%20%E5%B2%A9%E4%BB%A3%E4%BF%8A%E6%98%8E%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 209406,
-      "result_link_count": 141,
-      "candidate_count": 2,
+      "response_bytes": 145562,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -4820,6 +5421,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -4834,11 +5455,11 @@
       "manga_id": "psyren",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=PSYREN%20%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3%20%E5%B2%A9%E4%BB%A3%E4%BF%8A%E6%98%8E",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=PSYREN%20%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3%20%E5%B2%A9%E4%BB%A3%E4%BF%8A%E6%98%8E",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=PSYREN%20%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3%20%E5%B2%A9%E4%BB%A3%E4%BF%8A%E6%98%8E%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=PSYREN%20%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3%20%E5%B2%A9%E4%BB%A3%E4%BF%8A%E6%98%8E%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 363209,
+      "response_bytes": 224729,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -4861,7 +5482,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=PSYREN+%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3+%E5%B2%A9%E4%BB%A3%E4%BF%8A%E6%98%8E"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=PSYREN+%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3+%E5%B2%A9%E4%BB%A3%E4%BF%8A%E6%98%8E+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -4885,7 +5506,7 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search?p=PSYREN+%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/search/search?p=PSYREN+%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3+%E5%B2%A9%E4%BB%A3%E4%BF%8A%E6%98%8E&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
         "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
@@ -4896,7 +5517,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/PSYREN%20%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3%20%E5%B2%A9%E4%BB%A3%E4%BF%8A%E6%98%8E/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/PSYREN%20%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3%20%E5%B2%A9%E4%BB%A3%E4%BF%8A%E6%98%8E%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -4908,11 +5529,11 @@
       "manga_id": "mononogatari",
       "target_id": "mercari",
       "target_domain": "jp.mercari.com",
-      "search_url": "https://jp.mercari.com/search?keyword=%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A%20%E3%82%AA%E3%83%8B%E3%82%B0%E3%83%B3%E3%82%BD%E3%82%A6",
-      "final_url": "https://jp.mercari.com/search?keyword=%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A%20%E3%82%AA%E3%83%8B%E3%82%B0%E3%83%B3%E3%82%BD%E3%82%A6",
+      "search_url": "https://jp.mercari.com/search?keyword=%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A%20%E3%82%AA%E3%83%8B%E3%82%B0%E3%83%B3%E3%82%BD%E3%82%A6%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://jp.mercari.com/search?keyword=%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A%20%E3%82%AA%E3%83%8B%E3%82%B0%E3%83%B3%E3%82%BD%E3%82%A6%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 552375,
+      "response_bytes": 553810,
       "result_link_count": 50,
       "candidate_count": 0,
       "fallback_used": false,
@@ -4991,21 +5612,28 @@
       "manga_id": "mononogatari",
       "target_id": "bookoff",
       "target_domain": "shopping.bookoff.co.jp",
-      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A%20%E3%82%AA%E3%83%8B%E3%82%B0%E3%83%B3%E3%82%BD%E3%82%A6",
-      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A%20%E3%82%AA%E3%83%8B%E3%82%B0%E3%83%B3%E3%82%BD%E3%82%A6",
+      "search_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A%20%E3%82%AA%E3%83%8B%E3%82%B0%E3%83%B3%E3%82%BD%E3%82%A6%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://shopping.bookoff.co.jp/search/keyword/%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A%20%E3%82%AA%E3%83%8B%E3%82%B0%E3%83%B3%E3%82%BD%E3%82%A6%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "shopping.bookoff.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 218690,
-      "result_link_count": 141,
-      "candidate_count": 2,
+      "response_bytes": 145739,
+      "result_link_count": 68,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 2,
-        "off_target:www.bookoff.co.jp": 4,
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
         "off_target:sell.bookoff.co.jp": 3,
-        "off_target:my.bookoff.co.jp": 6
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
@@ -5023,6 +5651,26 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
@@ -5037,11 +5685,11 @@
       "manga_id": "mononogatari",
       "target_id": "yahoo-auctions",
       "target_domain": "auctions.yahoo.co.jp",
-      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A%20%E3%82%AA%E3%83%8B%E3%82%B0%E3%83%B3%E3%82%BD%E3%82%A6",
-      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A%20%E3%82%AA%E3%83%8B%E3%82%B0%E3%83%B3%E3%82%BD%E3%82%A6",
+      "search_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A%20%E3%82%AA%E3%83%8B%E3%82%B0%E3%83%B3%E3%82%BD%E3%82%A6%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
+      "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A%20%E3%82%AA%E3%83%8B%E3%82%B0%E3%83%B3%E3%82%BD%E3%82%A6%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 314188,
+      "response_bytes": 211188,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -5064,7 +5712,7 @@
           "https://support.yahoo-net.jp/voc/s/auctions"
         ],
         "off_target:buyee.jp": [
-          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A+%E3%82%AA%E3%83%8B%E3%82%B0%E3%83%B3%E3%82%BD%E3%82%A6"
+          "https://buyee.jp/item/search?lang=ja&rc=yaucsearch&query=%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A+%E3%82%AA%E3%83%8B%E3%82%B0%E3%83%B3%E3%82%BD%E3%82%A6+%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88"
         ],
         "off_target:paypayfleamarket.yahoo.co.jp": [
           "https://paypayfleamarket.yahoo.co.jp/"
@@ -5088,7 +5736,7 @@
       },
       "rejected_path_samples": [
         "https://auctions.yahoo.co.jp/",
-        "https://auctions.yahoo.co.jp/search/search?p=%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
+        "https://auctions.yahoo.co.jp/search/search?p=%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A+%E3%82%AA%E3%83%8B%E3%82%B0%E3%83%B3%E3%82%BD%E3%82%A6&fixed=0&auccat=0&b=1&n=50&select=23&mode=3",
         "https://auctions.yahoo.co.jp/my"
       ],
       "has_result_marker": true,
@@ -5099,7 +5747,7 @@
       "target_id": "rakuten",
       "target_domain": "item.rakuten.co.jp",
       "search_engine": "search.rakuten.co.jp",
-      "search_url": "https://search.rakuten.co.jp/search/mall/%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A%20%E3%82%AA%E3%83%8B%E3%82%B0%E3%83%B3%E3%82%BD%E3%82%A6/",
+      "search_url": "https://search.rakuten.co.jp/search/mall/%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A%20%E3%82%AA%E3%83%8B%E3%82%B0%E3%83%B3%E3%82%BD%E3%82%A6%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88/",
       "source_kind": "marketplace",
       "result_link_count": 0,
       "candidate_count": 0,
@@ -5111,10 +5759,10 @@
   "queries_with_anchors": 75,
   "queries_with_result_marker": 75,
   "queries_using_fallback": 0,
-  "queries_finding_candidates": 24,
+  "queries_finding_candidates": 0,
   "queries_appearing_blocked": 25,
   "new_candidate_count": 0,
-  "current_seen_count": 48,
+  "current_seen_count": 0,
   "retained_candidate_count": 73,
   "manual_seed_count": 25,
   "candidates": [
