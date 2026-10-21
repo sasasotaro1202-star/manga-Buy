@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from monitor import summarize_observations
+from monitor import summarize_observations, select_diverse_candidates
 
 
 class MonitorSummaryTests(unittest.TestCase):
@@ -34,6 +34,28 @@ class MonitorSummaryTests(unittest.TestCase):
         self.assertEqual(summary["out_of_stock_confirmed_count"], 1)
         self.assertEqual(summary["stock_unknown_count"], 2)
         self.assertEqual(summary["error_count"], 1)
+
+    def test_auto_watch_selection_prefers_distinct_marketplaces(self):
+        candidates = [
+            {"listing_url":"https://shopping.bookoff.co.jp/used/0012345678","last_seen_at":"2026-10-21T13:00:00+09:00"},
+            {"listing_url":"https://shopping.bookoff.co.jp/used/0012345679","last_seen_at":"2026-10-21T13:00:00+09:00"},
+            {"listing_url":"https://jp.mercari.com/item/m12345678901","last_seen_at":"2026-10-20T13:00:00+09:00"},
+        ]
+        selected = select_diverse_candidates(candidates, 2)
+        hosts = {(item["listing_url"].split("/")[2]) for item in selected}
+        self.assertEqual(len(selected), 2)
+        self.assertIn("shopping.bookoff.co.jp", hosts)
+        self.assertIn("jp.mercari.com", hosts)
+
+    def test_auto_watch_selection_fills_slots_when_only_one_host_exists(self):
+        candidates = [
+            {"listing_url":"https://shopping.bookoff.co.jp/used/0012345678","last_seen_at":"2026-10-21T13:00:00+09:00"},
+            {"listing_url":"https://shopping.bookoff.co.jp/used/0012345679","last_seen_at":"2026-10-21T12:00:00+09:00"},
+            {"listing_url":"https://shopping.bookoff.co.jp/used/0012345680","last_seen_at":"2026-10-21T11:00:00+09:00"},
+        ]
+        selected = select_diverse_candidates(candidates, 2)
+        self.assertEqual(len(selected), 2)
+        self.assertNotEqual(selected[0]["listing_url"], selected[1]["listing_url"])
 
     def test_currency_unknown_or_boolean_price_is_not_counted(self):
         rows = {

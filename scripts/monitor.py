@@ -137,6 +137,40 @@ def fetch_product(url, config, allowed_domains, robots_cache):
         return {"retrieval_status": "FETCH_ERROR", "error": type(exc).__name__ + ": " + str(exc)[:240]}
 
 
+def select_diverse_candidates(candidates, limit):
+    """Choose fresh leads across different seller hosts before taking same-host alternatives."""
+    limit = max(0, int(limit))
+    if limit == 0:
+        return []
+    ordered = sorted(
+        (item for item in candidates if isinstance(item, dict) and item.get("listing_url")),
+        key=lambda item: str(item.get("last_seen_at") or ""),
+        reverse=True,
+    )
+    selected = []
+    selected_urls = set()
+    selected_hosts = set()
+    for item in ordered:
+        url = str(item.get("listing_url") or "")
+        host = (urlparse(url).hostname or "").lower()
+        if not host or url in selected_urls or host in selected_hosts:
+            continue
+        selected.append(item)
+        selected_urls.add(url)
+        selected_hosts.add(host)
+        if len(selected) >= limit:
+            return selected
+    for item in ordered:
+        url = str(item.get("listing_url") or "")
+        if url in selected_urls:
+            continue
+        selected.append(item)
+        selected_urls.add(url)
+        if len(selected) >= limit:
+            break
+    return selected
+
+
 def run_monitor():
     import hashlib
 
@@ -183,8 +217,8 @@ def run_monitor():
     auto_entries = []
     for manga in manga_entries:
         candidates = discovery_by_manga.get(manga.get("id"), [])
-        candidates.sort(key=lambda item: str(item.get("last_seen_at") or ""), reverse=True)
-        for candidate in candidates[:per_manga]:
+        selected_candidates = select_diverse_candidates(candidates, per_manga)
+        for candidate in selected_candidates:
             url = str(candidate["listing_url"])
             listing_id = "discovered-" + hashlib.sha256(url.encode("utf-8")).hexdigest()[:16]
             auto_entries.append({
