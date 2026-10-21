@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-21T13:36:45+09:00",
+  "generated_at": "2026-10-21T13:39:22+09:00",
   "discovery_status": "OK",
-  "queries_checked": 150,
+  "queries_checked": 176,
   "query_errors": [],
   "query_diagnostics": [
     {
@@ -13,17 +13,23 @@
       "final_url": "https://jp.mercari.com/search?keyword=%E8%96%AC%E5%B1%8B%E3%81%AE%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%94%E3%81%A8%20%E3%81%AD%E3%81%93%E3%82%AF%E3%83%A9%E3%82%B2%E7%89%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 552602,
+      "response_bytes": 552603,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -34,17 +40,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "kusuriya-neko-kurage",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22%E8%96%AC%E5%B1%8B%E3%81%AE%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%94%E3%81%A8%20%E3%81%AD%E3%81%93%E3%82%AF%E3%83%A9%E3%82%B2%E7%89%88%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "kusuriya-neko-kurage",
@@ -61,13 +103,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -85,7 +128,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -98,7 +142,7 @@
       "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E8%96%AC%E5%B1%8B%E3%81%AE%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%94%E3%81%A8%20%E3%81%AD%E3%81%93%E3%82%AF%E3%83%A9%E3%82%B2%E7%89%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 239614,
+      "response_bytes": 239632,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -198,17 +242,23 @@
       "final_url": "https://jp.mercari.com/search?keyword=%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 550744,
+      "response_bytes": 550737,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -219,17 +269,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "frieren",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "frieren",
@@ -246,13 +332,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -270,7 +357,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -283,7 +371,7 @@
       "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E8%91%AC%E9%80%81%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%83%AC%E3%83%B3",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 372700,
+      "response_bytes": 372032,
       "result_link_count": 41,
       "candidate_count": 0,
       "fallback_used": false,
@@ -383,17 +471,23 @@
       "final_url": "https://jp.mercari.com/search?keyword=HUNTER%C3%97HUNTER",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 550480,
+      "response_bytes": 550488,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -404,17 +498,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "hunter-x-hunter",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22HUNTER%C3%97HUNTER%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "hunter-x-hunter",
@@ -431,13 +561,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -455,7 +586,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -468,7 +600,7 @@
       "final_url": "https://auctions.yahoo.co.jp/search/search?p=HUNTER%C3%97HUNTER",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 364638,
+      "response_bytes": 364325,
       "result_link_count": 41,
       "candidate_count": 0,
       "fallback_used": false,
@@ -568,17 +700,23 @@
       "final_url": "https://jp.mercari.com/search?keyword=%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1%20%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 552033,
+      "response_bytes": 552039,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -589,17 +727,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "jujutsu-modulo",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1%20%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "jujutsu-modulo",
@@ -616,13 +790,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -640,7 +815,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -653,7 +829,7 @@
       "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%91%AA%E8%A1%93%E5%BB%BB%E6%88%A6%E2%89%A1%20%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%AD",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 343093,
+      "response_bytes": 343481,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -755,15 +931,21 @@
       "source_kind": "marketplace",
       "response_bytes": 551691,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -774,17 +956,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "ajin",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22%E4%BA%9C%E4%BA%BA%20%E6%A1%9C%E4%BA%95%E7%94%BB%E9%96%80%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "ajin",
@@ -801,13 +1019,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -825,7 +1044,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -838,7 +1058,7 @@
       "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E4%BA%9C%E4%BA%BA%20%E6%A1%9C%E4%BA%95%E7%94%BB%E9%96%80",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 314552,
+      "response_bytes": 314620,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -938,17 +1158,23 @@
       "final_url": "https://jp.mercari.com/search?keyword=%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 551053,
+      "response_bytes": 551060,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -959,17 +1185,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "golden-kamuy",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "golden-kamuy",
@@ -986,13 +1248,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -1010,7 +1273,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -1023,7 +1287,7 @@
       "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 341114,
+      "response_bytes": 341118,
       "result_link_count": 41,
       "candidate_count": 0,
       "fallback_used": false,
@@ -1123,17 +1387,23 @@
       "final_url": "https://jp.mercari.com/search?keyword=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 552382,
+      "response_bytes": 552374,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -1144,17 +1414,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "chainsaw-man",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "chainsaw-man",
@@ -1171,13 +1477,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -1195,7 +1502,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -1208,7 +1516,7 @@
       "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%81%E3%82%A7%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%9E%E3%83%B3%20%E8%97%A4%E6%9C%AC%E3%82%BF%E3%83%84%E3%82%AD",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 325068,
+      "response_bytes": 325195,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -1308,17 +1616,23 @@
       "final_url": "https://jp.mercari.com/search?keyword=%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81%20%E5%A4%96%E8%96%97%E5%81%A5",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 551919,
+      "response_bytes": 551918,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -1329,17 +1643,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "kagurabachi",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81%20%E5%A4%96%E8%96%97%E5%81%A5%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "kagurabachi",
@@ -1356,13 +1706,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -1380,7 +1731,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -1393,7 +1745,7 @@
       "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%82%AB%E3%82%B0%E3%83%A9%E3%83%90%E3%83%81%20%E5%A4%96%E8%96%97%E5%81%A5",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 322477,
+      "response_bytes": 322495,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -1493,17 +1845,23 @@
       "final_url": "https://jp.mercari.com/search?keyword=%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF%20%E8%A3%8F%E9%82%A3%E5%9C%AD",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 551918,
+      "response_bytes": 551926,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -1514,17 +1872,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "gachiakuta",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF%20%E8%A3%8F%E9%82%A3%E5%9C%AD%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "gachiakuta",
@@ -1541,13 +1935,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -1565,7 +1960,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -1578,7 +1974,7 @@
       "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%82%AC%E3%83%81%E3%82%A2%E3%82%AF%E3%82%BF%20%E8%A3%8F%E9%82%A3%E5%9C%AD",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 319603,
+      "response_bytes": 319569,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -1678,17 +2074,23 @@
       "final_url": "https://jp.mercari.com/search?keyword=%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC%20%E8%91%A6%E5%8E%9F%E5%A4%A7%E4%BB%8B",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 552374,
+      "response_bytes": 552375,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -1699,17 +2101,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "world-trigger",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC%20%E8%91%A6%E5%8E%9F%E5%A4%A7%E4%BB%8B%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "world-trigger",
@@ -1726,13 +2164,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -1750,7 +2189,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -1763,7 +2203,7 @@
       "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%88%E3%83%AA%E3%82%AC%E3%83%BC%20%E8%91%A6%E5%8E%9F%E5%A4%A7%E4%BB%8B",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 321062,
+      "response_bytes": 321078,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -1865,15 +2305,21 @@
       "source_kind": "marketplace",
       "response_bytes": 552603,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -1884,17 +2330,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "tongari-atelier",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8%20%E7%99%BD%E6%B5%9C%E9%B4%8E%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "tongari-atelier",
@@ -1911,13 +2393,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -1935,7 +2418,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -1948,7 +2432,7 @@
       "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%81%A8%E3%82%93%E3%81%8C%E3%82%8A%E5%B8%BD%E5%AD%90%E3%81%AE%E3%82%A2%E3%83%88%E3%83%AA%E3%82%A8%20%E7%99%BD%E6%B5%9C%E9%B4%8E",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 323193,
+      "response_bytes": 323217,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -2048,17 +2532,23 @@
       "final_url": "https://jp.mercari.com/search?keyword=%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB%20%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 552951,
+      "response_bytes": 552944,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -2069,17 +2559,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "tenmaku-jadugal",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB%20%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "tenmaku-jadugal",
@@ -2096,13 +2622,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -2120,7 +2647,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -2133,7 +2661,7 @@
       "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%A4%A9%E5%B9%95%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%89%E3%82%A5%E3%83%BC%E3%82%AC%E3%83%AB%20%E3%83%88%E3%83%9E%E3%83%88%E3%82%B9%E3%83%BC%E3%83%97",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 299236,
+      "response_bytes": 299220,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -2233,17 +2761,23 @@
       "final_url": "https://jp.mercari.com/search?keyword=%E3%83%9E%E3%82%AE%20%E5%A4%A7%E9%AB%98%E5%BF%8D",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 551577,
+      "response_bytes": 551583,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -2254,17 +2788,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "magi",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22%E3%83%9E%E3%82%AE%20%E5%A4%A7%E9%AB%98%E5%BF%8D%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "magi",
@@ -2281,13 +2851,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -2305,7 +2876,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -2318,7 +2890,7 @@
       "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%9E%E3%82%AE%20%E5%A4%A7%E9%AB%98%E5%BF%8D",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 343529,
+      "response_bytes": 343579,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -2420,15 +2992,21 @@
       "source_kind": "marketplace",
       "response_bytes": 553355,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -2439,17 +3017,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "chi",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22%E3%83%81%E3%80%82%20%E5%9C%B0%E7%90%83%E3%81%AE%E9%81%8B%E5%8B%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E9%AD%9A%E8%B1%8A%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "chi",
@@ -2466,13 +3080,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -2490,7 +3105,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -2503,7 +3119,7 @@
       "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%81%E3%80%82%20%E5%9C%B0%E7%90%83%E3%81%AE%E9%81%8B%E5%8B%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E9%AD%9A%E8%B1%8A",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 212177,
+      "response_bytes": 212193,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -2603,17 +3219,23 @@
       "final_url": "https://jp.mercari.com/search?keyword=%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD%20%E5%B8%82%E5%B7%9D%E6%98%A5%E5%AD%90",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 551918,
+      "response_bytes": 551919,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -2624,17 +3246,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "houseki-no-kuni",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD%20%E5%B8%82%E5%B7%9D%E6%98%A5%E5%AD%90%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "houseki-no-kuni",
@@ -2651,13 +3309,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -2675,7 +3334,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -2688,7 +3348,7 @@
       "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%AE%9D%E7%9F%B3%E3%81%AE%E5%9B%BD%20%E5%B8%82%E5%B7%9D%E6%98%A5%E5%AD%90",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 318888,
+      "response_bytes": 319057,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -2788,17 +3448,23 @@
       "final_url": "https://jp.mercari.com/search?keyword=%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3%20%E9%BE%8D%E5%B9%B8%E4%BC%B8",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 551926,
+      "response_bytes": 551919,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -2809,17 +3475,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "dandadan",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22%E3%83%80%E3%83%B3%E3%83%80%E3%83%80%E3%83%B3%20%E9%BE%8D%E5%B9%B8%E4%BC%B8%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "dandadan",
@@ -2836,13 +3538,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -2860,7 +3563,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -2973,17 +3677,23 @@
       "final_url": "https://jp.mercari.com/search?keyword=PLUTO%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E6%89%8B%E5%A1%9A%E6%B2%BB%E8%99%AB",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 552902,
+      "response_bytes": 552899,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -2994,17 +3704,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "pluto",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22PLUTO%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E6%89%8B%E5%A1%9A%E6%B2%BB%E8%99%AB%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "pluto",
@@ -3021,13 +3767,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -3045,7 +3792,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -3058,7 +3806,7 @@
       "final_url": "https://auctions.yahoo.co.jp/search/search?p=PLUTO%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%20%E6%89%8B%E5%A1%9A%E6%B2%BB%E8%99%AB",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 397512,
+      "response_bytes": 397560,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -3158,17 +3906,23 @@
       "final_url": "https://jp.mercari.com/search?keyword=%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%20%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are%20%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 553208,
+      "response_bytes": 553209,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -3179,17 +3933,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "tokyo-ghoul-franchise",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%20%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are%20%E3%82%BB%E3%83%83%E3%83%88%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "tokyo-ghoul-franchise",
@@ -3201,18 +3991,26 @@
       "source_kind": "marketplace",
       "response_bytes": 145396,
       "result_link_count": 68,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 5,
+        "off_target:www.bookoff.co.jp": 8,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6,
+        "off_target:regist11.smp.ne.jp": 2,
+        "invalid_or_non_https": 1,
+        "off_target:www.facebook.com": 1,
+        "off_target:x.com": 1,
+        "off_target:page.line.me": 1,
+        "off_target:www.bookoffgroup.co.jp": 2,
+        "off_target:member.bookoff.co.jp": 1
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -3226,14 +4024,48 @@
         "off_target:my.bookoff.co.jp": [
           "https://my.bookoff.co.jp/wishlist",
           "https://my.bookoff.co.jp/login"
+        ],
+        "off_target:regist11.smp.ne.jp": [
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c",
+          "https://regist11.smp.ne.jp/regist/is?SMPFORM=ofn-latbq-651b190782b21aa1eaa0162e484e578c"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/%E3%83%96%E3%83%83%E3%82%AF%E3%82%AA%E3%83%95%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3bookoffonline-166258740189848/"
+        ],
+        "off_target:x.com": [
+          "https://x.com/bookoffonline"
+        ],
+        "off_target:page.line.me": [
+          "https://page.line.me/iau9918q"
+        ],
+        "off_target:www.bookoffgroup.co.jp": [
+          "https://www.bookoffgroup.co.jp/corporate/business.html",
+          "https://www.bookoffgroup.co.jp/"
+        ],
+        "off_target:member.bookoff.co.jp": [
+          "https://member.bookoff.co.jp/bo-member-content/contract/"
         ]
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
+    },
+    {
+      "manga_id": "tokyo-ghoul-franchise",
+      "target_id": "bookoff",
+      "target_domain": "shopping.bookoff.co.jp",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ashopping.bookoff.co.jp%2Fused%20%22%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%20%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are%20%E3%82%BB%E3%83%83%E3%83%88%22%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "tokyo-ghoul-franchise",
@@ -3243,7 +4075,7 @@
       "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%20%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are%20%E3%82%BB%E3%83%83%E3%83%88",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 383491,
+      "response_bytes": 383507,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -3343,17 +4175,23 @@
       "final_url": "https://jp.mercari.com/search?keyword=%E5%AF%84%E7%94%9F%E7%8D%A3%20%E5%B2%A9%E6%98%8E%E5%9D%87",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 551690,
+      "response_bytes": 551691,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -3364,17 +4202,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "parasyte",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22%E5%AF%84%E7%94%9F%E7%8D%A3%20%E5%B2%A9%E6%98%8E%E5%9D%87%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "parasyte",
@@ -3391,13 +4265,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -3415,7 +4290,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -3428,7 +4304,7 @@
       "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%AF%84%E7%94%9F%E7%8D%A3%20%E5%B2%A9%E6%98%8E%E5%9D%87",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 316621,
+      "response_bytes": 316619,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -3528,17 +4404,23 @@
       "final_url": "https://jp.mercari.com/search?keyword=MONSTER%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 551623,
+      "response_bytes": 551624,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -3549,17 +4431,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "monster",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22MONSTER%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "monster",
@@ -3576,13 +4494,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -3600,7 +4519,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -3613,7 +4533,7 @@
       "final_url": "https://auctions.yahoo.co.jp/search/search?p=MONSTER%20%E6%B5%A6%E6%B2%A2%E7%9B%B4%E6%A8%B9",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 421252,
+      "response_bytes": 421274,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -3715,15 +4635,21 @@
       "source_kind": "marketplace",
       "response_bytes": 552382,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -3734,17 +4660,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "vinland-saga",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "vinland-saga",
@@ -3761,13 +4723,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -3785,7 +4748,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -3798,7 +4762,7 @@
       "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B5%E3%82%AC%20%E5%B9%B8%E6%9D%91%E8%AA%A0",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 318915,
+      "response_bytes": 318923,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -3900,15 +4864,21 @@
       "source_kind": "marketplace",
       "response_bytes": 552032,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -3919,17 +4889,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "heavenly-delusion",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83%20%E7%9F%B3%E9%BB%92%E6%AD%A3%E6%95%B0%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "heavenly-delusion",
@@ -3946,13 +4952,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -3970,7 +4977,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -3983,7 +4991,7 @@
       "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E5%A4%A9%E5%9B%BD%E5%A4%A7%E9%AD%94%E5%A2%83%20%E7%9F%B3%E9%BB%92%E6%AD%A3%E6%95%B0",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 312686,
+      "response_bytes": 312668,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -4083,17 +5091,23 @@
       "final_url": "https://jp.mercari.com/search?keyword=%E7%B5%90%E7%95%8C%E5%B8%AB%20%E7%94%B0%E8%BE%BA%E3%82%A4%E3%82%A8%E3%83%AD%E3%82%A6",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 552053,
+      "response_bytes": 552046,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -4104,17 +5118,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "kekkaishi",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22%E7%B5%90%E7%95%8C%E5%B8%AB%20%E7%94%B0%E8%BE%BA%E3%82%A4%E3%82%A8%E3%83%AD%E3%82%A6%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "kekkaishi",
@@ -4131,13 +5181,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -4155,7 +5206,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -4168,7 +5220,7 @@
       "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E7%B5%90%E7%95%8C%E5%B8%AB%20%E7%94%B0%E8%BE%BA%E3%82%A4%E3%82%A8%E3%83%AD%E3%82%A6",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 319571,
+      "response_bytes": 319581,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -4270,15 +5322,21 @@
       "source_kind": "marketplace",
       "response_bytes": 552916,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -4289,17 +5347,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "psyren",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22PSYREN%20%E3%82%B5%E3%82%A4%E3%83%AC%E3%83%B3%20%E5%B2%A9%E4%BB%A3%E4%BF%8A%E6%98%8E%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "psyren",
@@ -4316,13 +5410,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -4340,7 +5435,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -4453,17 +5549,23 @@
       "final_url": "https://jp.mercari.com/search?keyword=%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A%20%E3%82%AA%E3%83%8B%E3%82%B0%E3%83%B3%E3%82%BD%E3%82%A6",
       "search_engine": "jp.mercari.com",
       "source_kind": "marketplace",
-      "response_bytes": 552381,
+      "response_bytes": 552374,
       "result_link_count": 50,
-      "candidate_count": 2,
+      "candidate_count": 0,
       "fallback_used": false,
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:about.mercari.com": 3,
+        "off_target:about.mercari.com": 4,
         "off_target:careers.mercari.com": 1,
-        "off_target:jp-news.mercari.com": 1,
-        "off_target:mercari.com": 1
+        "off_target:jp-news.mercari.com": 2,
+        "off_target:mercari.com": 1,
+        "off_target:mercari-shops.com": 1,
+        "off_target:support.mercari-shops.com": 2,
+        "off_target:www.merpay.com": 1,
+        "off_target:jp.merpay.com": 2,
+        "off_target:twitter.com": 1,
+        "off_target:www.facebook.com": 1
       },
       "rejected_host_samples": {
         "off_target:about.mercari.com": [
@@ -4474,17 +5576,53 @@
           "https://careers.mercari.com/jp/"
         ],
         "off_target:jp-news.mercari.com": [
-          "https://jp-news.mercari.com/"
+          "https://jp-news.mercari.com/",
+          "https://jp-news.mercari.com/mercari-shops"
         ],
         "off_target:mercari.com": [
           "https://mercari.com/"
+        ],
+        "off_target:mercari-shops.com": [
+          "https://mercari-shops.com/seller/shops"
+        ],
+        "off_target:support.mercari-shops.com": [
+          "https://support.mercari-shops.com/hc/ja",
+          "https://support.mercari-shops.com/hc/ja/articles/900005891046"
+        ],
+        "off_target:www.merpay.com": [
+          "https://www.merpay.com/merchant/terms/"
+        ],
+        "off_target:jp.merpay.com": [
+          "https://jp.merpay.com/antisocial/",
+          "https://jp.merpay.com/antimoneylaundering/"
+        ],
+        "off_target:twitter.com": [
+          "https://twitter.com/mercari_jp"
+        ],
+        "off_target:www.facebook.com": [
+          "https://www.facebook.com/mercarijp"
         ]
       },
       "rejected_path_samples": [
-        "https://jp.mercari.com/"
+        "https://jp.mercari.com/",
+        "https://jp.mercari.com/todos",
+        "https://jp.mercari.com/shops"
       ],
       "has_result_marker": true,
       "page_appears_blocked": true
+    },
+    {
+      "manga_id": "mononogatari",
+      "target_id": "mercari",
+      "target_domain": "jp.mercari.com",
+      "search_engine": "www.bing.com",
+      "search_url": "https://www.bing.com/search?q=site%3Ajp.mercari.com%2Fitem%20%22%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A%20%E3%82%AA%E3%83%8B%E3%82%B0%E3%83%B3%E3%82%BD%E3%82%A6%22%20%E4%B8%AD%E5%8F%A4%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88&mkt=ja-JP&setlang=ja",
+      "source_kind": "search_engine",
+      "result_link_count": 0,
+      "candidate_count": 0,
+      "robots_allowed": false,
+      "robots_reason": "ROBOTS_DISALLOWED",
+      "response_bytes": 0
     },
     {
       "manga_id": "mononogatari",
@@ -4501,13 +5639,14 @@
       "robots_allowed": true,
       "robots_reason": "ROBOTS_CHECKED",
       "rejected_host_counts": {
-        "off_target:support-online.bookoff.co.jp": 1,
-        "off_target:www.bookoff.co.jp": 2,
-        "off_target:sell.bookoff.co.jp": 2,
-        "off_target:my.bookoff.co.jp": 3
+        "off_target:support-online.bookoff.co.jp": 2,
+        "off_target:www.bookoff.co.jp": 4,
+        "off_target:sell.bookoff.co.jp": 3,
+        "off_target:my.bookoff.co.jp": 6
       },
       "rejected_host_samples": {
         "off_target:support-online.bookoff.co.jp": [
+          "https://support-online.bookoff.co.jp",
           "https://support-online.bookoff.co.jp"
         ],
         "off_target:www.bookoff.co.jp": [
@@ -4525,7 +5664,8 @@
       },
       "rejected_path_samples": [
         "https://shopping.bookoff.co.jp/",
-        "https://shopping.bookoff.co.jp/"
+        "https://shopping.bookoff.co.jp/",
+        "https://shopping.bookoff.co.jp/cart"
       ],
       "has_result_marker": true,
       "page_appears_blocked": false
@@ -4538,7 +5678,7 @@
       "final_url": "https://auctions.yahoo.co.jp/search/search?p=%E3%82%82%E3%81%AE%E3%81%AE%E3%81%8C%E3%81%9F%E3%82%8A%20%E3%82%AA%E3%83%8B%E3%82%B0%E3%83%B3%E3%82%BD%E3%82%A6",
       "search_engine": "auctions.yahoo.co.jp",
       "source_kind": "marketplace",
-      "response_bytes": 314190,
+      "response_bytes": 314184,
       "result_link_count": 32,
       "candidate_count": 0,
       "fallback_used": false,
@@ -4634,11 +5774,11 @@
   "queries_with_anchors": 75,
   "queries_with_result_marker": 75,
   "queries_using_fallback": 0,
-  "queries_finding_candidates": 50,
+  "queries_finding_candidates": 24,
   "queries_appearing_blocked": 25,
-  "new_candidate_count": 0,
-  "current_seen_count": 4,
-  "retained_candidate_count": 29,
+  "new_candidate_count": 48,
+  "current_seen_count": 48,
+  "retained_candidate_count": 73,
   "manual_seed_count": 25,
   "candidates": [
     {
@@ -4662,6 +5802,46 @@
       "notes": "初期候補URLのみ保存。価格・在庫・版・収録巻・状態・送料は未確認。自動監視が商品ページを再取得するまでは最安ランキングに使用しない。"
     },
     {
+      "manga_id": "ajin",
+      "manga_title": "亜人",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0019061825",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"亜人 桜井画門\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
+      "manga_id": "ajin",
+      "manga_title": "亜人",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0019619005",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"亜人 桜井画門\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
       "id": "mercari-seed-chainsaw-man",
       "manga_id": "chainsaw-man",
       "listing_url": "https://jp.mercari.com/item/m90950975620",
@@ -4680,6 +5860,46 @@
       "condition": "UNKNOWN",
       "shipping_jpy": null,
       "notes": "初期候補URLのみ保存。価格・在庫・版・収録巻・状態・送料は未確認。自動監視が商品ページを再取得するまでは最安ランキングに使用しない。"
+    },
+    {
+      "manga_id": "chainsaw-man",
+      "manga_title": "チェンソーマン",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0020109884",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"チェンソーマン 藤本タツキ\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
+      "manga_id": "chainsaw-man",
+      "manga_title": "チェンソーマン",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0020178561",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"チェンソーマン 藤本タツキ\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
     },
     {
       "id": "mercari-seed-chi",
@@ -4702,6 +5922,46 @@
       "notes": "初期候補URLのみ保存。価格・在庫・版・収録巻・状態・送料は未確認。自動監視が商品ページを再取得するまでは最安ランキングに使用しない。"
     },
     {
+      "manga_id": "chi",
+      "manga_title": "チ。―地球の運動について―",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0019562697",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"チ。 地球の運動について 魚豊\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
+      "manga_id": "chi",
+      "manga_title": "チ。―地球の運動について―",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0019576190",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"チ。 地球の運動について 魚豊\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
       "id": "mercari-seed-dandadan",
       "manga_id": "dandadan",
       "listing_url": "https://jp.mercari.com/item/m53405106469",
@@ -4720,6 +5980,46 @@
       "condition": "UNKNOWN",
       "shipping_jpy": null,
       "notes": "初期候補URLのみ保存。価格・在庫・版・収録巻・状態・送料は未確認。自動監視が商品ページを再取得するまでは最安ランキングに使用しない。"
+    },
+    {
+      "manga_id": "dandadan",
+      "manga_title": "ダンダダン",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0020030780",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"ダンダダン 龍幸伸\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
+      "manga_id": "dandadan",
+      "manga_title": "ダンダダン",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0020105109",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"ダンダダン 龍幸伸\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
     },
     {
       "id": "mercari-seed-frieren",
@@ -4742,6 +6042,46 @@
       "notes": "初期候補URLのみ保存。価格・在庫・版・収録巻・状態・送料は未確認。自動監視が商品ページを再取得するまでは最安ランキングに使用しない。"
     },
     {
+      "manga_id": "frieren",
+      "manga_title": "葬送のフリーレン",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0019503536",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"葬送のフリーレン\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
+      "manga_id": "frieren",
+      "manga_title": "葬送のフリーレン",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0020534597",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"葬送のフリーレン\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
       "id": "mercari-seed-gachiakuta",
       "manga_id": "gachiakuta",
       "listing_url": "https://jp.mercari.com/item/m75004137232",
@@ -4760,6 +6100,46 @@
       "condition": "UNKNOWN",
       "shipping_jpy": null,
       "notes": "初期候補URLのみ保存。価格・在庫・版・収録巻・状態・送料は未確認。自動監視が商品ページを再取得するまでは最安ランキングに使用しない。"
+    },
+    {
+      "manga_id": "gachiakuta",
+      "manga_title": "ガチアクタ",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0019916763",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"ガチアクタ 裏那圭\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
+      "manga_id": "gachiakuta",
+      "manga_title": "ガチアクタ",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0019946868",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"ガチアクタ 裏那圭\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
     },
     {
       "id": "mercari-seed-golden-kamuy",
@@ -4782,6 +6162,46 @@
       "notes": "初期候補URLのみ保存。価格・在庫・版・収録巻・状態・送料は未確認。自動監視が商品ページを再取得するまでは最安ランキングに使用しない。"
     },
     {
+      "manga_id": "golden-kamuy",
+      "manga_title": "ゴールデンカムイ",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0018908643",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"ゴールデンカムイ\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
+      "manga_id": "golden-kamuy",
+      "manga_title": "ゴールデンカムイ",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0019075863",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"ゴールデンカムイ\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
       "id": "mercari-seed-heavenly-delusion",
       "manga_id": "heavenly-delusion",
       "listing_url": "https://jp.mercari.com/item/m51449160470",
@@ -4800,6 +6220,46 @@
       "condition": "UNKNOWN",
       "shipping_jpy": null,
       "notes": "初期候補URLのみ保存。価格・在庫・版・収録巻・状態・送料は未確認。自動監視が商品ページを再取得するまでは最安ランキングに使用しない。"
+    },
+    {
+      "manga_id": "heavenly-delusion",
+      "manga_title": "天国大魔境",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0019097659",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"天国大魔境 石黒正数\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
+      "manga_id": "heavenly-delusion",
+      "manga_title": "天国大魔境",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0019214985",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"天国大魔境 石黒正数\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
     },
     {
       "id": "mercari-seed-houseki-no-kuni",
@@ -4822,6 +6282,46 @@
       "notes": "初期候補URLのみ保存。価格・在庫・版・収録巻・状態・送料は未確認。自動監視が商品ページを再取得するまでは最安ランキングに使用しない。"
     },
     {
+      "manga_id": "houseki-no-kuni",
+      "manga_title": "宝石の国",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0017342146",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"宝石の国 市川春子\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
+      "manga_id": "houseki-no-kuni",
+      "manga_title": "宝石の国",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0018950176",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"宝石の国 市川春子\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
       "id": "mercari-seed-hunter-x-hunter",
       "manga_id": "hunter-x-hunter",
       "listing_url": "https://jp.mercari.com/item/m83768923072",
@@ -4840,6 +6340,46 @@
       "condition": "UNKNOWN",
       "shipping_jpy": null,
       "notes": "初期候補URLのみ保存。価格・在庫・版・収録巻・状態・送料は未確認。自動監視が商品ページを再取得するまでは最安ランキングに使用しない。"
+    },
+    {
+      "manga_id": "hunter-x-hunter",
+      "manga_title": "HUNTER×HUNTER",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0018997955",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"HUNTER×HUNTER\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
+      "manga_id": "hunter-x-hunter",
+      "manga_title": "HUNTER×HUNTER",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0020897000",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"HUNTER×HUNTER\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
     },
     {
       "id": "mercari-seed-jujutsu-modulo",
@@ -4862,6 +6402,46 @@
       "notes": "初期候補URLのみ保存。価格・在庫・版・収録巻・状態・送料は未確認。自動監視が商品ページを再取得するまでは最安ランキングに使用しない。"
     },
     {
+      "manga_id": "jujutsu-modulo",
+      "manga_title": "呪術廻戦≡（モジュロ）",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0020759343",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"呪術廻戦≡ モジュロ\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
+      "manga_id": "jujutsu-modulo",
+      "manga_title": "呪術廻戦≡（モジュロ）",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0020777545",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"呪術廻戦≡ モジュロ\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
       "id": "mercari-seed-kagurabachi",
       "manga_id": "kagurabachi",
       "listing_url": "https://jp.mercari.com/item/m29370918203",
@@ -4880,6 +6460,46 @@
       "condition": "UNKNOWN",
       "shipping_jpy": null,
       "notes": "初期候補URLのみ保存。価格・在庫・版・収録巻・状態・送料は未確認。自動監視が商品ページを再取得するまでは最安ランキングに使用しない。"
+    },
+    {
+      "manga_id": "kagurabachi",
+      "manga_title": "カグラバチ",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0020235167",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"カグラバチ 外薗健\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
+      "manga_id": "kagurabachi",
+      "manga_title": "カグラバチ",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0020298488",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"カグラバチ 外薗健\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
     },
     {
       "id": "mercari-seed-kekkaishi",
@@ -4902,6 +6522,46 @@
       "notes": "初期候補URLのみ保存。価格・在庫・版・収録巻・状態・送料は未確認。自動監視が商品ページを再取得するまでは最安ランキングに使用しない。"
     },
     {
+      "manga_id": "kekkaishi",
+      "manga_title": "結界師",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0016471304",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"結界師 田辺イエロウ\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
+      "manga_id": "kekkaishi",
+      "manga_title": "結界師",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0016685472",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"結界師 田辺イエロウ\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
       "id": "mercari-seed-kusuriya-neko-kurage",
       "manga_id": "kusuriya-neko-kurage",
       "listing_url": "https://jp.mercari.com/item/m51330625661",
@@ -4922,6 +6582,46 @@
       "notes": "初期候補URLのみ保存。価格・在庫・版・収録巻・状態・送料は未確認。自動監視が商品ページを再取得するまでは最安ランキングに使用しない。"
     },
     {
+      "manga_id": "kusuriya-neko-kurage",
+      "manga_title": "薬屋のひとりごと（ねこクラゲ版）",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0020273201",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"薬屋のひとりごと ねこクラゲ版\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
+      "manga_id": "kusuriya-neko-kurage",
+      "manga_title": "薬屋のひとりごと（ねこクラゲ版）",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0020402632",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"薬屋のひとりごと ねこクラゲ版\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
       "id": "mercari-seed-magi",
       "manga_id": "magi",
       "listing_url": "https://jp.mercari.com/item/m57191826321",
@@ -4940,6 +6640,46 @@
       "condition": "UNKNOWN",
       "shipping_jpy": null,
       "notes": "初期候補URLのみ保存。価格・在庫・版・収録巻・状態・送料は未確認。自動監視が商品ページを再取得するまでは最安ランキングに使用しない。"
+    },
+    {
+      "manga_id": "magi",
+      "manga_title": "マギ",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0018769552",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"マギ 大高忍\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
+      "manga_id": "magi",
+      "manga_title": "マギ",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0018874020",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"マギ 大高忍\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
     },
     {
       "id": "mercari-seed-mononogatari",
@@ -4964,51 +6704,11 @@
     {
       "manga_id": "mononogatari",
       "manga_title": "もののがたり",
-      "listing_url": "https://jp.mercari.com/shops",
-      "search_result_title": "メルカリShops",
-      "source_domain": "jp.mercari.com",
-      "first_seen_at": "2026-10-21T13:33:40+09:00",
-      "last_seen_at": "2026-10-21T13:36:45+09:00",
-      "discovered_by_query": "site:jp.mercari.com/item \"もののがたり オニグンソウ\" 中古 全巻セット",
-      "discovered_by_target": "mercari",
-      "discovered_by_source": "marketplace",
-      "discovered_by_engine": "jp.mercari.com",
-      "verification_status": "UNVERIFIED_LEAD",
-      "price_jpy": null,
-      "availability": "UNKNOWN",
-      "volume_coverage": null,
-      "condition": "UNKNOWN",
-      "shipping_jpy": null,
-      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
-    },
-    {
-      "manga_id": "mononogatari",
-      "manga_title": "もののがたり",
-      "listing_url": "https://jp.mercari.com/todos",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0019189164",
       "search_result_title": "",
-      "source_domain": "jp.mercari.com",
-      "first_seen_at": "2026-10-21T13:33:40+09:00",
-      "last_seen_at": "2026-10-21T13:36:45+09:00",
-      "discovered_by_query": "site:jp.mercari.com/item \"もののがたり オニグンソウ\" 中古 全巻セット",
-      "discovered_by_target": "mercari",
-      "discovered_by_source": "marketplace",
-      "discovered_by_engine": "jp.mercari.com",
-      "verification_status": "UNVERIFIED_LEAD",
-      "price_jpy": null,
-      "availability": "UNKNOWN",
-      "volume_coverage": null,
-      "condition": "UNKNOWN",
-      "shipping_jpy": null,
-      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
-    },
-    {
-      "manga_id": "mononogatari",
-      "manga_title": "もののがたり",
-      "listing_url": "https://shopping.bookoff.co.jp/book",
-      "search_result_title": "書籍",
       "source_domain": "shopping.bookoff.co.jp",
-      "first_seen_at": "2026-10-21T13:33:40+09:00",
-      "last_seen_at": "2026-10-21T13:36:45+09:00",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
       "discovered_by_query": "site:shopping.bookoff.co.jp/used \"もののがたり オニグンソウ\" 全巻セット 中古",
       "discovered_by_target": "bookoff",
       "discovered_by_source": "marketplace",
@@ -5024,11 +6724,11 @@
     {
       "manga_id": "mononogatari",
       "manga_title": "もののがたり",
-      "listing_url": "https://shopping.bookoff.co.jp/cart",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0020105112",
       "search_result_title": "",
       "source_domain": "shopping.bookoff.co.jp",
-      "first_seen_at": "2026-10-21T13:33:40+09:00",
-      "last_seen_at": "2026-10-21T13:36:45+09:00",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
       "discovered_by_query": "site:shopping.bookoff.co.jp/used \"もののがたり オニグンソウ\" 全巻セット 中古",
       "discovered_by_target": "bookoff",
       "discovered_by_source": "marketplace",
@@ -5062,6 +6762,46 @@
       "notes": "初期候補URLのみ保存。価格・在庫・版・収録巻・状態・送料は未確認。自動監視が商品ページを再取得するまでは最安ランキングに使用しない。"
     },
     {
+      "manga_id": "monster",
+      "manga_title": "MONSTER",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0015008191",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"MONSTER 浦沢直樹\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
+      "manga_id": "monster",
+      "manga_title": "MONSTER",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0015010057",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"MONSTER 浦沢直樹\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
       "id": "mercari-seed-parasyte",
       "manga_id": "parasyte",
       "listing_url": "https://jp.mercari.com/item/m13687755955",
@@ -5080,6 +6820,46 @@
       "condition": "UNKNOWN",
       "shipping_jpy": null,
       "notes": "初期候補URLのみ保存。価格・在庫・版・収録巻・状態・送料は未確認。自動監視が商品ページを再取得するまでは最安ランキングに使用しない。"
+    },
+    {
+      "manga_id": "parasyte",
+      "manga_title": "寄生獣",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0017199177",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"寄生獣 岩明均\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
+      "manga_id": "parasyte",
+      "manga_title": "寄生獣",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0017199213",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"寄生獣 岩明均\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
     },
     {
       "id": "mercari-seed-pluto",
@@ -5102,6 +6882,46 @@
       "notes": "初期候補URLのみ保存。価格・在庫・版・収録巻・状態・送料は未確認。自動監視が商品ページを再取得するまでは最安ランキングに使用しない。"
     },
     {
+      "manga_id": "pluto",
+      "manga_title": "PLUTO",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0015021264",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"PLUTO 浦沢直樹 手塚治虫\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
+      "manga_id": "pluto",
+      "manga_title": "PLUTO",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0015021265",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"PLUTO 浦沢直樹 手塚治虫\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
       "id": "mercari-seed-psyren",
       "manga_id": "psyren",
       "listing_url": "https://jp.mercari.com/item/m54018095475",
@@ -5122,6 +6942,46 @@
       "notes": "初期候補URLのみ保存。価格・在庫・版・収録巻・状態・送料は未確認。自動監視が商品ページを再取得するまでは最安ランキングに使用しない。"
     },
     {
+      "manga_id": "psyren",
+      "manga_title": "PSYREN―サイレン―",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0016390609",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"PSYREN サイレン 岩代俊明\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
+      "manga_id": "psyren",
+      "manga_title": "PSYREN―サイレン―",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0016515729",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"PSYREN サイレン 岩代俊明\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
       "id": "mercari-seed-tenmaku-jadugal",
       "manga_id": "tenmaku-jadugal",
       "listing_url": "https://jp.mercari.com/item/m28336279286",
@@ -5140,6 +7000,46 @@
       "condition": "UNKNOWN",
       "shipping_jpy": null,
       "notes": "初期候補URLのみ保存。価格・在庫・版・収録巻・状態・送料は未確認。自動監視が商品ページを再取得するまでは最安ランキングに使用しない。"
+    },
+    {
+      "manga_id": "tenmaku-jadugal",
+      "manga_title": "天幕のジャードゥーガル",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0019945278",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"天幕のジャードゥーガル トマトスープ\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
+      "manga_id": "tenmaku-jadugal",
+      "manga_title": "天幕のジャードゥーガル",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0020372962",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"天幕のジャードゥーガル トマトスープ\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
     },
     {
       "id": "mercari-seed-tokyo-ghoul-franchise",
@@ -5182,6 +7082,46 @@
       "notes": "初期候補URLのみ保存。価格・在庫・版・収録巻・状態・送料は未確認。自動監視が商品ページを再取得するまでは最安ランキングに使用しない。"
     },
     {
+      "manga_id": "tongari-atelier",
+      "manga_title": "とんがり帽子のアトリエ",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0018804637",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"とんがり帽子のアトリエ 白浜鴎\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
+      "manga_id": "tongari-atelier",
+      "manga_title": "とんがり帽子のアトリエ",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0019009985",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"とんがり帽子のアトリエ 白浜鴎\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
       "id": "mercari-seed-vinland-saga",
       "manga_id": "vinland-saga",
       "listing_url": "https://jp.mercari.com/item/m49078164241",
@@ -5202,6 +7142,46 @@
       "notes": "初期候補URLのみ保存。価格・在庫・版・収録巻・状態・送料は未確認。自動監視が商品ページを再取得するまでは最安ランキングに使用しない。"
     },
     {
+      "manga_id": "vinland-saga",
+      "manga_title": "ヴィンランド・サガ",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0018961241",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"ヴィンランド・サガ 幸村誠\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
+      "manga_id": "vinland-saga",
+      "manga_title": "ヴィンランド・サガ",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0019113779",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"ヴィンランド・サガ 幸村誠\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
       "id": "mercari-seed-world-trigger",
       "manga_id": "world-trigger",
       "listing_url": "https://jp.mercari.com/item/m64226622113",
@@ -5220,6 +7200,46 @@
       "condition": "UNKNOWN",
       "shipping_jpy": null,
       "notes": "初期候補URLのみ保存。価格・在庫・版・収録巻・状態・送料は未確認。自動監視が商品ページを再取得するまでは最安ランキングに使用しない。"
+    },
+    {
+      "manga_id": "world-trigger",
+      "manga_title": "ワールドトリガー",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0019239144",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"ワールドトリガー 葦原大介\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
+    },
+    {
+      "manga_id": "world-trigger",
+      "manga_title": "ワールドトリガー",
+      "listing_url": "https://shopping.bookoff.co.jp/used/0019461112",
+      "search_result_title": "",
+      "source_domain": "shopping.bookoff.co.jp",
+      "first_seen_at": "2026-10-21T13:39:22+09:00",
+      "last_seen_at": "2026-10-21T13:39:22+09:00",
+      "discovered_by_query": "site:shopping.bookoff.co.jp/used \"ワールドトリガー 葦原大介\" 全巻セット 中古",
+      "discovered_by_target": "bookoff",
+      "discovered_by_source": "marketplace",
+      "discovered_by_engine": "shopping.bookoff.co.jp",
+      "verification_status": "UNVERIFIED_LEAD",
+      "price_jpy": null,
+      "availability": "UNKNOWN",
+      "volume_coverage": null,
+      "condition": "UNKNOWN",
+      "shipping_jpy": null,
+      "notes": "検索で発見した商品ページ候補。価格・在庫・全巻・状態・送料の証拠ではない。"
     }
   ]
 }
