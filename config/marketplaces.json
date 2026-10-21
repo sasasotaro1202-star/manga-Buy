@@ -82,28 +82,28 @@
         "domain": "jp.mercari.com",
         "query_template": "site:jp.mercari.com/item \"{title}\" 中古 全巻セット",
         "search_page_template": "https://jp.mercari.com/search?keyword={query}",
-        "search_term_template": "{title}"
+        "search_term_template": "{title} {set_term}"
       },
       {
         "id": "bookoff",
         "domain": "shopping.bookoff.co.jp",
         "query_template": "site:shopping.bookoff.co.jp/used \"{title}\" 全巻セット 中古",
         "search_page_template": "https://shopping.bookoff.co.jp/search/keyword/{query}",
-        "search_term_template": "{title}"
+        "search_term_template": "{title} {set_term}"
       },
       {
         "id": "yahoo-auctions",
         "domain": "auctions.yahoo.co.jp",
         "query_template": "site:auctions.yahoo.co.jp \"{title}\" 全巻セット 中古",
         "search_page_template": "https://auctions.yahoo.co.jp/search/search?p={query}",
-        "search_term_template": "{title}"
+        "search_term_template": "{title} {set_term}"
       },
       {
         "id": "rakuten",
         "domain": "item.rakuten.co.jp",
         "query_template": "site:item.rakuten.co.jp \"{title}\" 全巻セット 中古",
         "search_page_template": "https://search.rakuten.co.jp/search/mall/{query}/",
-        "search_term_template": "{title}"
+        "search_term_template": "{title} {set_term}"
       }
     ],
     "max_candidates_per_target": 2

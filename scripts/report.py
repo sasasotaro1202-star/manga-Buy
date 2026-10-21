@@ -29,6 +29,35 @@ def yen(value):
     return "¥" + format(value, ",")
 
 
+def candidate_observation_sort_key(item, observations_for_url):
+    """Sort candidates by confirmed stock first; price only orders items within a stock group."""
+    url = str(item.get("listing_url") or "")
+    observed = observations_for_url.get(url, {}) if isinstance(observations_for_url, dict) else {}
+    stock = str(observed.get("availability") or "UNKNOWN").upper()
+    stock_rank = {"IN_STOCK": 0, "UNKNOWN": 1, "PREORDER": 2, "OUT_OF_STOCK": 3}.get(stock, 1)
+    price = observed.get("price_jpy")
+    valid_price = (
+        observed.get("retrieval_status") == "OK"
+        and observed.get("currency") in {"JPY", "YEN"}
+        and isinstance(price, int) and not isinstance(price, bool) and price > 0
+    )
+    return (stock_rank, price if valid_price else 10**15, url)
+
+
+def candidate_display_title(item, observed):
+    """Prefer the actual product-page title to an empty or generic search-result label."""
+    for value in (
+        (observed or {}).get("title"),
+        item.get("search_result_title"),
+        item.get("source_domain"),
+        "候補リンク",
+    ):
+        label = str(value or "").strip()
+        if label:
+            return label
+    return "候補リンク"
+
+
 def generate_report():
     catalog_data = load_json(CATALOG_PATH, {"manga": []})
     marketplace_config = load_json(MARKETPLACES_PATH, {"marketplaces": []})
@@ -71,8 +100,11 @@ def generate_report():
         f"- 登録商品URL：{len(listing_data.get('listings', []))}",
         f"- 発見候補URL：{len(discovered_data.get('candidates', []))}",
         f"- 未検証の初期候補シード：{discovered_data.get('manual_seed_count', 0)}",
-        f"- 構造化データ取得成功：{monitor_summary.get('structured_data_count', monitor_summary.get('ok_count', 0))}",
+        f"- 商品ページ取得成功：{monitor_summary.get('page_fetch_success_count', monitor_summary.get('ok_count', 0))}",
+        f"- JSON-LD価格観測：{monitor_summary.get('structured_data_count', 0)}",
+        f"- メタタグ価格観測：{monitor_summary.get('meta_price_count', 0)}",
         f"- JPY価格抽出成功：{monitor_summary.get('price_extracted_count', 0)}",
+        f"- 価格抽出不能（取得済みページ）：{monitor_summary.get('price_extraction_issue_count', 0)}",
         f"- 在庫あり確認済み：{monitor_summary.get('in_stock_confirmed_count', 0)}",
         f"- 在庫状態不明：{monitor_summary.get('stock_unknown_count', 0)}",
         f"- 在庫なし確認済み：{monitor_summary.get('out_of_stock_confirmed_count', 0)}",
@@ -189,19 +221,37 @@ def generate_report():
                     str(value.get("listing_url") or ""): value
                     for value in observed_by_id.values() if isinstance(value, dict)
                 }
-                for item in discovered[:8]:
+                ordered_discovered = sorted(discovered, key=lambda item: candidate_observation_sort_key(item, observations_for_url))
+                for item in ordered_discovered[:8]:
                     item_url = str(item.get("listing_url") or "")
                     observed = observations_for_url.get(item_url, {})
-                    label = safe_markdown(item.get("search_result_title") or item.get("source_domain") or "候補リンク")
+                    label = safe_markdown(candidate_display_title(item, observed))
                     provenance = "（初期URLシード）" if item.get("discovered_by_source") == "manual_mercari_search_seed" else ""
                     lines.append("  - [" + label + "](" + item_url + ")" + provenance)
                     if observed:
-                        if observed.get("retrieval_status") == "OK" and isinstance(observed.get("price_jpy"), int):
-                            lines.append("    - 構造化データ観測：" + yen(observed.get("price_jpy")) + " / 在庫：" + safe_markdown(observed.get("availability") or "UNKNOWN") + " / 時刻：" + safe_markdown(observed.get("retrieved_at")) + "（全巻・送料込み総額ではありません）")
+                        observed_price = observed.get("price_jpy")
+                        valid_price = (
+                            observed.get("retrieval_status") == "OK"
+                            and observed.get("currency") in {"JPY", "YEN"}
+                            and isinstance(observed_price, int)
+                            and not isinstance(observed_price, bool)
+                            and observed_price > 0
+                        )
+                        stock = str(observed.get("availability") or "UNKNOWN").upper()
+                        stock_text = {
+                            "IN_STOCK": "在庫あり確認",
+                            "OUT_OF_STOCK": "在庫なし確認",
+                            "PREORDER": "予約受付",
+                            "UNKNOWN": "在庫状態不明",
+                        }.get(stock, "在庫状態不明")
+                        if valid_price:
+                            lines.append("    - 商品ページ価格：" + yen(observed_price) + " / " + stock_text + " / 取得：" + safe_markdown(observed.get("retrieved_at")) + "（単巻価格の可能性あり。全巻・送料込み総額ではありません）")
+                        elif observed.get("final_url"):
+                            lines.append("    - 商品ページ取得済みだが価格を確定できず：" + safe_markdown(observed.get("parse_status") or observed.get("retrieval_status") or "PRICE_UNKNOWN"))
                         else:
-                            lines.append("    - 取得結果：" + safe_markdown(observed.get("retrieval_status") or "未取得") + " / " + safe_markdown(observed.get("error") or "価格・在庫の構造化データを確認できませんでした"))
+                            lines.append("    - 取得結果：" + safe_markdown(observed.get("retrieval_status") or "未取得") + " / " + safe_markdown(observed.get("error") or "商品ページの価格を確認できませんでした"))
                     else:
-                        lines.append("    - 未取得。検索発見URLであり、購入条件は未確認です。")
+                        lines.append("    - 未取得。商品ページ候補であり、価格・在庫・購入条件は未確認です。")
             query = str(manga.get("search_title") or manga.get("title") or "") + " " + ("全巻セット 中古" if manga.get("series_status") == "completed" else "既刊全巻セット 中古")
             lines.append("- 各サイトで現在の出品を探す：")
             enabled = [site for site in marketplace_config.get("marketplaces", []) if site.get("enabled")]
@@ -214,7 +264,7 @@ def generate_report():
         "## データ品質・未解決事項",
         "",
         "- 各価格の出所は商品ページと取得時刻にひも付けて保存します。",
-        "- 価格を抽出できない、通貨が不明、複数価格が競合する場合は最安ランキングに入れません。",
+        "- 商品ページ取得成功・JSON-LD解析・メタタグ価格抽出・在庫確認は別々に集計します。価格を抽出できない、通貨が不明、複数価格が競合する場合は最安ランキングに入れません。",
         "- 送料/必須手数料が不明、状態が不明、版や巻の収録範囲が未確認の場合は確認済みの合計にしません。",
         "- robots.txtで不許可、アクセス制限、ネットワーク障害、HTTPエラーは在庫切れではなく取得エラーとして扱います。",
         "- 検索状態 EMPTY は「検索成功」ではなく候補URLを1件も抽出できなかったことを示します。ブロック/HTML変更の診断を確認し、検索リンクから実際の商品ページを登録してください。",

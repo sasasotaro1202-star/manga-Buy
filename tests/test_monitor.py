@@ -10,16 +10,17 @@ class MonitorSummaryTests(unittest.TestCase):
     def test_price_extraction_does_not_claim_inventory(self):
         rows = {
             "price-stock-unknown": {
-                "retrieval_status": "OK", "currency": "JPY", "price_jpy": 4500,
-                "availability": "UNKNOWN", "auto_discovered_candidate": True,
+                "retrieval_status": "OK", "parse_method": "JSON_LD", "final_url": "https://shop.example/item/1",
+                "currency": "JPY", "price_jpy": 4500, "availability": "UNKNOWN",
+                "auto_discovered_candidate": True,
             },
             "available": {
-                "retrieval_status": "OK", "currency": "JPY", "price_jpy": 5000,
-                "availability": "IN_STOCK",
+                "retrieval_status": "OK", "parse_method": "META_PRODUCT", "final_url": "https://shop.example/item/2",
+                "currency": "JPY", "price_jpy": 5000, "availability": "IN_STOCK",
             },
             "sold": {
-                "retrieval_status": "OK", "currency": "JPY", "price_jpy": 1200,
-                "availability": "OUT_OF_STOCK",
+                "retrieval_status": "OK", "parse_method": "JSON_LD", "final_url": "https://shop.example/item/3",
+                "currency": "JPY", "price_jpy": 1200, "availability": "OUT_OF_STOCK",
             },
             "error": {
                 "retrieval_status": "HTTP_ERROR", "currency": None, "price_jpy": None,
@@ -28,12 +29,27 @@ class MonitorSummaryTests(unittest.TestCase):
         }
         summary = summarize_observations(rows)
         self.assertEqual(summary["watched_count"], 4)
-        self.assertEqual(summary["structured_data_count"], 3)
+        self.assertEqual(summary["page_fetch_success_count"], 3)
+        self.assertEqual(summary["structured_data_count"], 2)
+        self.assertEqual(summary["meta_price_count"], 1)
         self.assertEqual(summary["price_extracted_count"], 3)
         self.assertEqual(summary["in_stock_confirmed_count"], 1)
         self.assertEqual(summary["out_of_stock_confirmed_count"], 1)
-        self.assertEqual(summary["stock_unknown_count"], 2)
+        self.assertEqual(summary["stock_unknown_count"], 1)
         self.assertEqual(summary["error_count"], 1)
+
+    def test_page_fetch_without_price_is_not_counted_as_fetch_error(self):
+        summary = summarize_observations({
+            "no-price": {
+                "retrieval_status": "PRICE_NOT_FOUND", "parse_method": None,
+                "final_url": "https://shop.example/item/4", "price_jpy": None,
+                "currency": None, "availability": "UNKNOWN",
+            }
+        })
+        self.assertEqual(summary["page_fetch_success_count"], 1)
+        self.assertEqual(summary["price_extraction_issue_count"], 1)
+        self.assertEqual(summary["error_count"], 0)
+        self.assertEqual(summary["stock_unknown_count"], 1)
 
     def test_auto_watch_selection_prefers_distinct_marketplaces(self):
         candidates = [

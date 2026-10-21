@@ -26,9 +26,13 @@ def append_jsonl(path, rows):
 
 
 def summarize_observations(observations):
-    """Separate successful parsing and extracted prices from confirmed inventory."""
+    """Report page fetches, metadata source, valid JPY prices and inventory separately."""
     entries = list((observations or {}).values())
-    availability = [str(item.get("availability") or "UNKNOWN").upper() for item in entries]
+    fetched_parse_states = {"OK", "PRICE_NOT_FOUND", "AMBIGUOUS_PRICE", "NON_JPY_CURRENCY", "INVALID_PRICE"}
+    fetch_error_states = {
+        "URL_NOT_ALLOWLISTED", "ROBOTS_BLOCKED_OR_UNKNOWN", "REDIRECT_NOT_ALLOWLISTED",
+        "RESPONSE_TOO_LARGE", "HTTP_ERROR", "NETWORK_ERROR", "FETCH_ERROR",
+    }
 
     def has_jpy_price(item):
         value = item.get("price_jpy")
@@ -40,20 +44,49 @@ def summarize_observations(observations):
             and value > 0
         )
 
-    ok_count = sum(item.get("retrieval_status") == "OK" for item in entries)
+    fetched = [
+        item for item in entries
+        if bool(item.get("final_url")) and item.get("retrieval_status") in fetched_parse_states
+    ]
+    json_ld_count = sum(
+        item.get("parse_method") == "JSON_LD" and has_jpy_price(item)
+        for item in entries
+    )
+    meta_price_count = sum(
+        item.get("parse_method") == "META_PRODUCT" and has_jpy_price(item)
+        for item in entries
+    )
+    unknown_stock_after_fetch = sum(
+        str(item.get("availability") or "UNKNOWN").upper() == "UNKNOWN"
+        for item in fetched
+    )
     return {
         "watched_count": len(entries),
         "auto_discovered_count": sum(bool(item.get("auto_discovered_candidate")) for item in entries),
-        "ok_count": ok_count,
-        "structured_data_count": ok_count,
+        "ok_count": sum(item.get("retrieval_status") == "OK" for item in entries),
+        "page_fetch_success_count": len(fetched),
+        "structured_data_count": json_ld_count,
+        "meta_price_count": meta_price_count,
         "price_extracted_count": sum(has_jpy_price(item) for item in entries),
-        "in_stock_confirmed_count": sum(value == "IN_STOCK" for value in availability),
-        "out_of_stock_confirmed_count": sum(value == "OUT_OF_STOCK" for value in availability),
-        "stock_unknown_count": sum(value == "UNKNOWN" for value in availability),
-        "preorder_count": sum(value == "PREORDER" for value in availability),
-        "error_count": sum(item.get("retrieval_status") != "OK" for item in entries),
+        "price_extraction_issue_count": sum(not has_jpy_price(item) for item in fetched),
+        "in_stock_confirmed_count": sum(
+            item in fetched and str(item.get("availability") or "").upper() == "IN_STOCK"
+            for item in entries
+        ),
+        "out_of_stock_confirmed_count": sum(
+            item in fetched and str(item.get("availability") or "").upper() == "OUT_OF_STOCK"
+            for item in entries
+        ),
+        "stock_unknown_count": unknown_stock_after_fetch,
+        "preorder_count": sum(
+            item in fetched and str(item.get("availability") or "").upper() == "PREORDER"
+            for item in entries
+        ),
+        "error_count": sum(
+            item.get("retrieval_status") in fetch_error_states or not item.get("retrieval_status")
+            for item in entries
+        ),
     }
-
 
 class AllowlistedRedirectHandler(HTTPRedirectHandler):
     def __init__(self, allowed_domains):

@@ -279,7 +279,7 @@ def search_engine_urls(discovery_config):
 
 
 def search_queries_for_manga(manga, discovery_config):
-    """Build independent marketplace-specific searches plus direct marketplace URLs."""
+    """Build marketplace-specific searches that explicitly seek bundle/listing pages."""
     title = str(manga.get("search_title") or manga.get("title") or "").replace('"', " ").strip()
     targets = discovery_config.get("search_targets")
     if not isinstance(targets, list) or not targets:
@@ -288,7 +288,8 @@ def search_queries_for_manga(manga, discovery_config):
             "domain": None,
             "query": '"' + title + '" 漫画 中古 全巻セット',
             "search_page_template": None,
-            "search_term_template": "{title}",
+            "search_term_template": "{title} 全巻セット",
+            "direct_term": title + " 全巻セット",
         }]
     queries = []
     for target in targets:
@@ -298,11 +299,12 @@ def search_queries_for_manga(manga, discovery_config):
         target_id = str(target.get("id") or "").strip()
         domain = str(target.get("domain") or "").strip().lower()
         search_page_template = str(target.get("search_page_template") or "").strip() or None
-        search_term_template = str(target.get("search_term_template") or "{title}")
+        search_term_template = str(target.get("search_term_template") or "{title} 全巻セット")
         if not template or not target_id or not domain:
             continue
         try:
             query = template.format(title=title)
+            direct_term = search_term_template.format(title=title, set_term="全巻セット")
         except (KeyError, ValueError):
             continue
         queries.append({
@@ -311,6 +313,7 @@ def search_queries_for_manga(manga, discovery_config):
             "query": query,
             "search_page_template": search_page_template,
             "search_term_template": search_term_template,
+            "direct_term": direct_term,
         })
     return queries
 
@@ -401,7 +404,7 @@ def run_discovery(limit=None):
             direct_template = str(query_spec.get("search_page_template") or "")
             direct_term_template = str(query_spec.get("search_term_template") or "{title}")
             try:
-                direct_term = direct_term_template.format(title=search_title)
+                direct_term = str(query_spec.get("direct_term") or direct_term_template.format(title=search_title, set_term="全巻セット"))
             except (KeyError, ValueError):
                 direct_term = search_title
             source_queue = []
