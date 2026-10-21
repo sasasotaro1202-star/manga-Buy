@@ -37,6 +37,7 @@ def generate_report():
     observations_data = load_json(OBSERVATIONS_PATH, {"observations": {}})
     discovered_data = load_json(DISCOVERED_PATH, {"candidates": []})
     observed_by_id = observations_data.get("observations", {})
+    monitor_summary = observations_data.get("summary", {}) or {}
     manga_entries = catalog_data.get("manga", [])
     manga_by_id = manga_map(catalog_data)
     listings_by_manga = {}
@@ -70,8 +71,12 @@ def generate_report():
         f"- 登録商品URL：{len(listing_data.get('listings', []))}",
         f"- 発見候補URL：{len(discovered_data.get('candidates', []))}",
         f"- 未検証の初期候補シード：{discovered_data.get('manual_seed_count', 0)}",
-        f"- 直近の商品取得成功：{observations_data.get('summary', {}).get('ok_count', 0)}",
-        f"- 直近の商品取得エラー：{observations_data.get('summary', {}).get('error_count', 0)}",
+        f"- 構造化データ取得成功：{monitor_summary.get('structured_data_count', monitor_summary.get('ok_count', 0))}",
+        f"- JPY価格抽出成功：{monitor_summary.get('price_extracted_count', 0)}",
+        f"- 在庫あり確認済み：{monitor_summary.get('in_stock_confirmed_count', 0)}",
+        f"- 在庫状態不明：{monitor_summary.get('stock_unknown_count', 0)}",
+        f"- 在庫なし確認済み：{monitor_summary.get('out_of_stock_confirmed_count', 0)}",
+        f"- 取得エラー：{monitor_summary.get('error_count', 0)}",
         f"- 検索発見状態：{discovered_data.get('discovery_status', 'NOT_RUN')}",
         f"- 検索結果リンクを含むページ：{discovered_data.get('queries_with_anchors', 0)}/{discovered_data.get('queries_checked', 0)}",
         f"- 検索結果マーカーを検出したページ：{discovered_data.get('queries_with_result_marker', 0)}/{discovered_data.get('queries_checked', 0)}",

@@ -4,7 +4,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
-from discover import SearchResultsParser, MarketplaceResultsParser, unwrap_search_url, is_product_candidate, parse_bing_rss, search_engine_urls, search_queries_for_manga
+from discover import SearchResultsParser, MarketplaceResultsParser, unwrap_search_url, is_product_candidate, parse_bing_rss, search_engine_urls, search_queries_for_manga, discovery_status_for
 
 
 class DiscoveryTests(unittest.TestCase):
@@ -150,6 +150,13 @@ class DiscoveryTests(unittest.TestCase):
                 self.assertEqual(row["availability"], "UNKNOWN")
                 self.assertEqual(row["condition"], "UNKNOWN")
                 self.assertIsNone(row["shipping_jpy"])
+
+    def test_discovery_status_distinguishes_retained_seeds_from_live_hits(self):
+        self.assertEqual(discovery_status_for(0, 0, 25), "SEEDS_ONLY")
+        self.assertEqual(discovery_status_for(0, 0, 0), "EMPTY")
+        self.assertEqual(discovery_status_for(0, 2, 25), "FAILED")
+        self.assertEqual(discovery_status_for(3, 0, 25), "OK")
+        self.assertEqual(discovery_status_for(3, 1, 25), "PARTIAL")
 
     def test_http_url_is_rejected(self):
         self.assertFalse(is_product_candidate("http://jp.mercari.com/item/m123", ["mercari.com"]))

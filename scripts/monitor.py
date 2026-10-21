@@ -25,6 +25,36 @@ def append_jsonl(path, rows):
             file.write(json.dumps(row, ensure_ascii=False, separators=(",", ":")) + "\n")
 
 
+def summarize_observations(observations):
+    """Separate successful parsing and extracted prices from confirmed inventory."""
+    entries = list((observations or {}).values())
+    availability = [str(item.get("availability") or "UNKNOWN").upper() for item in entries]
+
+    def has_jpy_price(item):
+        value = item.get("price_jpy")
+        return (
+            item.get("retrieval_status") == "OK"
+            and item.get("currency") in {"JPY", "YEN"}
+            and isinstance(value, int)
+            and not isinstance(value, bool)
+            and value > 0
+        )
+
+    ok_count = sum(item.get("retrieval_status") == "OK" for item in entries)
+    return {
+        "watched_count": len(entries),
+        "auto_discovered_count": sum(bool(item.get("auto_discovered_candidate")) for item in entries),
+        "ok_count": ok_count,
+        "structured_data_count": ok_count,
+        "price_extracted_count": sum(has_jpy_price(item) for item in entries),
+        "in_stock_confirmed_count": sum(value == "IN_STOCK" for value in availability),
+        "out_of_stock_confirmed_count": sum(value == "OUT_OF_STOCK" for value in availability),
+        "stock_unknown_count": sum(value == "UNKNOWN" for value in availability),
+        "preorder_count": sum(value == "PREORDER" for value in availability),
+        "error_count": sum(item.get("retrieval_status") != "OK" for item in entries),
+    }
+
+
 class AllowlistedRedirectHandler(HTTPRedirectHandler):
     def __init__(self, allowed_domains):
         super().__init__()
@@ -208,12 +238,7 @@ def run_monitor():
         if request_delay and index < len(watch_entries) - 1:
             time.sleep(request_delay)
 
-    summary = {
-        "watched_count": len(observations),
-        "auto_discovered_count": sum(bool(item.get("auto_discovered_candidate")) for item in observations.values()),
-        "ok_count": sum(item.get("retrieval_status") == "OK" for item in observations.values()),
-        "error_count": sum(item.get("retrieval_status") != "OK" for item in observations.values()),
-    }
+    summary = summarize_observations(observations)
     payload = {
         "schema_version": 1,
         "generated_at": now,

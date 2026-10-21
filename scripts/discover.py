@@ -314,6 +314,18 @@ def search_queries_for_manga(manga, discovery_config):
         })
     return queries
 
+def discovery_status_for(current_seen_count, error_count, manual_seed_count):
+    if current_seen_count and not error_count:
+        return "OK"
+    if current_seen_count:
+        return "PARTIAL"
+    if error_count:
+        return "FAILED"
+    if manual_seed_count:
+        return "SEEDS_ONLY"
+    return "EMPTY"
+
+
 def run_discovery(limit=None):
     catalog = load_json(CATALOG_PATH, {"manga": []})
     marketplace_config = load_json(MARKETPLACES_PATH, {})
@@ -400,15 +412,16 @@ def run_discovery(limit=None):
                     "term": direct_term,
                     "engine_index": -1,
                 })
-            # Search-engine fallback is used only if the marketplace page did not yield
-            # enough direct product URLs. It remains domain-filtered and never supplies prices.
-            for engine_index, engine_template in enumerate(engine_urls):
-                source_queue.append({
-                    "kind": "search_engine",
-                    "template": engine_template,
-                    "term": search_query,
-                    "engine_index": engine_index,
-                })
+            # One domain-scoped search-engine fallback per manga is enough. Repeating
+            # the same query for every marketplace adds latency but little coverage.
+            if target_index == 0:
+                for engine_index, engine_template in enumerate(engine_urls):
+                    source_queue.append({
+                        "kind": "search_engine",
+                        "template": engine_template,
+                        "term": search_query,
+                        "engine_index": engine_index,
+                    })
 
             accepted_for_target = 0
             for source in source_queue:
@@ -563,12 +576,7 @@ def run_discovery(limit=None):
     merged.update(current_by_url)
     candidates = list(merged.values())
     candidates.sort(key=lambda item: (item.get("manga_id") or "", item.get("listing_url") or ""))
-    status = (
-        "OK" if current_by_url and not errors
-        else "PARTIAL" if current_by_url
-        else "FAILED" if errors
-        else "EMPTY"
-    )
+    status = discovery_status_for(len(current_by_url), len(errors), manual_seed_count)
     result = {
         "schema_version": 1,
         "generated_at": now,
