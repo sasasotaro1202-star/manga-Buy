@@ -331,9 +331,15 @@ def run_discovery(limit=None):
 
     old_data = load_json(OUTPUT_PATH, {"candidates": []})
     old_candidates = old_data.get("candidates", [])
+    catalog_ids_for_retention = {str(item.get("id")) for item in catalog.get("manga", []) if item.get("id")}
+    # Retain only previously seen candidates that still pass the known product-detail
+    # URL patterns. This prunes false positives like Mercari navigation and cart pages.
     previous_by_url = {
-        item.get("listing_url"): item for item in old_candidates
-        if isinstance(item, dict) and item.get("listing_url")
+        str(item.get("listing_url")): item for item in old_candidates
+        if isinstance(item, dict)
+        and item.get("listing_url")
+        and str(item.get("manga_id") or "") in catalog_ids_for_retention
+        and is_product_candidate(str(item.get("listing_url")), allowed_domains)
     }
 
     # Seed actual product URLs as unverified leads. Never import search-result prices
