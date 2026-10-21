@@ -76,12 +76,14 @@ class MonitorSummaryTests(unittest.TestCase):
     def test_currency_unknown_or_boolean_price_is_not_counted(self):
         rows = {
             "unknown-currency": {
-                "retrieval_status": "OK", "currency": None, "price_jpy": 4500,
-                "availability": "UNKNOWN",
+                "retrieval_status": "OK", "parse_method": "META_PRODUCT",
+                "final_url": "https://shop.example/item/unknown-currency",
+                "currency": None, "price_jpy": 4500, "availability": "UNKNOWN",
             },
             "boolean-price": {
-                "retrieval_status": "OK", "currency": "JPY", "price_jpy": True,
-                "availability": "IN_STOCK",
+                "retrieval_status": "OK", "parse_method": "META_PRODUCT",
+                "final_url": "https://shop.example/item/boolean-price",
+                "currency": "JPY", "price_jpy": True, "availability": "IN_STOCK",
             },
         }
         summary = summarize_observations(rows)

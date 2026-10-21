@@ -44,10 +44,10 @@ def summarize_observations(observations):
             and value > 0
         )
 
-    fetched = [
-        item for item in entries
-        if bool(item.get("final_url")) and item.get("retrieval_status") in fetched_parse_states
-    ]
+    def page_was_fetched(item):
+        return bool(item.get("final_url")) and item.get("retrieval_status") in fetched_parse_states
+
+    fetched = [item for item in entries if page_was_fetched(item)]
     json_ld_count = sum(
         item.get("parse_method") == "JSON_LD" and has_jpy_price(item)
         for item in entries
@@ -55,10 +55,6 @@ def summarize_observations(observations):
     meta_price_count = sum(
         item.get("parse_method") == "META_PRODUCT" and has_jpy_price(item)
         for item in entries
-    )
-    unknown_stock_after_fetch = sum(
-        str(item.get("availability") or "UNKNOWN").upper() == "UNKNOWN"
-        for item in fetched
     )
     return {
         "watched_count": len(entries),
@@ -70,16 +66,19 @@ def summarize_observations(observations):
         "price_extracted_count": sum(has_jpy_price(item) for item in entries),
         "price_extraction_issue_count": sum(not has_jpy_price(item) for item in fetched),
         "in_stock_confirmed_count": sum(
-            item in fetched and str(item.get("availability") or "").upper() == "IN_STOCK"
+            page_was_fetched(item) and str(item.get("availability") or "").upper() == "IN_STOCK"
             for item in entries
         ),
         "out_of_stock_confirmed_count": sum(
-            item in fetched and str(item.get("availability") or "").upper() == "OUT_OF_STOCK"
+            page_was_fetched(item) and str(item.get("availability") or "").upper() == "OUT_OF_STOCK"
             for item in entries
         ),
-        "stock_unknown_count": unknown_stock_after_fetch,
+        "stock_unknown_count": sum(
+            page_was_fetched(item) and str(item.get("availability") or "UNKNOWN").upper() == "UNKNOWN"
+            for item in entries
+        ),
         "preorder_count": sum(
-            item in fetched and str(item.get("availability") or "").upper() == "PREORDER"
+            page_was_fetched(item) and str(item.get("availability") or "").upper() == "PREORDER"
             for item in entries
         ),
         "error_count": sum(
