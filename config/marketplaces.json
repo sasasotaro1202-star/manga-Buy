@@ -70,12 +70,11 @@
   "discovery": {
     "max_queries_per_run": 25,
     "max_candidates_per_manga": 8,
-    "delay_seconds": 0.7,
-    "timeout_seconds": 10,
+    "delay_seconds": 0.15,
+    "timeout_seconds": 3,
     "max_response_bytes": 2000000,
     "engine_urls": [
-      "https://www.bing.com/search?q={query}&mkt=ja-JP&setlang=ja",
-      "https://www.bing.com/search?format=rss&mkt=ja-JP&setlang=ja&q={query}"
+      "https://www.bing.com/search?q={query}&mkt=ja-JP&setlang=ja"
     ],
     "search_targets": [
       {

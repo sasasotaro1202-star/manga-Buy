@@ -287,11 +287,11 @@ def run_discovery(limit=None):
     marketplace_config = load_json(MARKETPLACES_PATH, {})
     discovery_config = marketplace_config.get("discovery", {})
     allowed_domains = marketplace_config.get("allowed_domains", [])
-    timeout = int(discovery_config.get("timeout_seconds", 10))
+    timeout = int(discovery_config.get("timeout_seconds", 3))
     max_bytes = int(discovery_config.get("max_response_bytes", 2_000_000))
     max_per_manga = max(1, int(discovery_config.get("max_candidates_per_manga", 8)))
     max_per_target = max(1, int(discovery_config.get("max_candidates_per_target", 2)))
-    delay = max(0.0, min(float(discovery_config.get("delay_seconds", 0.7)), 30.0))
+    delay = max(0.0, min(float(discovery_config.get("delay_seconds", 0.15)), 30.0))
     max_queries = min(int(discovery_config.get("max_queries_per_run", 25)), limit or 25)
     user_agent = str((marketplace_config.get("monitor") or {}).get(
         "user_agent", "manga-Buy/0.1 (+https://github.com/sasasotaro1202-star/manga-Buy)"
