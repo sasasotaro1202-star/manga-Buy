@@ -100,6 +100,21 @@ class DiscoveryTests(unittest.TestCase):
         self.assertEqual(parser.items[1]["url"], "/item/m123")
         self.assertIn("Used manga full set", parser.items[1]["title"])
 
+    def test_seed_file_contains_only_urls_and_unknown_observation_values(self):
+        import json
+        seed_path = Path(__file__).resolve().parents[1] / "config" / "manual_candidate_seeds.json"
+        data = json.loads(seed_path.read_text(encoding="utf-8"))
+        self.assertEqual(len(data["candidates"]), 25)
+        self.assertEqual(len({row["manga_id"] for row in data["candidates"]}), 25)
+        for row in data["candidates"]:
+            with self.subTest(manga_id=row["manga_id"]):
+                self.assertTrue(row["listing_url"].startswith("https://jp.mercari.com/"))
+                self.assertEqual(row["verification_status"], "UNVERIFIED_SEED")
+                self.assertIsNone(row["price_jpy"])
+                self.assertEqual(row["availability"], "UNKNOWN")
+                self.assertEqual(row["condition"], "UNKNOWN")
+                self.assertIsNone(row["shipping_jpy"])
+
     def test_http_url_is_rejected(self):
         self.assertFalse(is_product_candidate("http://jp.mercari.com/item/m123", ["mercari.com"]))
 

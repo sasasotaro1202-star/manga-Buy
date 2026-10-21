@@ -303,6 +303,30 @@ def run_discovery(limit=None):
         item.get("listing_url"): item for item in old_candidates
         if isinstance(item, dict) and item.get("listing_url")
     }
+
+    # Seed actual product URLs as unverified leads. Never import search-result prices
+    # or stock claims; only the repository's own product-page monitor can observe them.
+    seed_data = load_json(ROOT / "config" / "manual_candidate_seeds.json", {"candidates": []})
+    catalog_ids = {str(item.get("id")) for item in catalog.get("manga", []) if item.get("id")}
+    manual_seed_count = 0
+    for seed in seed_data.get("candidates", []):
+        if not isinstance(seed, dict):
+            continue
+        seed_url = str(seed.get("listing_url") or "").strip()
+        seed_manga_id = str(seed.get("manga_id") or "")
+        if seed_manga_id not in catalog_ids or not valid_https_url(seed_url) or not allowed_host(seed_url, allowed_domains):
+            continue
+        normalized_seed = dict(seed)
+        normalized_seed.update({
+            "verification_status": "UNVERIFIED_SEED",
+            "price_jpy": None,
+            "availability": "UNKNOWN",
+            "condition": "UNKNOWN",
+            "shipping_jpy": None,
+            "volume_coverage": None,
+        })
+        previous_by_url.setdefault(seed_url, normalized_seed)
+        manual_seed_count += 1
     current_by_url = {}
     errors = []
     diagnostics = []
@@ -522,6 +546,7 @@ def run_discovery(limit=None):
         "new_candidate_count": len(set(current_by_url) - set(previous_by_url)),
         "current_seen_count": len(current_by_url),
         "retained_candidate_count": len(candidates),
+        "manual_seed_count": manual_seed_count,
         "candidates": candidates,
     }
     save_json(OUTPUT_PATH, result)
@@ -529,7 +554,7 @@ def run_discovery(limit=None):
         "generated_at", "discovery_status", "queries_checked", "queries_with_anchors",
         "queries_with_result_marker", "queries_using_fallback", "queries_finding_candidates",
         "queries_appearing_blocked", "new_candidate_count",
-        "current_seen_count", "retained_candidate_count"
+        "current_seen_count", "retained_candidate_count", "manual_seed_count"
     )}, ensure_ascii=False))
     return result
 

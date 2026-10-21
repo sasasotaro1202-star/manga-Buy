@@ -4,12 +4,13 @@ from __future__ import annotations
 import json
 import sys
 
-from manga_core import ROOT, load_json, valid_https_url, expected_count, normalized_ranges
+from manga_core import ROOT, load_json, valid_https_url, allowed_host, expected_count, normalized_ranges
 
 CATALOG_PATH = ROOT / "config" / "manga_catalog.json"
 MARKETPLACES_PATH = ROOT / "config" / "marketplaces.json"
 CONDITION_PATH = ROOT / "config" / "condition_policy.json"
 LISTINGS_PATH = ROOT / "data" / "listings.json"
+SEEDS_PATH = ROOT / "config" / "manual_candidate_seeds.json"
 
 
 def main():
@@ -122,6 +123,32 @@ def main():
             errors.append(f"Listing {lid!r} has invalid shipping_jpy.")
         if listing.get("mandatory_fees_jpy") is not None and (not isinstance(listing.get("mandatory_fees_jpy"), int) or listing["mandatory_fees_jpy"] < 0):
             errors.append(f"Listing {lid!r} has invalid mandatory_fees_jpy.")
+
+    seed_data = load_json(SEEDS_PATH, {"candidates": []})
+    seed_ids = set()
+    seed_urls = set()
+    for seed in seed_data.get("candidates", []):
+        if not isinstance(seed, dict):
+            errors.append("Manual candidate seed must be an object.")
+            continue
+        sid = seed.get("id")
+        url = seed.get("listing_url")
+        if not sid or sid in seed_ids:
+            errors.append(f"Manual candidate seed has missing/duplicate ID: {sid!r}.")
+        seed_ids.add(sid)
+        if not url or url in seed_urls:
+            errors.append(f"Manual candidate seed has missing/duplicate URL: {url!r}.")
+        seed_urls.add(url)
+        if seed.get("manga_id") not in set(ids):
+            errors.append(f"Manual candidate seed {sid!r} refers to unknown manga_id.")
+        if not valid_https_url(url) or not allowed_host(url, allowed_domains):
+            errors.append(f"Manual candidate seed {sid!r} must use an allowlisted HTTPS product URL.")
+        if seed.get("verification_status") != "UNVERIFIED_SEED":
+            errors.append(f"Manual candidate seed {sid!r} must remain UNVERIFIED_SEED.")
+        if any(seed.get(field) is not None for field in ("price_jpy", "shipping_jpy", "mandatory_fees_jpy")):
+            errors.append(f"Manual candidate seed {sid!r} must not include copied price/cost values.")
+        if seed.get("availability") != "UNKNOWN" or seed.get("condition") != "UNKNOWN":
+            errors.append(f"Manual candidate seed {sid!r} must keep stock and condition UNKNOWN.")
 
     review_needed = [item for item in manga if item.get("volume_count_status") == "NEEDS_REVIEW"]
     if errors:

@@ -69,6 +69,7 @@ def generate_report():
         f"- 追跡作品：{len(manga_entries)}",
         f"- 登録商品URL：{len(listing_data.get('listings', []))}",
         f"- 発見候補URL：{len(discovered_data.get('candidates', []))}",
+        f"- 未検証の初期候補シード：{discovered_data.get('manual_seed_count', 0)}",
         f"- 直近の商品取得成功：{observations_data.get('summary', {}).get('ok_count', 0)}",
         f"- 直近の商品取得エラー：{observations_data.get('summary', {}).get('error_count', 0)}",
         f"- 検索発見状態：{discovered_data.get('discovery_status', 'NOT_RUN')}",
@@ -178,7 +179,7 @@ def generate_report():
                         lines.append("    - 取得状態：" + safe_markdown(observation.get("retrieval_status")) + " / " + safe_markdown(observation.get("error")))
             discovered = discovered_by_manga.get(manga.get("id"), [])
             if discovered:
-                lines.append("- 自動発見リンク（参考価格の観測はできても、全巻・版・状態・送料は未検証）：")
+                lines.append("- 発見・初期登録済み候補リンク（すべて未検証。全巻・版・状態・送料は未確認）：")
                 observations_for_url = {
                     str(value.get("listing_url") or ""): value
                     for value in observed_by_id.values() if isinstance(value, dict)
@@ -187,7 +188,8 @@ def generate_report():
                     item_url = str(item.get("listing_url") or "")
                     observed = observations_for_url.get(item_url, {})
                     label = safe_markdown(item.get("search_result_title") or item.get("source_domain") or "候補リンク")
-                    lines.append("  - [" + label + "](" + item_url + ")")
+                    provenance = "（初期URLシード）" if item.get("discovered_by_source") == "manual_mercari_search_seed" else ""
+                    lines.append("  - [" + label + "](" + item_url + ")" + provenance)
                     if observed:
                         if observed.get("retrieval_status") == "OK" and isinstance(observed.get("price_jpy"), int):
                             lines.append("    - 構造化データ観測：" + yen(observed.get("price_jpy")) + " / 在庫：" + safe_markdown(observed.get("availability") or "UNKNOWN") + " / 時刻：" + safe_markdown(observed.get("retrieved_at")) + "（全巻・送料込み総額ではありません）")
