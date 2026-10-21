@@ -74,7 +74,7 @@
     "timeout_seconds": 3,
     "max_response_bytes": 2000000,
     "engine_urls": [
-      "https://www.bing.com/search?q={query}&mkt=ja-JP&setlang=ja"
+      "https://html.duckduckgo.com/html/?q={query}"
     ],
     "search_targets": [
       {

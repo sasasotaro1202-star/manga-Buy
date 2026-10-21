@@ -163,6 +163,18 @@ class DiscoveryTests(unittest.TestCase):
         self.assertEqual(query["direct_term"], "Example Author 全巻セット")
         self.assertIn("全巻セット", query["query"])
 
+    def test_direct_queries_preserve_broader_title_fallback(self):
+        manga = {"id": "series", "title": "Example", "search_title": "Example Author", "series_status": "ongoing"}
+        config = {"search_targets": [{
+            "id": "market", "domain": "shop.example",
+            "query_template": 'site:shop.example "{title}" 全巻セット 中古',
+            "search_page_template": "https://shop.example/search?q={query}",
+            "search_term_template": "{title} {set_term}",
+        }]}
+        query = search_queries_for_manga(manga, config)[0]
+        self.assertEqual(query["direct_term"], "Example Author 全巻セット")
+        self.assertEqual(query["search_term_template"], "{title} {set_term}")
+
     def test_discovery_status_distinguishes_retained_seeds_from_live_hits(self):
         self.assertEqual(discovery_status_for(0, 0, 25), "SEEDS_ONLY")
         self.assertEqual(discovery_status_for(0, 0, 0), "EMPTY")

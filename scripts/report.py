@@ -99,6 +99,7 @@ def generate_report():
         f"- 追跡作品：{len(manga_entries)}",
         f"- 登録商品URL：{len(listing_data.get('listings', []))}",
         f"- 発見候補URL：{len(discovered_data.get('candidates', []))}",
+        f"- 今回の検索で抽出した商品URL：{discovered_data.get('current_seen_count', 0)}",
         f"- 未検証の初期候補シード：{discovered_data.get('manual_seed_count', 0)}",
         f"- 商品ページ取得成功：{monitor_summary.get('page_fetch_success_count', monitor_summary.get('ok_count', 0))}",
         f"- JSON-LD価格観測：{monitor_summary.get('structured_data_count', 0)}",

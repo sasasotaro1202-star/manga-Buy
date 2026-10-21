@@ -415,16 +415,26 @@ def run_discovery(limit=None):
                     "term": direct_term,
                     "engine_index": -1,
                 })
-            # One domain-scoped search-engine fallback per manga is enough. Repeating
-            # the same query for every marketplace adds latency but little coverage.
-            if target_index == 0:
-                for engine_index, engine_template in enumerate(engine_urls):
+                # If the bundle-specific query yields too few product URLs, broaden
+                # to the title-only query. Product-page URLs remain unverified leads;
+                # only later volume/edition/condition/cost checks can make them eligible.
+                if search_title and search_title != direct_term:
                     source_queue.append({
-                        "kind": "search_engine",
-                        "template": engine_template,
-                        "term": search_query,
-                        "engine_index": engine_index,
+                        "kind": "marketplace_broad_fallback",
+                        "template": direct_template,
+                        "term": search_title,
+                        "engine_index": -1,
                     })
+            # Search-engine fallback is attempted only after the direct and broader
+            # marketplace-page searches failed to fill this target's quota. robots.txt
+            # is checked independently for the search engine; disallowed engines are skipped.
+            for engine_index, engine_template in enumerate(engine_urls):
+                source_queue.append({
+                    "kind": "search_engine",
+                    "template": engine_template,
+                    "term": search_query,
+                    "engine_index": engine_index,
+                })
 
             accepted_for_target = 0
             for source in source_queue:
@@ -545,7 +555,7 @@ def run_discovery(limit=None):
                         "response_bytes": len(raw),
                         "result_link_count": len(search_results),
                         "candidate_count": new_from_source,
-                        "fallback_used": source["kind"] == "search_engine",
+                        "fallback_used": source["kind"] in {"search_engine", "marketplace_broad_fallback"},
                         "robots_allowed": True,
                         "robots_reason": robots_reason,
                         "rejected_host_counts": rejected_hosts,
