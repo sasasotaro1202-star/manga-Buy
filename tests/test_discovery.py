@@ -35,6 +35,42 @@ class DiscoveryTests(unittest.TestCase):
         self.assertTrue(is_product_candidate("https://jp.mercari.com/item/m123", domains))
         self.assertFalse(is_product_candidate("https://jp.mercari.com/search?keyword=manga", domains))
 
+    def test_mercari_item_and_shops_product_urls_are_allowed(self):
+        domains = ["jp.mercari.com", "mercari.com"]
+        self.assertTrue(is_product_candidate("https://jp.mercari.com/item/m12345678901", domains))
+        self.assertTrue(is_product_candidate("https://jp.mercari.com/shops/product/2JGH4DeDXK5osLkFCgED8s", domains))
+
+    def test_navigation_and_search_pages_are_never_product_candidates(self):
+        domains = [
+            "jp.mercari.com", "shopping.bookoff.co.jp", "auctions.yahoo.co.jp",
+            "search.rakuten.co.jp", "item.rakuten.co.jp", "shopping.yahoo.co.jp",
+            "store.shopping.yahoo.co.jp"
+        ]
+        blocked = [
+            "https://jp.mercari.com/shops",
+            "https://jp.mercari.com/todos",
+            "https://jp.mercari.com/search?keyword=manga",
+            "https://shopping.bookoff.co.jp/book",
+            "https://shopping.bookoff.co.jp/cart",
+            "https://shopping.bookoff.co.jp/search/keyword/manga",
+            "https://auctions.yahoo.co.jp/search/search?p=manga",
+            "https://search.rakuten.co.jp/search/mall/manga/",
+            "https://shopping.yahoo.co.jp/search?p=manga",
+        ]
+        for url in blocked:
+            with self.subTest(url=url):
+                self.assertFalse(is_product_candidate(url, domains), url)
+
+    def test_known_product_routes_for_bookoff_rakuten_and_auctions(self):
+        domains = [
+            "shopping.bookoff.co.jp", "auctions.yahoo.co.jp",
+            "item.rakuten.co.jp", "store.shopping.yahoo.co.jp"
+        ]
+        self.assertTrue(is_product_candidate("https://shopping.bookoff.co.jp/used/0012345678", domains))
+        self.assertTrue(is_product_candidate("https://auctions.yahoo.co.jp/jp/auction/a123456789", domains))
+        self.assertTrue(is_product_candidate("https://item.rakuten.co.jp/shop/item-code/", domains))
+        self.assertTrue(is_product_candidate("https://store.shopping.yahoo.co.jp/shop/item.html", domains))
+
     def test_bing_rss_parser_extracts_product_links_without_prices(self):
         xml = b"""<?xml version="1.0" encoding="UTF-8"?>
         <rss version="2.0"><channel><item>

@@ -8,6 +8,7 @@ from __future__ import annotations
 import argparse
 import base64
 import json
+import re
 import time
 import urllib.robotparser
 from urllib.error import HTTPError
@@ -205,28 +206,59 @@ def parse_bing_rss(raw):
     return results
 
 def is_product_candidate(url, allowed_domains):
+    """Accept only recognizable item-detail routes, never generic search/navigation pages."""
     if not valid_https_url(url) or not allowed_host(url, allowed_domains):
         return False
     parsed = urlparse(url)
+    host = (parsed.hostname or "").lower()
     path = parsed.path.lower().rstrip("/")
     if not path or path == "/":
         return False
-    blocked = ("/search", "/search/", "/category", "/categories", "/filter", "/campaign", "/help", "/guide", "/login", "/signup")
-    if any(token in path for token in blocked):
-        return False
-    # Reject known search-result routes, while keeping product/item URLs.
-    if parsed.hostname and "mercari.com" in parsed.hostname and path.startswith("/search"):
-        return False
-    if parsed.hostname and "amazon.co.jp" in parsed.hostname and not any(
-        token in path for token in ("/dp/", "/gp/product/", "/gp/aw/d/")
-    ):
-        return False
-    if parsed.hostname and "auctions.yahoo.co.jp" in parsed.hostname and "/jp/auction/" not in path:
-        return False
-    if parsed.hostname and "item.rakuten.co.jp" in parsed.hostname and len(path.split("/")) < 3:
-        return False
-    return True
 
+    # Mercari: a concrete item ID is mandatory; /shops, /todos and other navigation
+    # routes are not listings even though they are HTTPS pages on an allowed host.
+    if host == "jp.mercari.com":
+        return bool(
+            re.fullmatch(r"/item/m[a-z0-9]{3,}", path)
+            or re.fullmatch(r"/shops/product/[a-z0-9]+", path)
+        )
+
+    # Amazon product detail pages only; reject /s search pages and all generic routes.
+    if host == "www.amazon.co.jp" or host == "amazon.co.jp":
+        return bool(
+            re.fullmatch(r"/dp/[a-z0-9]{8,}", path)
+            or re.fullmatch(r"/gp/product/[a-z0-9]{8,}", path)
+            or re.fullmatch(r"/gp/aw/d/[a-z0-9]{8,}", path)
+        )
+
+    # BOOKOFF item-detail URLs are under /used/ with a numeric item code. Avoid
+    # broad routes such as /book, /cart or category/navigation pages.
+    if host == "shopping.bookoff.co.jp":
+        if not path.startswith("/used/"):
+            return False
+        last_segment = path.split("/")[-1]
+        return len(last_segment) >= 6 and any(char.isdigit() for char in last_segment)
+
+    if host == "auctions.yahoo.co.jp":
+        return bool(re.fullmatch(r"/jp/auction/[a-z0-9]+", path))
+
+    # A Rakuten result is a product only on item.rakuten.co.jp, not its search host.
+    if host == "search.rakuten.co.jp":
+        return False
+    if host == "item.rakuten.co.jp":
+        parts = [part for part in path.split("/") if part]
+        return len(parts) >= 2
+
+    # Yahoo! Shopping item pages use a store host and an HTML item slug.
+    if host == "shopping.yahoo.co.jp":
+        return False
+    if host.endswith(".shopping.yahoo.co.jp"):
+        parts = [part for part in path.split("/") if part]
+        return len(parts) == 2 and parts[-1].endswith(".html")
+
+    # The current crawler has explicit acceptance rules for its configured targets.
+    # Unknown allowlisted hosts fail closed until a product URL pattern is tested.
+    return False
 
 def search_engine_urls(discovery_config):
     """Use configured public HTML search pages; a second engine is a fallback, not bypass."""
