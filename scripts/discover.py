@@ -391,7 +391,7 @@ def run_discovery(limit=None):
         accepted_for_manga = 0
         seen_for_manga = set()
 
-        for query_spec in query_specs:
+        for target_index, query_spec in enumerate(query_specs):
             if accepted_for_manga >= max_per_manga:
                 break
             target_id = query_spec.get("id")
