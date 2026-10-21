@@ -1,6 +1,6 @@
 # manga-Buy 最新レポート
 
-確認時刻（JST）： 2026-10-21T13:43:21+09:00
+確認時刻（JST）： 2026-10-21T13:46:43+09:00
 
 ## このレポートの読み方
 
@@ -37,7 +37,7 @@
   - [薬屋のひとりごと 1〜17巻 既刊全巻セット スクエニ](https://jp.mercari.com/item/m51330625661)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0020273201)
-    - 構造化データ観測：¥715 / 在庫：IN_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥715 / 在庫：IN_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0020402632)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -60,7 +60,7 @@
   - [葬送のフリーレン 1-15巻 全巻セット](https://jp.mercari.com/item/m44333642559)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0019503536)
-    - 構造化データ観測：¥385 / 在庫：IN_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥385 / 在庫：IN_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0020534597)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -83,7 +83,7 @@
   - [HUNTER×HUNTER ハンターハンター 全巻セット 1〜39巻 冨樫義博](https://jp.mercari.com/item/m83768923072)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0018997955)
-    - 構造化データ観測：¥440 / 在庫：IN_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥440 / 在庫：IN_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0020897000)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -106,7 +106,7 @@
   - [呪術廻戦≡ モジュロ 1・2巻 セット 芥見下々 岩崎優次 ジャンプコミックス](https://jp.mercari.com/item/m41028386876)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0020759343)
-    - 構造化データ観測：¥385 / 在庫：IN_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥385 / 在庫：IN_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0020777545)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -129,7 +129,7 @@
   - [亜人 全巻セット 期間限定値引き中](https://jp.mercari.com/item/m64735042085)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0019061825)
-    - 構造化データ観測：¥330 / 在庫：IN_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥330 / 在庫：IN_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0019619005)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -152,7 +152,7 @@
   - [ゴールデンカムイ 全巻 31巻セット](https://jp.mercari.com/item/m53688937716)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0018908643)
-    - 構造化データ観測：¥220 / 在庫：IN_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥220 / 在庫：IN_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0019075863)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -175,7 +175,7 @@
   - [チェンソーマン 全巻 24巻セット](https://jp.mercari.com/item/m90950975620)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0020109884)
-    - 構造化データ観測：¥440 / 在庫：IN_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥440 / 在庫：IN_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0020178561)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -198,7 +198,7 @@
   - [カグラバチ 1〜12巻 全巻セット シュリンク付き 美品](https://jp.mercari.com/item/m29370918203)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0020235167)
-    - 構造化データ観測：¥495 / 在庫：IN_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥495 / 在庫：IN_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0020298488)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -221,7 +221,7 @@
   - [ガチアクタ 1〜19巻 全巻 セット 裏那圭](https://jp.mercari.com/item/m75004137232)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0019916763)
-    - 構造化データ観測：¥275 / 在庫：IN_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥275 / 在庫：IN_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0019946868)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -246,7 +246,7 @@
   - [ワールドトリガー 全巻セット](https://jp.mercari.com/item/m64226622113)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0019239144)
-    - 構造化データ観測：¥385 / 在庫：IN_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥385 / 在庫：IN_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0019461112)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -269,7 +269,7 @@
   - [とんがり帽子のアトリエ全巻セット 1-16巻セット 白浜鴎](https://jp.mercari.com/item/m72098180822)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0018804637)
-    - 構造化データ観測：¥220 / 在庫：IN_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥220 / 在庫：IN_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0019009985)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -292,7 +292,7 @@
   - [天幕のジャードゥーガル 1〜6巻 全巻セット トマトスープ](https://jp.mercari.com/item/m28336279286)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0019945278)
-    - 構造化データ観測：¥770 / 在庫：IN_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥770 / 在庫：IN_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0020372962)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -315,7 +315,7 @@
   - [マギ MAGI 1巻〜37巻 全巻セット 大高忍](https://jp.mercari.com/item/m57191826321)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0018769552)
-    - 構造化データ観測：¥165 / 在庫：IN_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥165 / 在庫：IN_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0018874020)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -338,7 +338,7 @@
   - [チ。―地球の運動について― 全巻セット 1〜8巻 魚豊](https://jp.mercari.com/item/m51703863928)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0019562697)
-    - 構造化データ観測：¥220 / 在庫：IN_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥220 / 在庫：IN_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0019576190)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -361,7 +361,7 @@
   - [宝石の国 1〜13巻 全巻セット 市川春子作品集2冊付き](https://jp.mercari.com/item/m50189308006)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0017342146)
-    - 構造化データ観測：¥220 / 在庫：IN_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥220 / 在庫：IN_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0018950176)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -384,7 +384,7 @@
   - [ほぼ初版 ダンダダン1〜25巻 最新 全巻セット 龍幸伸 集英社](https://jp.mercari.com/item/m53405106469)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0020030780)
-    - 構造化データ観測：¥275 / 在庫：IN_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥275 / 在庫：IN_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0020105109)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -406,7 +406,7 @@
   - [PLUTO プルートウ 全8巻セット 浦沢直樹 手塚治虫](https://jp.mercari.com/item/m99057757327)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0015021264)
-    - 構造化データ観測：¥275 / 在庫：IN_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥275 / 在庫：IN_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0015021265)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -427,7 +427,7 @@
 - 組み合わせ購入プラン：巻数の確定または条件を満たす登録出品が不足。
 - 発見・初期登録済み候補リンク（すべて未検証。全巻・版・状態・送料は未確認）：
   - [東京喰種 全巻セット 1-14巻 re 1-16巻 石田スイ](https://jp.mercari.com/item/m59424553594)（初期URLシード）
-    - 構造化データ観測：¥6,200 / 在庫：UNKNOWN / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥6,200 / 在庫：UNKNOWN / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
 - 各サイトで現在の出品を探す：
   - [Amazon.co.jp](https://www.amazon.co.jp/s?k=%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%20%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are%20%E3%82%BB%E3%83%83%E3%83%88%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
   - [メルカリ](https://jp.mercari.com/search?keyword=%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%20%E6%9D%B1%E4%BA%AC%E5%96%B0%E7%A8%AE%3Are%20%E3%82%BB%E3%83%83%E3%83%88%20%E5%85%A8%E5%B7%BB%E3%82%BB%E3%83%83%E3%83%88%20%E4%B8%AD%E5%8F%A4)
@@ -448,7 +448,7 @@
   - [寄生獣 全10巻 完結セット 全巻 岩明均 アフタヌーンKC](https://jp.mercari.com/item/m13687755955)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0017199177)
-    - 構造化データ観測：¥275 / 在庫：OUT_OF_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥275 / 在庫：OUT_OF_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0017199213)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -470,7 +470,7 @@
   - [MONSTER 全18巻セット 浦沢直樹 ビッグコミックス](https://jp.mercari.com/item/m96261054770)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0015008191)
-    - 構造化データ観測：¥275 / 在庫：OUT_OF_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥275 / 在庫：OUT_OF_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0015010057)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -493,7 +493,7 @@
   - [ヴィンランド・サガ 1〜29巻 全巻セット](https://jp.mercari.com/item/m49078164241)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0018961241)
-    - 構造化データ観測：¥220 / 在庫：IN_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥220 / 在庫：IN_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0019113779)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -516,7 +516,7 @@
   - [天国大魔境 全巻セット 石黒正数](https://jp.mercari.com/item/m51449160470)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0019097659)
-    - 構造化データ観測：¥220 / 在庫：IN_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥220 / 在庫：IN_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0019214985)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -538,7 +538,7 @@
   - [結界師 全35巻セット 田辺イエロウ](https://jp.mercari.com/shops/product/2JGH4DeDXK5osLkFCgED8s)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0016471304)
-    - 構造化データ観測：¥220 / 在庫：IN_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥220 / 在庫：IN_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0016685472)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -560,7 +560,7 @@
   - [PSYREN サイレン 全16巻セット 岩代俊明 初版あり 帯付きあり](https://jp.mercari.com/item/m54018095475)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0016390609)
-    - 構造化データ観測：¥495 / 在庫：OUT_OF_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥495 / 在庫：OUT_OF_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0016515729)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -583,7 +583,7 @@
   - [もののがたり 全16巻セット オニグンソウ ヤングジャンプコミックス](https://jp.mercari.com/item/m72809824264)（初期URLシード）
     - 未取得。検索発見URLであり、購入条件は未確認です。
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0019189164)
-    - 構造化データ観測：¥275 / 在庫：IN_STOCK / 時刻：2026-10-21T13:41:47+09:00（全巻・送料込み総額ではありません）
+    - 構造化データ観測：¥275 / 在庫：IN_STOCK / 時刻：2026-10-21T13:45:31+09:00（全巻・送料込み総額ではありません）
   - [shopping.bookoff.co.jp](https://shopping.bookoff.co.jp/used/0020105112)
     - 未取得。検索発見URLであり、購入条件は未確認です。
 - 各サイトで現在の出品を探す：
@@ -607,7 +607,7 @@
 
 ## 更新・検証
 
-- 観測生成時刻：2026-10-21T13:41:47+09:00
-- 検索生成時刻：2026-10-21T13:39:22+09:00
+- 観測生成時刻：2026-10-21T13:45:31+09:00
+- 検索生成時刻：2026-10-21T13:43:31+09:00
 - 巻数メタデータ監査は scripts/validate.py の結果も参照してください。
 
