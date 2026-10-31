@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-30T14:48:29+09:00",
+  "generated_at": "2026-10-31T14:41:36+09:00",
   "observations": {
     "discovered-a0eccb6844ab179e": {
       "source_url": "https://shopping.bookoff.co.jp/used/0020273201",
@@ -17,7 +17,7 @@
       "listing_id": "discovered-a0eccb6844ab179e",
       "manga_id": "kusuriya-neko-kurage",
       "listing_url": "https://shopping.bookoff.co.jp/used/0020273201",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 715
@@ -37,7 +37,7 @@
       "listing_id": "discovered-427365ad8a266167",
       "manga_id": "kusuriya-neko-kurage",
       "listing_url": "https://jp.mercari.com/item/m51330625661",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "薬屋のひとりごと 1〜17巻 既刊全巻セット スクエニ",
       "previous_valid_price_jpy": 9000
@@ -57,7 +57,7 @@
       "listing_id": "discovered-9d666dc7ae3668dd",
       "manga_id": "frieren",
       "listing_url": "https://shopping.bookoff.co.jp/used/0019503536",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 385
@@ -77,7 +77,7 @@
       "listing_id": "discovered-d0aaa2f3f2ac023c",
       "manga_id": "frieren",
       "listing_url": "https://jp.mercari.com/item/m44333642559",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "葬送のフリーレン 1-15巻 全巻セット",
       "previous_valid_price_jpy": 6200
@@ -97,7 +97,7 @@
       "listing_id": "discovered-3de3bdf0eb925898",
       "manga_id": "hunter-x-hunter",
       "listing_url": "https://shopping.bookoff.co.jp/used/0018997955",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 440
@@ -117,7 +117,7 @@
       "listing_id": "discovered-32052aebf444f1db",
       "manga_id": "hunter-x-hunter",
       "listing_url": "https://jp.mercari.com/item/m83768923072",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "HUNTER×HUNTER ハンターハンター 全巻セット 1〜39巻 冨樫義博",
       "previous_valid_price_jpy": 11980
@@ -137,7 +137,7 @@
       "listing_id": "discovered-4ab95b162c4bcfd3",
       "manga_id": "jujutsu-modulo",
       "listing_url": "https://shopping.bookoff.co.jp/used/0020759343",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 385
@@ -157,7 +157,7 @@
       "listing_id": "discovered-befa63affd81271b",
       "manga_id": "jujutsu-modulo",
       "listing_url": "https://jp.mercari.com/item/m41028386876",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "呪術廻戦≡ モジュロ 1・2巻 セット 芥見下々 岩崎優次 ジャンプコミックス",
       "previous_valid_price_jpy": 995
@@ -177,7 +177,7 @@
       "listing_id": "discovered-5f934ae0da5110b3",
       "manga_id": "ajin",
       "listing_url": "https://shopping.bookoff.co.jp/used/0019061825",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 330
@@ -197,7 +197,7 @@
       "listing_id": "discovered-2a213e3f86d8516b",
       "manga_id": "ajin",
       "listing_url": "https://jp.mercari.com/item/m64735042085",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "亜人 全巻セット 期間限定値引き中",
       "previous_valid_price_jpy": 6666
@@ -217,7 +217,7 @@
       "listing_id": "discovered-46c866b93a714543",
       "manga_id": "golden-kamuy",
       "listing_url": "https://shopping.bookoff.co.jp/used/0018908643",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 220
@@ -237,7 +237,7 @@
       "listing_id": "discovered-40fc7d38612dfd27",
       "manga_id": "golden-kamuy",
       "listing_url": "https://jp.mercari.com/item/m53688937716",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "ゴールデンカムイ 全巻 31巻セット",
       "previous_valid_price_jpy": 10000
@@ -257,7 +257,7 @@
       "listing_id": "discovered-ac59c817d20d6f24",
       "manga_id": "chainsaw-man",
       "listing_url": "https://shopping.bookoff.co.jp/used/0020109884",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 440
@@ -277,7 +277,7 @@
       "listing_id": "discovered-ded1d7da52282ed0",
       "manga_id": "chainsaw-man",
       "listing_url": "https://jp.mercari.com/item/m90950975620",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "チェンソーマン 全巻 24巻セット",
       "previous_valid_price_jpy": 7300
@@ -297,7 +297,7 @@
       "listing_id": "discovered-7c76f1afab5f4ed4",
       "manga_id": "kagurabachi",
       "listing_url": "https://shopping.bookoff.co.jp/used/0020235167",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 495
@@ -317,7 +317,7 @@
       "listing_id": "discovered-0741d8ac2469c4d1",
       "manga_id": "kagurabachi",
       "listing_url": "https://jp.mercari.com/item/m29370918203",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "カグラバチ 1〜12巻 全巻セット シュリンク付き 美品",
       "previous_valid_price_jpy": 4999
@@ -337,7 +337,7 @@
       "listing_id": "discovered-de4195badf6cfc9e",
       "manga_id": "gachiakuta",
       "listing_url": "https://shopping.bookoff.co.jp/used/0019916763",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 275
@@ -357,7 +357,7 @@
       "listing_id": "discovered-bc15d1df9b720593",
       "manga_id": "gachiakuta",
       "listing_url": "https://jp.mercari.com/item/m75004137232",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "ガチアクタ 1〜19巻 全巻 セット 裏那圭",
       "previous_valid_price_jpy": 8380
@@ -377,7 +377,7 @@
       "listing_id": "discovered-da641bea351ef4b8",
       "manga_id": "world-trigger",
       "listing_url": "https://shopping.bookoff.co.jp/used/0019239144",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 385
@@ -385,7 +385,7 @@
     "discovered-527c06f1674dee0b": {
       "source_url": "https://jp.mercari.com/item/m64226622113",
       "title": "ワールドトリガー 全巻セット - メルカリメルカリ",
-      "price_jpy": 7111,
+      "price_jpy": 6999,
       "currency": "JPY",
       "availability": "UNKNOWN",
       "shipping_jpy_from_page": null,
@@ -397,10 +397,10 @@
       "listing_id": "discovered-527c06f1674dee0b",
       "manga_id": "world-trigger",
       "listing_url": "https://jp.mercari.com/item/m64226622113",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "ワールドトリガー 全巻セット",
-      "previous_valid_price_jpy": 7333
+      "previous_valid_price_jpy": 7111
     },
     "discovered-405efcdb5bdc6bcc": {
       "source_url": "https://shopping.bookoff.co.jp/used/0018804637",
@@ -417,7 +417,7 @@
       "listing_id": "discovered-405efcdb5bdc6bcc",
       "manga_id": "tongari-atelier",
       "listing_url": "https://shopping.bookoff.co.jp/used/0018804637",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 330
@@ -428,7 +428,7 @@
       "listing_id": "discovered-47f3b53845b56959",
       "manga_id": "tongari-atelier",
       "listing_url": "https://jp.mercari.com/item/m72098180822",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "とんがり帽子のアトリエ全巻セット 1-16巻セット 白浜鴎",
       "previous_valid_price_jpy": null
@@ -448,7 +448,7 @@
       "listing_id": "discovered-9ac0115b8be07a8d",
       "manga_id": "tenmaku-jadugal",
       "listing_url": "https://shopping.bookoff.co.jp/used/0019945278",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 770
@@ -468,7 +468,7 @@
       "listing_id": "discovered-1a93f2697282230f",
       "manga_id": "tenmaku-jadugal",
       "listing_url": "https://jp.mercari.com/item/m28336279286",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "天幕のジャードゥーガル 1〜6巻 全巻セット トマトスープ",
       "previous_valid_price_jpy": 4800
@@ -488,27 +488,27 @@
       "listing_id": "discovered-07f49f9228af4249",
       "manga_id": "magi",
       "listing_url": "https://shopping.bookoff.co.jp/used/0018769552",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 165
     },
     "discovered-4586e55d70b0c4f0": {
       "source_url": "https://jp.mercari.com/item/m57191826321",
-      "title": "マギ MAGI 1巻〜37巻 全巻セット 大高忍 - メルカリメルカリ",
-      "price_jpy": 4099,
-      "currency": "JPY",
+      "title": "メルカリ - 日本最大のフリマサービスメルカリ",
+      "price_jpy": null,
+      "currency": null,
       "availability": "UNKNOWN",
       "shipping_jpy_from_page": null,
       "seller_from_page": null,
-      "parse_method": "META_PRODUCT",
-      "parse_status": "OK",
-      "retrieval_status": "OK",
+      "parse_method": null,
+      "parse_status": "PRICE_NOT_FOUND",
+      "retrieval_status": "PRICE_NOT_FOUND",
       "final_url": "https://jp.mercari.com/item/m57191826321",
       "listing_id": "discovered-4586e55d70b0c4f0",
       "manga_id": "magi",
       "listing_url": "https://jp.mercari.com/item/m57191826321",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "マギ MAGI 1巻〜37巻 全巻セット 大高忍",
       "previous_valid_price_jpy": 4099
@@ -528,7 +528,7 @@
       "listing_id": "discovered-9f0214be2b959415",
       "manga_id": "chi",
       "listing_url": "https://shopping.bookoff.co.jp/used/0019562697",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 220
@@ -548,7 +548,7 @@
       "listing_id": "discovered-62f4a3586018da69",
       "manga_id": "chi",
       "listing_url": "https://jp.mercari.com/item/m51703863928",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "チ。―地球の運動について― 全巻セット 1〜8巻 魚豊",
       "previous_valid_price_jpy": 4300
@@ -568,7 +568,7 @@
       "listing_id": "discovered-e68216cca1ff833c",
       "manga_id": "houseki-no-kuni",
       "listing_url": "https://shopping.bookoff.co.jp/used/0017342146",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 220
@@ -588,7 +588,7 @@
       "listing_id": "discovered-64a63d72d25b4a3a",
       "manga_id": "houseki-no-kuni",
       "listing_url": "https://jp.mercari.com/item/m50189308006",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "宝石の国 1〜13巻 全巻セット 市川春子作品集2冊付き",
       "previous_valid_price_jpy": 6000
@@ -608,7 +608,7 @@
       "listing_id": "discovered-5fa920e39d7a4b68",
       "manga_id": "dandadan",
       "listing_url": "https://shopping.bookoff.co.jp/used/0020030780",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 275
@@ -628,7 +628,7 @@
       "listing_id": "discovered-ab31365f0c3bc419",
       "manga_id": "dandadan",
       "listing_url": "https://jp.mercari.com/item/m53405106469",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "ほぼ初版 ダンダダン1〜25巻 最新 全巻セット 龍幸伸 集英社",
       "previous_valid_price_jpy": 7100
@@ -648,7 +648,7 @@
       "listing_id": "discovered-bbeb51fd8f2b6ddb",
       "manga_id": "pluto",
       "listing_url": "https://shopping.bookoff.co.jp/used/0015021264",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 275
@@ -668,7 +668,7 @@
       "listing_id": "discovered-bcd2dae62ce7d377",
       "manga_id": "pluto",
       "listing_url": "https://jp.mercari.com/item/m99057757327",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "PLUTO プルートウ 全8巻セット 浦沢直樹 手塚治虫",
       "previous_valid_price_jpy": 1350
@@ -688,7 +688,7 @@
       "listing_id": "discovered-cee5c5fd1f85263b",
       "manga_id": "tokyo-ghoul-franchise",
       "listing_url": "https://jp.mercari.com/item/m59424553594",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "東京喰種 全巻セット 1-14巻 re 1-16巻 石田スイ",
       "previous_valid_price_jpy": 5777
@@ -708,7 +708,7 @@
       "listing_id": "discovered-1ce1981600662ae3",
       "manga_id": "parasyte",
       "listing_url": "https://shopping.bookoff.co.jp/used/0017199177",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 275
@@ -728,7 +728,7 @@
       "listing_id": "discovered-d4fa32218c79ba53",
       "manga_id": "parasyte",
       "listing_url": "https://jp.mercari.com/item/m13687755955",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "寄生獣 全10巻 完結セット 全巻 岩明均 アフタヌーンKC",
       "previous_valid_price_jpy": 2980
@@ -748,7 +748,7 @@
       "listing_id": "discovered-440eb94640cd6bb6",
       "manga_id": "monster",
       "listing_url": "https://shopping.bookoff.co.jp/used/0015008191",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 275
@@ -768,7 +768,7 @@
       "listing_id": "discovered-553723a645730818",
       "manga_id": "monster",
       "listing_url": "https://jp.mercari.com/item/m96261054770",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "MONSTER 全18巻セット 浦沢直樹 ビッグコミックス",
       "previous_valid_price_jpy": 2400
@@ -788,7 +788,7 @@
       "listing_id": "discovered-f0d070f6b19e0a7e",
       "manga_id": "vinland-saga",
       "listing_url": "https://shopping.bookoff.co.jp/used/0018961241",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 495
@@ -808,7 +808,7 @@
       "listing_id": "discovered-d5f56d0e94afe414",
       "manga_id": "vinland-saga",
       "listing_url": "https://jp.mercari.com/item/m49078164241",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "ヴィンランド・サガ 1〜29巻 全巻セット",
       "previous_valid_price_jpy": 9799
@@ -828,7 +828,7 @@
       "listing_id": "discovered-c16a9f05fa83e582",
       "manga_id": "heavenly-delusion",
       "listing_url": "https://shopping.bookoff.co.jp/used/0019097659",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 220
@@ -848,10 +848,10 @@
       "listing_id": "discovered-18c6b569b3c1b52d",
       "manga_id": "heavenly-delusion",
       "listing_url": "https://jp.mercari.com/item/m51449160470",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "天国大魔境 全巻セット 石黒正数",
-      "previous_valid_price_jpy": 6900
+      "previous_valid_price_jpy": 6800
     },
     "discovered-96abcf0e8f1be2ed": {
       "source_url": "https://shopping.bookoff.co.jp/used/0016471304",
@@ -868,7 +868,7 @@
       "listing_id": "discovered-96abcf0e8f1be2ed",
       "manga_id": "kekkaishi",
       "listing_url": "https://shopping.bookoff.co.jp/used/0016471304",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 220
@@ -888,7 +888,7 @@
       "listing_id": "discovered-c7c891b887d45599",
       "manga_id": "kekkaishi",
       "listing_url": "https://jp.mercari.com/shops/product/2JGH4DeDXK5osLkFCgED8s",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "結界師 全35巻セット 田辺イエロウ",
       "previous_valid_price_jpy": null
@@ -908,7 +908,7 @@
       "listing_id": "discovered-8df80845361d072b",
       "manga_id": "psyren",
       "listing_url": "https://shopping.bookoff.co.jp/used/0016390609",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 495
@@ -928,7 +928,7 @@
       "listing_id": "discovered-0ef557b73e9b170e",
       "manga_id": "psyren",
       "listing_url": "https://jp.mercari.com/item/m54018095475",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "PSYREN サイレン 全16巻セット 岩代俊明 初版あり 帯付きあり",
       "previous_valid_price_jpy": 6500
@@ -948,7 +948,7 @@
       "listing_id": "discovered-eea775798240c14f",
       "manga_id": "mononogatari",
       "listing_url": "https://shopping.bookoff.co.jp/used/0019189164",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "",
       "previous_valid_price_jpy": 220
@@ -968,7 +968,7 @@
       "listing_id": "discovered-333232f56037649b",
       "manga_id": "mononogatari",
       "listing_url": "https://jp.mercari.com/item/m72809824264",
-      "retrieved_at": "2026-10-30T14:48:29+09:00",
+      "retrieved_at": "2026-10-31T14:41:36+09:00",
       "auto_discovered_candidate": true,
       "search_result_title": "もののがたり 全16巻セット オニグンソウ ヤングジャンプコミックス",
       "previous_valid_price_jpy": 5400
@@ -977,12 +977,12 @@
   "summary": {
     "watched_count": 49,
     "auto_discovered_count": 49,
-    "ok_count": 47,
+    "ok_count": 46,
     "page_fetch_success_count": 48,
     "structured_data_count": 24,
-    "meta_price_count": 23,
-    "price_extracted_count": 47,
-    "price_extraction_issue_count": 1,
+    "meta_price_count": 22,
+    "price_extracted_count": 46,
+    "price_extraction_issue_count": 2,
     "in_stock_confirmed_count": 22,
     "out_of_stock_confirmed_count": 2,
     "stock_unknown_count": 24,
